@@ -182,7 +182,13 @@ hr {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 40px;
+}
 
+.equipes>div {
+    flex-basis: calc(33.33% - 80px);
+    /* Calcula a largura base para 3 itens por linha (33.33%) menos o espaço entre eles (80px) */
+    width: calc(33.33% - 80px);
+    /* Define a largura para 3 itens por linha (33.33%) menos o espaço entre eles (80px) */
 }
 
 .equipes-lista {
@@ -192,6 +198,7 @@ hr {
     flex-direction: column;
     width: 300px;
     height: auto;
+    min-height: 500px;
     border-radius: 20px;
     background-color: rgb(24, 24, 24);
     margin-bottom: 10px;
@@ -217,7 +224,7 @@ hr {
     font-size: 10px;
 }
 
-.equipes-lista a{
+.equipes-lista a {
     text-decoration: none;
 }
 
@@ -255,7 +262,7 @@ hr {
 }
 
 .titulos {
-    margin-top: 1rem;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -265,6 +272,7 @@ hr {
 }
 
 .titulos img {
+    margin: 0;
     width: 25px;
     height: 25px;
 }
@@ -273,6 +281,20 @@ hr {
     margin: 1px;
     font-size: 8px;
     color: rgb(255, 187, 0);
+}
+
+.titulos .titulo:hover::before {
+    cursor: none;
+    content: "Troféu conquistado ao ganhar o CAPLOL 2023.1";
+    position: absolute;
+    top: -35px;
+    left: 0;
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
 }
 
 .nicks {
