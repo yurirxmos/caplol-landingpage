@@ -175,6 +175,24 @@ hr {
     border: none;
 }
 
+.equipes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+
+}
+
+.equipes-lista {
+    width: 800px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: rgb(24, 24, 24);
+    margin-bottom: 10px;
+}
+
 .jogos {
     display: flex;
     justify-content: center;
