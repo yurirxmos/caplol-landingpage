@@ -1,6 +1,10 @@
 html {
     font-family: 'Inter', sans-serif;
-    background-color: #252525;
+    background-image: url(./assets/bg-repeat.png);
+}
+
+body {
+    margin: 0;
 }
 
 h2 {
@@ -16,16 +20,56 @@ hr {
     width: 60%;
 }
 
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 .header {
+    position: relative;
     text-align: center;
     padding: 1rem;
-    background-color: black;
+    background-color: #333;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(./assets/caplol.png);
 }
 
 .header h1 {
+    text-shadow: 2px 0px 4px black;
     color: #ffffff;
     font-weight: 1000;
     letter-spacing: 7px;
+}
+
+.header span {
+    font-weight: 700;
+}
+
+.texto-vertical-r {
+    position: absolute;
+    width: 80px;
+    text-orientation: upright;
+    left: calc(50% - 76px/2 + 734px);
+    top: 50%;
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ddd;
+    transform: rotate(-90deg);
+}
+
+.texto-vertical-l {
+    position: absolute;
+    width: 80px;
+    text-orientation: upright;
+    right: calc(50% - 76px/2 + 734px);
+    top: 50%;
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ddd;
+    transform: rotate(90deg);
 }
 
 .navbar {
@@ -66,6 +110,8 @@ hr {
 }
 
 .navbar a:hover {
+    color: black;
+    transition: 300ms;
     border-bottom: 1px solid white;
 }
 
@@ -79,7 +125,7 @@ hr {
 
 .bloco h2 {
     font-weight: 400;
-    font-size: 13px;
+    font-size: 11px;
     letter-spacing: 0px;
     color: white;
     margin-bottom: -30px;
@@ -91,6 +137,21 @@ hr {
     letter-spacing: 0px;
     color: white;
 }
+
+#regras a {
+    margin-top: 1rem;
+    text-decoration: none;
+    font-weight: 1000;
+    font-size: 32px;
+    letter-spacing: 0px;
+    color: white;
+}
+
+#regras a:hover {
+    transition: 300ms;
+    color: #272727;
+}
+
 
 #twitch-embed {
     display: flex;
@@ -148,6 +209,7 @@ hr {
 }
 
 .tabela-conteudo li {
+    list-style-type: none;
     color: white;
     margin: 2rem;
 }
@@ -159,6 +221,7 @@ hr {
 
 .icones {
     margin-top: 4rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,6 +230,41 @@ hr {
 }
 
 .icones img {
+    margin-right: 5px;
     width: 20px;
     height: 20px;
+}
+
+.icones a {
+    text-decoration: none;
+    font-weight: 1000;
+    color: #ddd;
+    display: flex;
+    align-items: center;
+}
+
+.icones a:hover {
+    transition: 300ms;
+    color: #272727;
+}
+
+.footer {
+    position: relative;
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)), url(./assets/caplol.png);
+}
+
+.footer h1 {
+    text-shadow: 2px 0px 4px black;
+    color: #ffffff;
+    font-weight: 1000;
+    letter-spacing: 7px;
+}
+
+.footer span {
+    font-weight: 700;
 }

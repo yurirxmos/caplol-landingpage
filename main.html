@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CAPLOL | Início</title>
+    <title>CAPLOL | Site Oficial</title>
     <head>
       <link rel="stylesheet" type="text/css" href="main.css" />
     </head>
 
-    <link rel="icon" type="image/x-icon" href="/assets/lol-icon.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,6 +20,8 @@
 
     <div class="header">
       <h1>CAPLOL</h1>
+      <div class="texto-vertical-r">SITE <span>OFICIAL</span></div>
+      <div class="texto-vertical-l">SITE <span>OFICIAL</span></div>
     </div>
 
     <!-- NAVBAR -->
@@ -75,39 +77,39 @@
       <div class="tabela-conteudo">
         <li>
           <span>1</span> [LBD] Lambradores
-          ----------------------------------------------- 1J 1V 1D
+          _______________________________________________ 1J 1V 1D
         </li>
         <li>
           <span>2</span> [LBD] Lambradores
-          ----------------------------------------------- 1J 1V 1D
+          _______________________________________________ 1J 1V 1D
         </li>
         <li>
           <span>3</span> [LBD] Lambradores
-          ----------------------------------------------- 1J 1V 1D
+          _______________________________________________ 1J 1V 1D
         </li>
         <li>
           <span>4</span> [LBD] Lambradores
-          ----------------------------------------------- 1J 1V 1D
+          _______________________________________________ 1J 1V 1D
         </li>
         <li>
           <span>5</span> [LBD] Lambradores
-          ----------------------------------------------- 1J 1V 1D
+          _______________________________________________ 1J 1V 1D
         </li>
         <li>
           <span>6</span> [LBD] Lambradores
-          ----------------------------------------------- 1J 1V 1D
+          _______________________________________________ 1J 1V 1D
         </li>
         <li>
           <span>7</span> [LBD] Lambradores
-          ----------------------------------------------- 1J 1V 1D
+          _______________________________________________ 1J 1V 1D
         </li>
         <li>
           <span>8</span> [LBD] Lambradores
-          ----------------------------------------------- 1J 1V 1D
+          _______________________________________________ 1J 1V 1D
         </li>
         <li>
           <span>9</span> [LBD] Lambradores
-          ----------------------------------------------- 1J 1V 1D
+          _______________________________________________ 1J 1V 1D
         </li>
       </div>
     </div>
@@ -117,33 +119,26 @@
     <!-- REGRAS -->
 
     <div class="bloco" id="regras">
-      <h2>\ CONFIRA AS /</h2> <br />
-      <h1>REGRAS</h1>
-      <a href="#">[ www.linkdasregras.com ]</a>
+      <h2>\ CLIQUE ABAIXO PARA VER AS /</h2> <br />
+      <a href="https://bit.ly/regras-caplol" target="_blank">REGRAS</a></a>
     </div>
+
+    <hr class="hr-ball"></hr>
 
     <div class="icones">
-      <a href="#"><img src="./assets/discord.png" alt="discord-icon"></a>
-      <a href="#"><img src="./assets/twitch.png" alt="twitch-icon"></a>
-      <a href="#"><img src="./assets/youtube.png" alt="youtube-icon"></a>
+      <a href="https://discord.gg/UzEARpUFWg" target="_blank"><img src="./assets/discord.png" alt="discord-icon"> /DISCORD</a>
+      <a href="https://www.twitch.tv/caploltwitch" target="_blank"><img src="./assets/twitch.png" alt="twitch-icon"> /TWITCH</a>
+      <a href="https://www.youtube.com/" target="_blank"><img src="./assets/youtube.png" alt="youtube-icon"> /YOUTUBE</a>
+    </div>
+
+    <div class="footer">
+      <h1>CAPLOL</h1>
+      <div class="texto-vertical-r">SITE <span>OFICIAL</span></div>
+      <div class="texto-vertical-l">SITE <span>OFICIAL</span></div>
     </div>
     
-
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
-
-    <script type="text/javascript">
-      var embed = new Twitch.Embed("twitch-embed", {
-        width: 854,
-        height: 480,
-        channel: "caploltwitch",
-        layout: "video",
-        autoplay: true,
-      });
-
-      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-        var player = embed.getPlayer();
-        player.play();
-      });
-    </script>
+    <script src="./twitch-embed.js"></script>
+    
   </body>
 </html>
