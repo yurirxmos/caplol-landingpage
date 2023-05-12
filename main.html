@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CAPLOL | Início</title>
+    <head>
+      <link rel="stylesheet" type="text/css" href="main.css" />
+    </head>
+
+    <link rel="icon" type="image/x-icon" href="/assets/lol-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+
+    <div class="header">
+      <h1>CAPLOL</h1>
+    </div>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+      <ul class="navbar-ul">
+        <li class="navbar-li"><a href="#transmissao">trasmissão</a></li>
+        <li class="navbar-li"><a href="#jogos">jogos</a></li>
+        <li class="navbar-li"><a href="#tabela">tabela</a></li>
+        <li class="navbar-li"><a href="#regras">regras</a></li>
+      </ul>
+    </nav>
+
+    <hr />
+
+    <!-- TRANSMISSÃO -->
+
+    <div class="bloco" id="transmissao">
+      <h2>\ TODOS OS JOGOS COM /</h2>
+      <br />
+      <h1>TRANSMISSÃO NA TWITCH</h1>
+    </div>
+
+    <div id="twitch-embed"></div>
+
+    <hr class="hr-ball" />
+
+    <!-- JOGOS -->
+
+    <div class="bloco" id="jogos">
+      <h2>\ ACOMPANHE AQUI TODOS OS /</h2>
+      <br />
+      <h1>JOGOS</h1>
+    </div>
+
+    <div class="jogos">
+      <div class="jogos-lista"></div>
+      <div class="jogos-lista"></div>
+      <div class="jogos-lista"></div>
+    </div>
+
+    <hr class="hr-ball" />
+
+    <!-- TABELA -->
+
+    <div class="bloco" id="tabela">
+      <h2>\ VEJA AGORA A /</h2>
+      <br />
+      <h1>TABELA</h1>
+    </div>
+
+    <div class="tabela">
+      <div class="tabela-conteudo">
+        <li>
+          <span>1</span> [LBD] Lambradores
+          ----------------------------------------------- 1J 1V 1D
+        </li>
+        <li>
+          <span>2</span> [LBD] Lambradores
+          ----------------------------------------------- 1J 1V 1D
+        </li>
+        <li>
+          <span>3</span> [LBD] Lambradores
+          ----------------------------------------------- 1J 1V 1D
+        </li>
+        <li>
+          <span>4</span> [LBD] Lambradores
+          ----------------------------------------------- 1J 1V 1D
+        </li>
+        <li>
+          <span>5</span> [LBD] Lambradores
+          ----------------------------------------------- 1J 1V 1D
+        </li>
+        <li>
+          <span>6</span> [LBD] Lambradores
+          ----------------------------------------------- 1J 1V 1D
+        </li>
+        <li>
+          <span>7</span> [LBD] Lambradores
+          ----------------------------------------------- 1J 1V 1D
+        </li>
+        <li>
+          <span>8</span> [LBD] Lambradores
+          ----------------------------------------------- 1J 1V 1D
+        </li>
+        <li>
+          <span>9</span> [LBD] Lambradores
+          ----------------------------------------------- 1J 1V 1D
+        </li>
+      </div>
+    </div>
+
+    <hr class="hr-ball" />
+
+    <!-- REGRAS -->
+
+    <div class="bloco" id="regras">
+      <h2>\ CONFIRA AS /</h2> <br />
+      <h1>REGRAS</h1>
+      <a href="#">[ www.linkdasregras.com ]</a>
+    </div>
+
+    <div class="icones">
+      <a href="#"><img src="./assets/discord.png" alt="discord-icon"></a>
+      <a href="#"><img src="./assets/twitch.png" alt="twitch-icon"></a>
+      <a href="#"><img src="./assets/youtube.png" alt="youtube-icon"></a>
+    </div>
+    
+
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <script type="text/javascript">
+      var embed = new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "caploltwitch",
+        layout: "video",
+        autoplay: true,
+      });
+
+      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        var player = embed.getPlayer();
+        player.play();
+      });
+    </script>
+  </body>
+</html>

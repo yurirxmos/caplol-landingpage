@@ -1,0 +1,172 @@
+html {
+    font-family: 'Inter', sans-serif;
+    background-color: #252525;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+}
+
+hr {
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 10%;
+    width: 60%;
+}
+
+.header {
+    text-align: center;
+    padding: 1rem;
+    background-color: black;
+}
+
+.header h1 {
+    color: #ffffff;
+    font-weight: 1000;
+    letter-spacing: 7px;
+}
+
+.navbar {
+    margin: 1rem;
+    background-color: transparent;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-li {
+
+    text-transform: uppercase;
+    margin-right: 50px;
+}
+
+.navbar-li:not(:last-child)::after {
+    content: "/";
+    margin-left: 30px;
+    color: white;
+    font-weight: 1000;
+}
+
+.navbar a {
+    font-weight: 300;
+    color: #ddd !important;
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+}
+
+.navbar a:hover {
+    border-bottom: 1px solid white;
+}
+
+.bloco {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bloco h2 {
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0px;
+    color: white;
+    margin-bottom: -30px;
+}
+
+.bloco h1 {
+    font-weight: 1000;
+    font-size: 32px;
+    letter-spacing: 0px;
+    color: white;
+}
+
+#twitch-embed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#twitch-embed iframe {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.hr-ball {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    opacity: 100%;
+    border: none;
+}
+
+.jogos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+
+}
+
+.jogos-lista {
+    width: 300px;
+    height: 600px;
+    border-radius: 20px;
+    background-color: rgb(24, 24, 24);
+    margin-bottom: 10px;
+}
+
+.tabela {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabela-conteudo {
+    text-align: center;
+    width: 120vh;
+    height: 70vh;
+    border-radius: 20px;
+    background-color: rgb(24, 24, 24);
+    margin-bottom: 10px;
+}
+
+.tabela-conteudo li {
+    color: white;
+    margin: 2rem;
+}
+
+.tabela-conteudo span {
+    font-weight: 1000;
+    margin-right: 5px;
+}
+
+.icones {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.icones img {
+    width: 20px;
+    height: 20px;
+}
