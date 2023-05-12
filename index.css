@@ -186,11 +186,102 @@ hr {
 }
 
 .equipes-lista {
-    width: 800px;
-    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: auto;
     border-radius: 20px;
     background-color: rgb(24, 24, 24);
     margin-bottom: 10px;
+}
+
+.equipes-lista h1 {
+    text-align: center;
+    font-size: 18px;
+    text-shadow: 2px 0px 4px black;
+    color: #ffffff;
+    font-weight: 1000;
+}
+
+.equipes-lista img {
+    margin-top: 1rem;
+    align-self: center;
+    width: 100px;
+    height: 100px;
+}
+
+.equipes-lista p {
+    color: rgb(104, 104, 104);
+    font-size: 10px;
+}
+
+.equipes-lista a{
+    text-decoration: none;
+}
+
+
+.equipes :hover {
+    transition: 400ms;
+    background-color: rgb(31, 31, 31);
+}
+
+
+.equipes-info hr {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    opacity: 10%;
+    width: 100%;
+}
+
+.equipes-info h2 {
+    margin: 0;
+    font-weight: 1000;
+    text-align: center;
+    font-size: 15px;
+}
+
+.equipes-info h3 {
+    margin: 0;
+    margin-bottom: 13px;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+    font-size: 13px;
+}
+
+.titulos {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0px;
+}
+
+.titulos img {
+    width: 25px;
+    height: 25px;
+}
+
+.titulos p {
+    margin: 1px;
+    font-size: 8px;
+    color: rgb(255, 187, 0);
+}
+
+.nicks {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    gap: 10px;
+    margin: 1rem;
 }
 
 .jogos {
@@ -220,7 +311,7 @@ hr {
 .tabela-conteudo {
     text-align: center;
     width: 120vh;
-    height: 70vh;
+    height: auto;
     border-radius: 20px;
     background-color: rgb(24, 24, 24);
     margin-bottom: 10px;
