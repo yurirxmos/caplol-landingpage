@@ -3,6 +3,7 @@
     --intz: rgb(255, 153, 238);
     --oly: rgb(255, 216, 42);
     --lbd: rgb(247, 192, 90);
+    --unb: rgb(90, 210, 247);
 }
 
 html {
@@ -461,6 +462,10 @@ hr {
 
 .tabela-conteudo span#LBD {
     color: var(--lbd);
+}
+
+.tabela-conteudo span#UNB {
+    color: var(--unb);
 }
 
 .placar {
