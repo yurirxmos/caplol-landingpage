@@ -1,3 +1,10 @@
+:root {
+    --inv: rgb(86, 145, 255);
+    --intz: rgb(255, 153, 238);
+    --oly: rgb(255, 216, 42);
+    --lbd: rgb(247, 192, 90);
+}
+
 html {
     font-family: 'Inter', sans-serif;
     background-image: url(./assets/bg-repeat.png);
@@ -369,15 +376,64 @@ hr {
     margin-bottom: 10px;
 }
 
+.tabela-conteudo img {
+    vertical-align: middle;
+    width: 13px;
+    height: 13px;
+}
+
 .tabela-conteudo li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
     list-style-type: none;
     color: white;
     margin: 2rem;
 }
 
+.tabela-conteudo b {
+    margin-right: 5px;
+}
+
 .tabela-conteudo span {
     font-weight: 1000;
-    margin-right: 5px;
+}
+
+.tabela-conteudo span#INV {
+    color: var(--inv);
+}
+
+.tabela-conteudo span#INTZ {
+    color: var(--intz);
+}
+
+.tabela-conteudo span#OLY {
+    color: var(--oly);
+}
+
+.tabela-conteudo span#LBD {
+    color: var(--lbd);
+}
+
+.placar {
+    margin-left: auto;
+}
+
+.placar .score:nth-child(1) {
+    font-weight: 500;
+}
+
+.placar .score:nth-child(2) {
+    font-weight: 500;
+    color: rgb(174, 255, 178);
+}
+
+.placar .score:nth-child(3) {
+    font-weight: 500;
+    color: rgb(255, 174, 174);
 }
 
 .icones {
