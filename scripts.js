@@ -1,3 +1,4 @@
+// PLAYER TWITCH
 var embed = new Twitch.Embed("twitch-embed", {
     width: 854,
     height: 480,
@@ -10,6 +11,8 @@ var embed = new Twitch.Embed("twitch-embed", {
     var player = embed.getPlayer();
     player.play();
   });
+
+// BOTÃO DE MOSTRAR/OCULTAR JOGOS
 
 var botao = document.getElementById("spoilerButton");
 var textoBotao = document.getElementById("buttonText");
@@ -39,6 +42,34 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+
+// Define a data alvo
+var dataAlvo = new Date("2023-07-01");
+
+// Função para atualizar o contador
+function atualizarContador() {
+  // Obtém a data atual
+  var dataAtual = new Date();
+
+  // Calcula a diferença em milissegundos entre a data atual e a data alvo
+  var diferenca = dataAlvo.getTime() - dataAtual.getTime();
+
+  // Calcula os componentes do contador: dias, horas, minutos e segundos
+  var dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+  var horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+  var segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+  // Exibe o contador no elemento HTML
+  var contadorElemento = document.getElementById("contador");
+  contadorElemento.textContent = dias + "d " + horas + "h " + minutos + "m " + segundos + "s";
+
+  // Atualiza o contador a cada segundo
+  setTimeout(atualizarContador, 1000);
+}
+
+// Inicia o contador
+atualizarContador();
 
 
 

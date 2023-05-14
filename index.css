@@ -20,6 +20,15 @@ html {
     }
 }
 
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
 body {
     margin: 0;
 }
@@ -37,14 +46,7 @@ hr {
     width: 60%;
 }
 
-@keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+
 
 ::-webkit-scrollbar {
     display: none;
@@ -65,36 +67,6 @@ hr {
     color: #ffffff;
     font-weight: 1000;
     letter-spacing: 7px;
-}
-
-.header span {
-    font-weight: 700;
-}
-
-.texto-vertical-r {
-    position: absolute;
-    width: 80px;
-    text-orientation: upright;
-    left: calc(50% - 76px/2 + 734px);
-    top: 50%;
-    font-weight: 200;
-    font-size: 12px;
-    line-height: 15px;
-    color: #ddd;
-    transform: rotate(-90deg);
-}
-
-.texto-vertical-l {
-    position: absolute;
-    width: 80px;
-    text-orientation: upright;
-    right: calc(50% - 76px/2 + 734px);
-    top: 50%;
-    font-weight: 200;
-    font-size: 12px;
-    line-height: 15px;
-    color: #ddd;
-    transform: rotate(90deg);
 }
 
 .navbar {
@@ -138,6 +110,29 @@ hr {
     color: black;
     transition: 300ms;
     border-bottom: 1px solid white;
+}
+
+.contagem-inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    background-color: #350000;
+    padding-bottom: 1rem;
+}
+
+.contagem-inicio h1 {
+    font-weight: 1000;
+    font-size: 30px;
+    color: white;
+}
+
+#contador {
+    font-size: 20px;
+    color: white;
 }
 
 .bloco {
