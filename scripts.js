@@ -4,27 +4,28 @@ document.addEventListener("DOMContentLoaded", function() {
   var imagem = document.querySelector(".mostrarJogos img");
   var jogosDiv = document.querySelector(".jogos");
   var textoBotao = document.getElementById("buttonText");
-  var spoilersVisiveis = false; // Definir como true para mostrar os spoilers por padrão
+  var spoilersVisiveis = false; 
 
-  // Função para atualizar o estado do botão e dos spoilers
   function atualizarSpoilers() {
     if (spoilersVisiveis) {
-      jogosDiv.style.display = "none";
+      jogosDiv.classList.add("fade-out");
       textoBotao.textContent = "MOSTRAR TODOS SPOILERS";
       imagem.src = "./assets/spoilers-off.png";
-      jogosDiv.classList.remove("fade-in");
+      setTimeout(function() {
+        jogosDiv.style.display = "none";
+      }, 500);
     } else {
       jogosDiv.style.display = "flex";
+      setTimeout(function() {
+        jogosDiv.classList.remove("fade-out");
+      }, 10);
       textoBotao.textContent = "OCULTAR TODOS SPOILERS";
       imagem.src = "./assets/spoilers-on.png";
-      jogosDiv.classList.add("fade-in");
     }
   }
 
-  // Atualizar o estado dos spoilers no carregamento da página
   atualizarSpoilers();
-
-  // Adicionar o evento de clique ao botão
+  
   botao.addEventListener("click", function() {
     spoilersVisiveis = !spoilersVisiveis;
     atualizarSpoilers();
@@ -32,37 +33,64 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// Define a data alvo
-var dataAlvo = new Date("2023-07-01");
 
-// Função para atualizar o contador
+// CONTADOR NA TELA 
+var dataAlvo = new Date("2023-07-01"); // Define a data alvo
+
 function atualizarContador() {
-  // Obtém a data atual
+
   var dataAtual = new Date();
-
-  // Calcula a diferença em milissegundos entre a data atual e a data alvo
   var diferenca = dataAlvo.getTime() - dataAtual.getTime();
-
-  // Calcula os componentes do contador: dias, horas, minutos e segundos
   var dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
   var horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
   var segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
-
-  // Exibe o contador no elemento HTML
   var contadorElemento = document.getElementById("contador");
-  contadorElemento.textContent = dias + "d " + horas + "h " + minutos + "m " + segundos + "s";
 
-  // Atualiza o contador a cada segundo
+  contadorElemento.textContent = dias + "d " + horas + "h " + minutos + "m " + segundos + "s";
   setTimeout(atualizarContador, 1000);
 }
 
-// Inicia o contador
 atualizarContador();
 
 
+// BUSCAR JOGADOR
+function pesquisarJogador() {
+  var nick = document.getElementById('nickInput').value;
 
+  resultado.innerHTML = '';
 
+  fetch('https://br1.api.riotgames.com/lol/summoner/v4/summoners/by-name/' + encodeURIComponent(nick) + '?api_key=' + apiKey)
+    .then(response => response.json())
+    .then(data => {
+      // Extrair o ID do jogador retornado pela API
+      var jogadorId = data.id;
 
-  
-  
+      fetch('https://br1.api.riotgames.com/lol/league/v4/entries/by-summoner/' + jogadorId + '?api_key=' + apiKey)
+        .then(response => response.json())
+        .then(data => {
+          
+          var resultado = document.getElementById('resultado');
+          resultado.style.display = 'block';
+
+          if (data[0] && data[0].tier && data[0].rank && data[0].leaguePoints) {
+            resultado.innerHTML = '<h1>Elo</h1> ' + '<h2>' + data[0].tier + ' ' + data[0].rank + ' '+ data[0].leaguePoints + ' LP'+ '</h2>' + '<br>';
+            resultado.innerHTML += '<h1>Vitórias</h1> ' + '<h2>' + data[0].wins + '</h2>';
+            if (data[0].wins <= 35) {
+              resultado.innerHTML += '<h3><b>JOGADOR INVALIDADO</b> <br> A quantidade de vitórias precisa ser maior que 35.</h3>';
+            } else {
+              resultado.innerHTML += '<br>' + '<h4><b>JOGADOR VALIDADO</b> <br> Você está pronto para jogar o CAPLOL.</h4>';
+            }
+          } else {
+            resultado.innerHTML += '<h3><b>JOGADOR INVALIDADO</b> <br> O jogador não foi encontrado ou não está ranqueado.</h3>';
+          }
+        })
+
+        .catch(error => {
+          console.log('Erro na obtenção das informações do jogador', error);
+        });
+    })
+    .catch(error => {
+      console.log('Erro na obtenção do ID do jogador', error);
+    });
+}

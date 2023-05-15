@@ -4,9 +4,9 @@
     <title>CAPLOL | Site Oficial</title>
     <head>
       <link rel="stylesheet" type="text/css" href="index.css" />
+      <link rel="icon" href="/assets/favicon.ico" />
     </head>
-
-    <link rel="icon" href="/assets/favicon.ico" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,6 +37,7 @@
     <hr />
 
     <!-- CONTADOR -->
+
     <div class="contagem-inicio">
       <h1>INÍCIO EM:</h1>
       <div id="contador"></div>
@@ -198,6 +199,7 @@
 
     <div class="jogos">
       <div class="jogos-lista">
+
         <!-- PRIMEIRO BLOCO -->
 
         <div class="jogo">
@@ -216,6 +218,7 @@
       </div>
 
       <div class="jogos-lista">
+
         <!-- SEGUNDO BLOCO -->
         <div class="jogo">
           <h2>
@@ -226,6 +229,7 @@
       </div>
 
       <div class="jogos-lista">
+
         <!-- TERCEIRO BLOCO -->
 
         <div class="jogo">
@@ -316,6 +320,23 @@
       </a>
     </div>
 
+    <div class="bloco" id="verificacao">
+      <h2>\ DESCUBRA SE SUA CONTA ESTÁ APTA /</h2>
+      <br />
+      <h1>
+        VERIFICAR
+      </h1>
+    </div>
+
+    <div class="verificar">
+      <form class="verificar-conteudo">
+        <input id="nickInput" type="text" placeholder="Insira o nick aqui" required>
+        <button type="submit" onclick="pesquisarJogador()">pesquisar</button>
+      </form>
+    </div>
+
+    <div class="resultado" id="resultado"></div>
+
     <div class="bloco" id="registro">
       <h2>\ E AÍ, QUER PARTICIPAR? /</h2>
       <br />
@@ -339,7 +360,10 @@
       >
     </div>
 
+
+
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script src="config.js"></script>
     <script src="./twitch.js"></script>
     <script src="./scripts.js"></script>
   </body>
