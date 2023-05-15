@@ -227,7 +227,7 @@ hr {
     flex-basis: calc(33.33% - 40px);
     width: calc(33.33% - 40px);
 }
-
+ 
 .equipes-lista {
     text-decoration: none;
     display: flex;
