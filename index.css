@@ -4,6 +4,9 @@
     --oly: rgb(255, 216, 42);
     --lbd: rgb(247, 192, 90);
     --unb: rgb(90, 210, 247);
+
+    --vitoria: rgb(153, 255, 153);
+    --derrota: rgb(255, 153, 153);
 }
 
 html {
@@ -16,6 +19,7 @@ html {
     0% {
         background-position: 0 0;
     }
+
     100% {
         background-position: 100% 0%;
     }
@@ -23,12 +27,13 @@ html {
 
 @keyframes fade-in {
     from {
-      opacity: 0;
+        opacity: 0;
     }
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
 body {
     margin: 0;
@@ -46,8 +51,6 @@ hr {
     opacity: 10%;
     width: 60%;
 }
-
-
 
 ::-webkit-scrollbar {
     display: none;
@@ -116,7 +119,7 @@ hr {
 .contagem-inicio {
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 10px;
@@ -170,7 +173,21 @@ hr {
 
 #regras a:hover {
     transition: 300ms;
-    color: #272727;
+    color: #ec3737;
+}
+
+#registro a {
+    margin-top: 1rem;
+    text-decoration: none;
+    font-weight: 1000;
+    font-size: 32px;
+    letter-spacing: 0px;
+    color: white;
+}
+
+#registro a:hover {
+    transition: 300ms;
+    color: #37ec64;
 }
 
 
@@ -183,6 +200,7 @@ hr {
 #twitch-embed iframe {
     border-radius: 20px;
     overflow: hidden;
+    width: 80%;
 }
 
 .hr-ball {
@@ -202,17 +220,16 @@ hr {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 60px;
 }
 
 .equipes>div {
-    flex-basis: calc(33.33% - 80px);
-    /* Calcula a largura base para 3 itens por linha (33.33%) menos o espaço entre eles (80px) */
-    width: calc(33.33% - 80px);
-    /* Define a largura para 3 itens por linha (33.33%) menos o espaço entre eles (80px) */
+    flex-basis: calc(33.33% - 40px);
+    width: calc(33.33% - 40px);
 }
 
 .equipes-lista {
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -241,12 +258,9 @@ hr {
 }
 
 .equipes-lista p {
+    text-align: center;
     color: rgb(104, 104, 104);
     font-size: 10px;
-}
-
-.equipes-lista a {
-    text-decoration: none;
 }
 
 
@@ -339,7 +353,7 @@ hr {
 
 }
 
-.mostrarJogos button{
+.mostrarJogos button {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -347,8 +361,9 @@ hr {
     width: 40vh;
     margin-bottom: 1rem;
     min-width: 80px;
-    
+
     text-transform: uppercase;
+    font-weight: bolder;
     font-family: 'Inter', sans-serif;
     font-size: 12px;
     border: none;
@@ -358,13 +373,12 @@ hr {
 }
 
 .mostrarJogos button:hover {
-    color: #333;
-    background-color: white;
+    background-color: #ec3737;
     cursor: pointer;
     transition: 400ms;
-  }
+}
 
-  
+
 .jogos {
     animation: fade-in 1s ease-in-out forwards;
     display: flex;
@@ -386,7 +400,7 @@ hr {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 40px;
-    width: 300px;
+    width: 350px;
     height: 500px;
     border-radius: 20px;
     background-color: rgb(24, 24, 24);
@@ -405,6 +419,26 @@ hr {
     text-align: center;
     font-size: 11px;
     color: white;
+}
+
+.jogo {
+    text-align: center;
+}
+
+.jogo img {
+    width: 18px;
+    height: 18px;
+    margin: 5px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+
+#vitoria {
+    color: var(--vitoria);
+}
+
+#derrota {
+    color: var(--derrota);
 }
 
 .tabela {
@@ -512,7 +546,7 @@ hr {
 
 .icones a:hover {
     transition: 300ms;
-    color: #272727;
+    color: #ec3737;
 }
 
 .footer {
