@@ -25,16 +25,6 @@ html {
     }
 }
 
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
 body {
     margin: 0;
 }
@@ -169,6 +159,7 @@ hr {
     font-size: 32px;
     letter-spacing: 0px;
     color: white;
+    border-bottom: solid 1px #ec3737;
 }
 
 #regras a:hover {
@@ -183,6 +174,7 @@ hr {
     font-size: 32px;
     letter-spacing: 0px;
     color: white;
+    border-bottom: solid 1px #37ec64;
 }
 
 #registro a:hover {
@@ -227,7 +219,7 @@ hr {
     flex-basis: calc(33.33% - 40px);
     width: calc(33.33% - 40px);
 }
- 
+
 .equipes-lista {
     text-decoration: none;
     display: flex;
@@ -380,17 +372,12 @@ hr {
 
 
 .jogos {
-    animation: fade-in 1s ease-in-out forwards;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 40px;
-}
-
-.jogos.oculto {
-    display: none;
 }
 
 .jogos-lista {
@@ -521,7 +508,7 @@ hr {
 }
 
 .icones {
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     display: flex;
     justify-content: center;
@@ -531,14 +518,16 @@ hr {
 }
 
 .icones img {
+    border-radius: 3px;
     margin-right: 5px;
     width: 20px;
     height: 20px;
 }
 
 .icones a {
+    text-transform: lowercase;
     text-decoration: none;
-    font-weight: 1000;
+    font-weight: 400;
     color: #ddd;
     display: flex;
     align-items: center;
@@ -547,25 +536,4 @@ hr {
 .icones a:hover {
     transition: 300ms;
     color: #ec3737;
-}
-
-.footer {
-    position: relative;
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)), url(./assets/caplol.png);
-}
-
-.footer h1 {
-    text-shadow: 2px 0px 4px black;
-    color: #ffffff;
-    font-weight: 1000;
-    letter-spacing: 7px;
-}
-
-.footer span {
-    font-weight: 700;
 }
