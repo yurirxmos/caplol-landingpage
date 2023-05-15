@@ -42,6 +42,37 @@ hr {
     width: 60%;
 }
 
+@media (max-width: 600px) {
+    html {
+        font-family: 'Inter', sans-serif;
+        background-image: url(./assets/bg-repeat.png);
+        animation: none;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .contagem-inicio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 10px;
+    
+        background-color: #350000;
+        padding-bottom: 1rem;
+    }
+    
+    .contagem-inicio h1 {
+        font-weight: 1000;
+        font-size: 130px;
+        color: white;
+    }
+
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -266,8 +297,9 @@ hr {
     padding: 5px;
 }
 
-.resultado h3 { /*  RESULTADO INVALIDO */
-    
+.resultado h3 {
+    /*  RESULTADO INVALIDO */
+
     display: block;
     margin-right: auto;
     margin-left: auto;
@@ -283,8 +315,9 @@ hr {
 
 }
 
-.resultado h4 { /*  RESULTADO VALIDADO */
-    
+.resultado h4 {
+    /*  RESULTADO VALIDADO */
+
     display: block;
     margin-right: auto;
     margin-left: auto;
@@ -297,7 +330,7 @@ hr {
     border-radius: 4px;
     width: 60%;
     padding: 5px;
-    
+
 }
 
 .verificar-conteudo button {
@@ -522,7 +555,7 @@ hr {
     opacity: 1;
     transition: opacity 0.5s;
 }
-  
+
 .jogos.fade-out {
     opacity: 0;
     pointer-events: none;
@@ -686,4 +719,3 @@ hr {
     transition: 300ms;
     color: #ec3737;
 }
-  
