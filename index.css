@@ -42,37 +42,6 @@ hr {
     width: 60%;
 }
 
-@media (max-width: 600px) {
-    html {
-        font-family: 'Inter', sans-serif;
-        background-image: url(./assets/bg-repeat.png);
-        animation: none;
-    }
-
-    .navbar {
-        display: none;
-    }
-
-    .contagem-inicio {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 10px;
-    
-        background-color: #350000;
-        padding-bottom: 1rem;
-    }
-    
-    .contagem-inicio h1 {
-        font-weight: 1000;
-        font-size: 130px;
-        color: white;
-    }
-
-}
-
 ::-webkit-scrollbar {
     display: none;
 }
@@ -213,6 +182,8 @@ hr {
     color: #37ec64;
 }
 
+/* AGUARDANDO API DA RIOT 
+
 #verificacao h1 {
     font-weight: 1000;
     font-size: 32px;
@@ -250,6 +221,7 @@ hr {
     outline: none;
 }
 
+*/
 
 .resultado {
     display: none;

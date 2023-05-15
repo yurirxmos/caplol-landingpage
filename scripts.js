@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var spoilersVisiveis = false; 
 
   function atualizarSpoilers() {
+    event.preventDefault();
     if (spoilersVisiveis) {
       jogosDiv.classList.add("fade-out");
       textoBotao.textContent = "MOSTRAR TODOS SPOILERS";
@@ -56,6 +57,7 @@ atualizarContador();
 
 // BUSCAR JOGADOR
 function pesquisarJogador() {
+  event.preventDefault();
   var nick = document.getElementById('nickInput').value;
 
   resultado.innerHTML = '';
