@@ -76,16 +76,22 @@ function pesquisarJogador() {
           resultado.style.display = 'block';
 
           if (data[0] && data[0].tier && data[0].rank && data[0].leaguePoints) {
-            resultado.innerHTML = '<h1>Elo</h1> ' + '<h2>' + data[0].tier + ' ' + data[0].rank + ' '+ data[0].leaguePoints + ' LP'+ '</h2>' + '<br>';
-            resultado.innerHTML += '<h1>Vitórias</h1> ' + '<h2>' + data[0].wins + '</h2>';
-            if (data[0].wins <= 35) {
-              resultado.innerHTML += '<h3><b>JOGADOR INVALIDADO</b> <br> A quantidade de vitórias precisa ser maior que 35.</h3>';
+            if (data[0].tier === 'DIAMOND' || data[0].tier === 'MASTER' || data[0].tier === 'GRANDMASTER' || data[0].tier === 'CHALLENGER') {
+              resultado.innerHTML = '<h1>Elo</h1> ' + '<h2>' + data[0].tier + ' ' + data[0].rank + ' ' + data[0].leaguePoints + ' LP' + '</h2>' + '<br>';
+              resultado.innerHTML += '<h4 id="restringido"><b>Sob certas restrições</b> <br> Você <u>pode jogar</u> o CAPLOL, mas possui restrições, verifique as regras!</h4>';
             } else {
-              resultado.innerHTML += '<br>' + '<h4><b>JOGADOR VALIDADO</b> <br> Você está pronto para jogar o CAPLOL.</h4>';
+              resultado.innerHTML = '<h1>Elo</h1> ' + '<h2>' + data[0].tier + ' ' + data[0].rank + ' ' + data[0].leaguePoints + ' LP' + '</h2>' + '<br>';
+              resultado.innerHTML += '<h1>Vitórias</h1> ' + '<h2>' + data[0].wins + '</h2>';
+              if (data[0].wins <= 35) {
+                resultado.innerHTML += '<h3><b>Inválido</b> <br> A quantidade de vitórias precisa ser maior que 35.</h3>';
+              } else {
+                resultado.innerHTML += '<br>' + '<h4><b>Válido</b> <br> Você está pronto para jogar o CAPLOL.</h4>';
+              }
             }
           } else {
-            resultado.innerHTML += '<h3><b>JOGADOR INVALIDADO</b> <br> O jogador não foi encontrado ou não está ranqueado.</h3>';
+            resultado.innerHTML += '<h3><b>Não definido</b> <br> O jogador não foi encontrado ou não está ranqueado.</h3>';
           }
+          
         })
 
         .catch(error => {

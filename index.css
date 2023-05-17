@@ -152,6 +152,118 @@ hr {
     color: white;
 }
 
+
+.mvp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mvp h1 {
+    text-align: center;
+    font-weight: 400;
+    color: white;
+    font-size: 11px;
+    opacity: 30%;
+}
+
+.mvp-conteudo {
+    text-align: center;
+    width: 70vh;
+    height: auto;
+    background-color: rgb(24, 24, 24);
+    margin-bottom: 10px;
+}
+
+.mvp-conteudo img {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-left: 0.2rem;
+}
+
+.mvp-conteudo li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style-type: none;
+    color: white;
+}
+
+.mvp-conteudo li#posicao-1 {
+    padding-right:  0.5rem;
+    padding-left: 0.5rem;
+    background: linear-gradient(to right, rgba(255, 230, 0, 0.137), transparent);
+    border-left: solid 1px gold;
+}
+
+.mvp-conteudo li#posicao-2 {
+    padding-right:  0.5rem;
+    padding-left: 0.5rem;
+    background: linear-gradient(to right, rgba(192, 192, 192, 0.137), transparent);
+    border-left: solid 1px silver;
+}
+
+.mvp-conteudo li#posicao-3 {
+    padding-right:  0.5rem;
+    padding-left: 0.5rem;
+    background: linear-gradient(to right, rgba(165, 42, 42, 0.137), transparent);
+    border-left: solid 1px brown;
+}
+
+.mvp-placar {
+    display: flex;
+    margin-left: auto;
+    flex-wrap: wrap;
+    gap: 4vh;
+}
+
+.mvp-placar h2 {
+    font-size: 16px;    
+}
+
+.mvp-placar :nth-child(1) {
+    font-size: 14px; 
+    font-weight: 400;
+}
+
+.mvp-placar :nth-child(2) {
+    font-weight: 800;
+}
+
+.mvp-conteudo b {
+    margin-right: 5px;
+}
+
+.mvp-conteudo span {
+    font-weight: 1000;
+}
+
+.mvp-conteudo span#INV {
+    color: var(--inv);
+}
+
+.mvp-conteudo span#INTZ {
+    color: var(--intz);
+}
+
+.mvp-conteudo span#OLY {
+    color: var(--oly);
+}
+
+.mvp-conteudo span#LBD {
+    color: var(--lbd);
+}
+
+.mvp-conteudo span#UNB {
+    color: var(--unb);
+}
+
+
 #regras a {
     margin-top: 1rem;
     text-decoration: none;
@@ -182,7 +294,7 @@ hr {
     color: #37ec64;
 }
 
-/* AGUARDANDO API DA RIOT 
+/* AGUARDANDO API DA RIOT */
 
 #verificacao h1 {
     font-weight: 1000;
@@ -220,8 +332,6 @@ hr {
     border: none;
     outline: none;
 }
-
-*/
 
 .resultado {
     display: none;
@@ -304,6 +414,12 @@ hr {
     padding: 5px;
 
 }
+
+.resultado h4#restringido {
+    /*  RESULTADO RESTRINGIDO */
+    background-color: rgb(103, 103, 255);
+}
+
 
 .verificar-conteudo button {
     display: block;
@@ -589,9 +705,8 @@ hr {
 
 .tabela-conteudo {
     text-align: center;
-    width: 120vh;
+    min-width: 120vh;
     height: auto;
-    border-radius: 20px;
     background-color: rgb(24, 24, 24);
     margin-bottom: 10px;
 }
@@ -609,9 +724,9 @@ hr {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
+    padding: 15px;
     list-style-type: none;
     color: white;
-    margin: 2rem;
 }
 
 .tabela-conteudo b {
@@ -622,7 +737,23 @@ hr {
     font-weight: 1000;
 }
 
+.tabela-conteudo li:nth-child(n):nth-child(-n+4) {
+    
+    border-left: solid 3px green;
+}
+
+.tabela-conteudo li:nth-child(n+5):nth-child(-n+8) {
+    
+    border-left: solid 3px rgb(0, 87, 128);
+}
+
+.tabela-conteudo li:nth-child(n+9):nth-child(-n+12) {
+    
+    border-left: solid 3px rgb(226, 43, 43);
+}
+
 .tabela-conteudo span#INV {
+
     color: var(--inv);
 }
 
@@ -641,6 +772,57 @@ hr {
 .tabela-conteudo span#UNB {
     color: var(--unb);
 }
+
+.legenda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.legenda-conteudo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; 
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+    background-color: rgb(34, 34, 34);
+}
+
+.legenda-conteudo div {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.legenda-conteudo #superior {
+    width: 13px;
+    height: 13px;
+    margin: 0 10px;
+    background-color: #208f3c;
+}
+
+.legenda-conteudo #inferior {
+    width: 13px;
+    height: 13px;
+    margin: 0 10px;
+    background-color: rgb(0, 87, 128);
+}
+
+.legenda-conteudo #eliminacao {
+    width: 13px;
+    height: 13px;
+    margin: 0 10px;
+    background-color: rgb(226, 43, 43);
+}
+
+.legenda-conteudo p{
+    color: white;
+    font-size: 13px;
+}
+
+
 
 .placar {
     margin-left: auto;
