@@ -4,29 +4,25 @@ document.addEventListener("DOMContentLoaded", function() {
   var imagem = document.querySelector(".mostrarJogos img");
   var jogosDiv = document.querySelector(".jogos");
   var textoBotao = document.getElementById("buttonText");
-  var spoilersVisiveis = false; 
+  var spoilersVisiveis = false;
 
   function atualizarSpoilers() {
     event.preventDefault();
     if (spoilersVisiveis) {
-      jogosDiv.classList.add("fade-out");
+      jogosDiv.style.filter = "blur(3px)";
+      jogosDiv.style.transition = "300ms"
       textoBotao.textContent = "MOSTRAR TODOS SPOILERS";
       imagem.src = "./assets/spoilers-off.png";
-      setTimeout(function() {
-        jogosDiv.style.display = "none";
-      }, 500);
     } else {
-      jogosDiv.style.display = "flex";
-      setTimeout(function() {
-        jogosDiv.classList.remove("fade-out");
-      }, 10);
+      jogosDiv.style.filter = "none";
+      jogosDiv.style.transition = "300ms"
       textoBotao.textContent = "OCULTAR TODOS SPOILERS";
       imagem.src = "./assets/spoilers-on.png";
     }
-  }
+  }  
 
   atualizarSpoilers();
-  
+
   botao.addEventListener("click", function() {
     spoilersVisiveis = !spoilersVisiveis;
     atualizarSpoilers();

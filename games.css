@@ -1,0 +1,107 @@
+.mostrarJogos img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 20px;
+    height: 20px;
+    margin-bottom: 0.5rem;
+    filter: brightness(100%) invert(1);
+
+}
+
+.mostrarJogos button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 6vh;
+    width: 40vh;
+    margin-bottom: 2rem;
+    min-width: 80px;
+
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+}
+
+.mostrarJogos button:hover {
+    background-color: #ec3737;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+
+.jogos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.jogos.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.jogos-lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 350px;
+    height: 550px;
+    border-radius: 20px;
+    background-color: rgb(24, 24, 24);
+    margin-bottom: 10px;
+}
+
+.jogos-lista h2 {
+    font-size: 22px;
+    margin: 0;
+    margin-bottom: 3px;
+}
+
+.jogos-lista h3 {
+    font-weight: 200;
+    margin: 0;
+    text-align: center;
+    font-size: 11px;
+    color: white;
+}
+
+.jogo {
+    text-align: center;
+}
+
+.jogo b:hover {
+    color: #ec3737;
+    transition: 300ms;
+    cursor: default;
+}
+
+.jogo img {
+    width: 18px;
+    height: 18px;
+    margin: 5px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+
+#vitoria {
+    color: var(--vitoria);
+}
+
+#derrota {
+    color: var(--derrota);
+}
