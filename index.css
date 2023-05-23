@@ -783,3 +783,92 @@ hr {
     transition: 300ms;
     color: #ec3737;
 }
+
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-family: 'Inter', sans-serif;
+        background-color: #242424;
+    }
+
+    hr {
+        width: 20%;
+    }
+
+    .navbar {
+        margin: 1rem;
+        background-color: rgba(31, 31, 31, 0.397);
+        padding: 10px;
+        display: flex;
+        flex-direction: column; /* Alteração: definir a direção como coluna */
+        align-items: center; /* Alteração: centralizar na horizontal */
+    }
+    
+    .navbar-ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column; /* Alteração: definir a direção como coluna */
+        align-items: center; /* Alteração: centralizar na horizontal */
+        justify-content: center;
+        margin-left: 2rem;
+    }
+    
+    .navbar-li {
+        text-transform: uppercase;
+        margin-right: 2rem;
+        margin-bottom: 1rem; /* Alteração: adicionar margem inferior */
+    }
+    
+    .navbar-li:not(:last-child)::after {
+        content: "";
+        display: none; /* Alteração: remover o ponto após o último item */
+    }
+    
+    .navbar a {
+        font-weight: 300;
+        color: #ddd !important;
+        text-decoration: none;
+        color: #333;
+        padding: 5px;
+    }
+    
+    .navbar a:hover {
+        cursor: pointer;
+        color: #ec3737 !important;
+        transition: 500ms;
+        border-bottom: solid 1px #ec3737;
+    }
+
+    .bloco h1 {
+        font-size: 20px;
+    }
+    
+    .placar {
+        margin-left: 0;
+    }
+
+    .tabela-conteudo {
+        min-width: 45vh;
+    }
+
+    .tabela-conteudo li {
+        flex-direction: column;
+    }
+
+    .legenda-conteudo {
+        display: block;
+        background-color: transparent;
+    }
+
+    .mvp-conteudo {
+        width: auto;
+    }
+    
+    .icones {
+        flex-direction: column;
+        gap: 20px;
+    }
+  }
+  
