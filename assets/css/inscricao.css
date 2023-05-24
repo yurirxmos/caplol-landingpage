@@ -2,10 +2,6 @@
     background-color: #242424;
 }
 
-.inscricao :nth-child(1) {
-    background-color: #111111;
-}
-
 .inscricao-conteudo {
     display: flex;
     justify-content: center;
@@ -115,4 +111,25 @@ img {
     transition: 400ms;
     cursor: pointer;
     background-color: #242424;
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .inscricao-conteudo {
+        flex-direction: column;
+        padding-top: 0;
+    }
+    
+    .texto {
+        width: 100%;
+    }
+    
+    .inscricao-conteudo h1 {
+        text-align: center;
+    }
+
+    .inscricao-conteudo img {
+        width: 150px;
+        height: 150px;
+    }
 }
