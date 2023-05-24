@@ -1,4 +1,4 @@
-name: Meu Fluxo de Trabalho
+name: Fluxo de Trabalho - Dados
 
 on:
   push:
@@ -16,10 +16,9 @@ jobs:
       - name: Configurar ambiente
         run: |
           echo "API_KEY=${{ secrets.API_KEY }}" >> .env
-          echo "GIT_KEY=${{ secrets.GIT_KEY }}" >> .env
 
-      - name: Upload do arquivo de variáveis de ambiente
-        uses: actions/upload-artifact@v2
-        with:
-          name: env-vars
-          path: .env
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Executar script
+        run: node scripts.js
