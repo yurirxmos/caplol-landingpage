@@ -12,12 +12,12 @@ document.addEventListener("DOMContentLoaded", function() {
       jogosDiv.style.filter = "blur(3px)";
       jogosDiv.style.transition = "300ms"
       textoBotao.textContent = "MOSTRAR TODOS SPOILERS";
-      imagem.src = "./assets/spoilers-off.png";
+      imagem.src = "/assets/img/icones/spoilers-off.png";
     } else {
       jogosDiv.style.filter = "none";
       jogosDiv.style.transition = "300ms"
       textoBotao.textContent = "OCULTAR TODOS SPOILERS";
-      imagem.src = "./assets/spoilers-on.png";
+      imagem.src = "/assets/img/icones/spoilers-on.png";
     }
   }  
 

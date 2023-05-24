@@ -12,7 +12,7 @@
 
 html {
     font-family: 'Inter', sans-serif;
-    background-image: url(./assets/bg-repeat.png);
+    background-image: url(/assets/img/icones/bg-repeat.png);
     background-color: rgb(31, 31, 31);
     animation: move-background 100s linear infinite;
 }
@@ -55,20 +55,28 @@ hr {
     background-color: #333;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(./assets/caplol.png);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(/assets/img/icones/caplol.png);
 }
 
 .header h1 {
+    margin-top: 0;
     text-shadow: 2px 0px 4px black;
     color: #ffffff;
     font-weight: 1000;
-    letter-spacing: 7px;
+    letter-spacing: 5px;
+    margin-bottom: 0;
+}
+
+.header h2 {
+    margin-top: 0;
+    font-weight: 300;
+    font-size: 12px;
 }
 
 .navbar {
-    margin: 1rem;
-    background-color: transparent;
-    padding: 10px;
+    margin: 0;
+    padding-top: 1.2rem;
+    margin-bottom: 0.8rem;
     display: flex;
     justify-content: center;
 }
@@ -78,27 +86,23 @@ hr {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .navbar-li {
     text-transform: uppercase;
-    margin-right: 2rem;
-}
-
-.navbar-li:not(:last-child)::after {
-    content: ".";
-    margin-left: 2rem;
-    color: white;
-    font-weight: 1000;
+    margin: 0 1rem;
+    border-radius: 10px;
 }
 
 .navbar a {
+    font-size: 16px;
     font-weight: 300;
     color: #ddd !important;
     text-decoration: none;
     color: #333;
-    padding: 5px;
+    padding: 15px;
 }
 
 .navbar a:hover {
@@ -108,28 +112,32 @@ hr {
     border-bottom: solid 1px #ec3737;
 }
 
+
 .contagem-inicio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
     margin-top: 2rem;
-    background-color: #350000;
-    padding-bottom: 1rem;
+    padding: 1rem;
+    background-color: #640000;
 }
 
 .contagem-inicio h1 {
+    margin-top: 0;
+    margin-bottom: 0;
     font-weight: 1000;
     font-size: 30px;
     color: white;
-    margin-bottom: 0;
 }
 
 #contador {
-    font-size: 20px;
+    font-size: 17px;
     color: white;
+}
+
+.bloco#transmissao {
+    margin-top: 2rem;
 }
 
 .bloco {
@@ -204,21 +212,21 @@ hr {
 }
 
 .mvp-conteudo li#posicao-1 {
-    padding-right:  0.5rem;
+    padding-right: 0.5rem;
     padding-left: 0.5rem;
     background: linear-gradient(to right, rgba(255, 230, 0, 0.137), transparent);
     border-left: solid 1px gold;
 }
 
 .mvp-conteudo li#posicao-2 {
-    padding-right:  0.5rem;
+    padding-right: 0.5rem;
     padding-left: 0.5rem;
     background: linear-gradient(to right, rgba(192, 192, 192, 0.137), transparent);
     border-left: solid 1px silver;
 }
 
 .mvp-conteudo li#posicao-3 {
-    padding-right:  0.5rem;
+    padding-right: 0.5rem;
     padding-left: 0.5rem;
     background: linear-gradient(to right, rgba(165, 42, 42, 0.137), transparent);
     border-left: solid 1px brown;
@@ -232,11 +240,11 @@ hr {
 }
 
 .mvp-placar h2 {
-    font-size: 16px;    
+    font-size: 16px;
 }
 
 .mvp-placar :nth-child(1) {
-    font-size: 14px; 
+    font-size: 14px;
     font-weight: 400;
 }
 
@@ -456,7 +464,7 @@ hr {
 .resultado h4#restringido {
     /*  RESULTADO RESTRINGIDO */
     background-color: rgb(103, 103, 255);
-    
+
 }
 
 #twitch-embed {
@@ -650,17 +658,17 @@ hr {
 }
 
 .tabela-conteudo li:nth-child(n):nth-child(-n+4) {
-    
+
     border-left: solid 3px green;
 }
 
 .tabela-conteudo li:nth-child(n+5):nth-child(-n+8) {
-    
+
     border-left: solid 3px rgb(0, 87, 128);
 }
 
 .tabela-conteudo li:nth-child(n+9):nth-child(-n+12) {
-    
+
     border-left: solid 3px rgb(226, 43, 43);
 }
 
@@ -698,7 +706,7 @@ hr {
 .legenda-conteudo {
     display: flex;
     justify-content: space-between;
-    flex-direction: row; 
+    flex-direction: row;
     width: auto;
     height: auto;
     border-radius: 15px;
@@ -707,7 +715,7 @@ hr {
 
 .legenda-conteudo div {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     align-items: center;
     margin: 0 1rem;
 }
@@ -733,7 +741,7 @@ hr {
     background-color: rgb(226, 43, 43);
 }
 
-.legenda-conteudo p{
+.legenda-conteudo p {
     color: white;
     font-size: 13px;
 }
@@ -805,32 +813,38 @@ hr {
         background-color: rgba(31, 31, 31, 0.397);
         padding: 10px;
         display: flex;
-        flex-direction: column; /* Alteração: definir a direção como coluna */
-        align-items: center; /* Alteração: centralizar na horizontal */
+        flex-direction: column;
+        /* Alteração: definir a direção como coluna */
+        align-items: center;
+        /* Alteração: centralizar na horizontal */
     }
-    
+
     .navbar-ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
         display: flex;
-        flex-direction: column; /* Alteração: definir a direção como coluna */
-        align-items: center; /* Alteração: centralizar na horizontal */
+        flex-direction: column;
+        /* Alteração: definir a direção como coluna */
+        align-items: center;
+        /* Alteração: centralizar na horizontal */
         justify-content: center;
         margin-left: 2rem;
     }
-    
+
     .navbar-li {
         text-transform: uppercase;
         margin-right: 2rem;
-        margin-bottom: 1rem; /* Alteração: adicionar margem inferior */
+        margin-bottom: 1rem;
+        /* Alteração: adicionar margem inferior */
     }
-    
+
     .navbar-li:not(:last-child)::after {
         content: "";
-        display: none; /* Alteração: remover o ponto após o último item */
+        display: none;
+        /* Alteração: remover o ponto após o último item */
     }
-    
+
     .navbar a {
         font-weight: 300;
         color: #ddd !important;
@@ -838,7 +852,7 @@ hr {
         color: #333;
         padding: 5px;
     }
-    
+
     .navbar a:hover {
         cursor: pointer;
         color: #ec3737 !important;
@@ -849,7 +863,7 @@ hr {
     .bloco h1 {
         font-size: 20px;
     }
-    
+
     .placar {
         margin-left: 0;
     }
@@ -870,7 +884,7 @@ hr {
     .mvp-conteudo {
         width: auto;
     }
-    
+
     .icones {
         flex-direction: column;
         gap: 20px;
@@ -879,5 +893,4 @@ hr {
     .resultado {
         width: 90%;
     }
-  }
-  
+}
