@@ -15,5 +15,4 @@ jobs:
 
       - name: Configurar ambiente
         run: |
-          npm install
           echo "API_KEY=${{ secrets.API_KEY }}" >> .env
