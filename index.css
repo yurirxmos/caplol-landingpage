@@ -412,7 +412,7 @@ hr {
     display: block;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 5px;
+    margin-top: 1rem;
     font-size: 12px;
     margin-bottom: 1rem;
     font-weight: 400;
@@ -427,6 +427,7 @@ hr {
 .resultado h4#restringido {
     /*  RESULTADO RESTRINGIDO */
     background-color: rgb(103, 103, 255);
+    
 }
 
 

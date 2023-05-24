@@ -56,6 +56,7 @@ function pesquisarJogador() {
   event.preventDefault();
   var nick = document.getElementById('nickInput').value;
   const API_KEY = "RGAPI-7baeb44a-4ade-4482-b126-2bb126cdbe11";
+  
 
   resultado.innerHTML = '';
 
@@ -65,24 +66,45 @@ function pesquisarJogador() {
       
       var jogadorId = data.id;
 
+      console.log(jogadorId);
+
       fetch('https://br1.api.riotgames.com/lol/league/v4/entries/by-summoner/' + jogadorId + '?api_key=' + API_KEY)
         .then(response => response.json())
         .then(data => {
           
+          console.log(data);
+
           var resultado = document.getElementById('resultado');
           resultado.style.display = 'block';
 
-          if (data[0] && data[0].tier && data[0].rank && data[0].leaguePoints) {
-            if (data[0].tier === 'DIAMOND' || data[0].tier === 'MASTER' || data[0].tier === 'GRANDMASTER' || data[0].tier === 'CHALLENGER') {
-              resultado.innerHTML = '<h1>Elo</h1> ' + '<h2>' + data[0].tier + ' ' + data[0].rank + ' ' + data[0].leaguePoints + ' LP' + '</h2>' + '<br>';
-              resultado.innerHTML += '<h4 id="restringido"><b>Sob certas restrições</b> <br> Você <u>pode jogar</u> o CAPLOL, mas possui restrições, verifique as regras!</h4>';
-            } else {
-              resultado.innerHTML = '<h1>Elo</h1> ' + '<h2>' + data[0].tier + ' ' + data[0].rank + ' ' + data[0].leaguePoints + ' LP' + '</h2>' + '<br>';
-              resultado.innerHTML += '<h1>Vitórias</h1> ' + '<h2>' + data[0].wins + '</h2>';
-              if (data[0].wins <= 35) {
-                resultado.innerHTML += '<h3><b>Inválido</b> <br> A quantidade de vitórias precisa ser maior que 35.</h3>';
+          if (data) {
+            if (data[0].queueType === 'RANKED_SOLO_5x5') {
+              if (data[0].tier === 'DIAMOND' || data[0].tier === 'MASTER' || data[0].tier === 'GRANDMASTER' || data[0].tier === 'CHALLENGER') {
+                resultado.innerHTML = '<h1>Elo</h1> ' + '<h2>' + data[0].tier + ' ' + data[0].rank + ' ' + data[0].leaguePoints + ' LP' + '</h2>' + '<br>';
+                resultado.innerHTML += '<h1>Vitórias</h1> ' + '<h2>' + data[0].wins + '</h2>';
+                resultado.innerHTML += '<h4 id="restringido"><b>Sob certas restrições</b> <br> Você <u>pode jogar</u> o CAPLOL, mas possui restrições, verifique as regras!</h4>';
               } else {
-                resultado.innerHTML += '<br>' + '<h4><b>Válido</b> <br> Você está pronto para jogar o CAPLOL.</h4>';
+                resultado.innerHTML = '<h1>Elo</h1> ' + '<h2>' + data[0].tier + ' ' + data[0].rank + ' ' + data[0].leaguePoints + ' LP' + '</h2>' + '<br>';
+                resultado.innerHTML += '<h1>Vitórias</h1> ' + '<h2>' + data[0].wins + '</h2>';
+                if (data[0].wins <= 35) {
+                  resultado.innerHTML += '<h3><b>Inválido</b> <br> A quantidade de vitórias precisa ser maior que 35.</h3>';
+                } else {
+                  resultado.innerHTML += '<br>' + '<h4><b>Válido</b> <br> Você está pronto para jogar o CAPLOL.</h4>';
+                }
+              }
+            } else {
+              if (data[1].tier === 'DIAMOND' || data[1].tier === 'MASTER' || data[1].tier === 'GRANDMASTER' || data[1].tier === 'CHALLENGER') {
+                resultado.innerHTML = '<h1>Elo</h1> ' + '<h2>' + data[1].tier + ' ' + data[1].rank + ' ' + data[1].leaguePoints + ' LP' + '</h2>' + '<br>';
+                resultado.innerHTML += '<h1>Vitórias</h1> ' + '<h2>' + data[1].wins + '</h2>';
+                resultado.innerHTML += '<h4 id="restringido"><b>Sob certas restrições</b> <br> Você <u>pode jogar</u> o CAPLOL, mas possui restrições, verifique as regras!</h4>';
+              } else {
+                resultado.innerHTML = '<h1>Elo</h1> ' + '<h2>' + data[1].tier + ' ' + data[1].rank + ' ' + data[1].leaguePoints + ' LP' + '</h2>' + '<br>';
+                resultado.innerHTML += '<h1>Vitórias</h1> ' + '<h2>' + data[1].wins + '</h2>';
+                if (data[1].wins <= 35) {
+                  resultado.innerHTML += '<h3><b>Inválido</b> <br> A quantidade de vitórias precisa ser maior que 35.</h3>';
+                } else {
+                  resultado.innerHTML += '<br>' + '<h4><b>Válido</b> <br> Você está pronto para jogar o CAPLOL.</h4>';
+                }
               }
             }
           } else {
