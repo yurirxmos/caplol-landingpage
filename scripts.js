@@ -81,13 +81,9 @@ function pesquisarJogador() {
       
       var jogadorId = data.id;
 
-      console.log(jogadorId);
-
       fetch('https://br1.api.riotgames.com/lol/league/v4/entries/by-summoner/' + jogadorId + '?api_key=' + API_KEY)
         .then(response => response.json())
         .then(data => {
-          
-          console.log(data);
 
           var resultado = document.getElementById('resultado');
           resultado.style.display = 'block';
