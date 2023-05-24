@@ -296,21 +296,6 @@ hr {
     color: #ec3737;
 }
 
-#registro a {
-    margin-top: 1rem;
-    text-decoration: none;
-    font-weight: 1000;
-    font-size: 32px;
-    letter-spacing: 0px;
-    color: white;
-    border-bottom: solid 1px #37ec64;
-}
-
-#registro a:hover {
-    transition: 300ms;
-    color: #37ec64;
-}
-
 /* AGUARDANDO API DA RIOT */
 
 #verificacao h1 {

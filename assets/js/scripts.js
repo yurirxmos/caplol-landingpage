@@ -121,3 +121,16 @@ function pesquisarJogador() {
       console.log('Erro na obtenção do ID do jogador', error);
     });
 }
+
+
+//DIV INSCRIÇÃO
+function toggleFormInscricao() {
+  var checkbox = document.getElementById("myCheckbox");
+  var formInscricao = document.getElementById("form-inscricao");
+  
+  if (checkbox.checked) {
+    formInscricao.style.display = "block";
+  } else {
+    formInscricao.style.display = "none";
+  }
+}
