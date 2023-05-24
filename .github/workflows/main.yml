@@ -13,31 +13,13 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v2
 
-      - name: Obter artefatos da ação
-        id: get-artifacts
-        run: |
-          echo "::set-env name=GITHUB_TOKEN::${{ secrets.GITHUB_TOKEN }}"
-          echo "::set-output name=token::${{ secrets.GITHUB_TOKEN }}"
-
-          # Obter a lista de artefatos
-          artifacts=$(curl -s \
-            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/repos/yurirxmos/caplol-site/actions/artifacts")
-
-          # Encontrar o ID do artefato desejado
-          artifact_id=$(echo "$artifacts" | jq -r '.artifacts[] | select(.name == "env-vars") | .id')
-
-          echo "::set-output name=artifact_id::$artifact_id"
-
-      - name: Download do arquivo de variáveis de ambiente
-        id: download-artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: env-vars
-          path: .env
-
       - name: Configurar ambiente
         run: |
           echo "API_KEY=${{ secrets.API_KEY }}" >> .env
           echo "GIT_KEY=${{ secrets.GIT_KEY }}" >> .env
+
+      - name: Upload do arquivo de variáveis de ambiente
+        uses: actions/upload-artifact@v2
+        with:
+          name: env-vars
+          path: .env
