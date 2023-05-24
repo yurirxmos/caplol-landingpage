@@ -342,6 +342,35 @@ hr {
     outline: none;
 }
 
+
+.verificar-conteudo button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 1rem;
+
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+}
+
+.verificar-conteudo button:hover {
+    background-color: #ec3737;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.erroMensagem {
+    font-size: 12px;
+    color: #ec3737;
+}
+
 .resultado {
     display: none;
     margin-right: auto;
@@ -428,31 +457,6 @@ hr {
     /*  RESULTADO RESTRINGIDO */
     background-color: rgb(103, 103, 255);
     
-}
-
-
-.verificar-conteudo button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 10%;
-    padding: 0.5rem 0.5rem;
-    margin-bottom: 1rem;
-
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    border: none;
-    background-color: #333;
-    color: white;
-    border-radius: 10px;
-}
-
-.verificar-conteudo button:hover {
-    background-color: #ec3737;
-    cursor: pointer;
-    transition: 400ms;
 }
 
 #twitch-embed {
@@ -786,7 +790,6 @@ hr {
     color: #ec3737;
 }
 
-
 @media only screen and (max-width: 768px) {
     html {
         font-family: 'Inter', sans-serif;
@@ -871,6 +874,10 @@ hr {
     .icones {
         flex-direction: column;
         gap: 20px;
+    }
+
+    .resultado {
+        width: auto;
     }
   }
   

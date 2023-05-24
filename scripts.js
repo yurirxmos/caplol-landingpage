@@ -52,6 +52,21 @@ atualizarContador();
 
 
 // BUSCAR JOGADOR
+function verificarInput() {
+  var nickInput = document.getElementById("nickInput");
+  var nick = nickInput.value.trim(); // Remove espaços em branco do início e do fim do valor
+
+  var erroMensagem = document.getElementById("erroMensagem"); // Elemento para exibir mensagem de erro
+
+  if (nick !== "") {
+    pesquisarJogador();
+    erroMensagem.textContent = "";
+  } else {
+    erroMensagem.textContent = "Por favor, insira um nick válido.";
+    
+  }
+}
+
 function pesquisarJogador() {
   event.preventDefault();
   var nick = document.getElementById('nickInput').value;

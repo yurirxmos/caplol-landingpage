@@ -434,10 +434,11 @@
           id="nickInput"
           type="text"
           placeholder="Insira o nick aqui"
-          required
         />
-        <button type="submit" onclick="pesquisarJogador()">pesquisar</button>
+        <div class="erroMensagem" id="erroMensagem"></div> <!-- Elemento para exibir mensagem de erro -->
+        <button type="submit" onclick="verificarInput()">pesquisar</button>
       </form>
+      
     </div>
 
     
