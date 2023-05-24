@@ -3,17 +3,17 @@ name: Meu Fluxo de Trabalho
 on:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do código
-      uses: actions/checkout@v2
+      - name: Checkout do cÃ³digo
+        uses: actions/checkout@v2
 
       - name: Configurar ambiente
-      run: |
-        npm install
-        echo "API_KEY=${{ secrets.API_KEY }}" >> .env
+        run: |
+          npm install
+          echo "API_KEY=${{ secrets.API_KEY }}" >> .env
