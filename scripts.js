@@ -54,48 +54,74 @@ atualizarContador();
 // BUSCAR JOGADOR
 function pesquisarJogador() {
   event.preventDefault();
-  const apiKey = process.env.API_KEY;
   var nick = document.getElementById('nickInput').value;
 
   resultado.innerHTML = '';
 
-  fetch('https://br1.api.riotgames.com/lol/summoner/v4/summoners/by-name/' + encodeURIComponent(nick) + '?api_key=' + apiKey)
-    .then(response => response.json())
-    .then(data => {
-      // Extrair o ID do jogador retornado pela API
-      var jogadorId = data.id;
+  fetch(`https://api.github.com/repos/yurirxmos/caplol-site/actions/artifacts`)
+  .then(response => response.json())
+  .then(data => {
+    const artifact = data.artifacts.find(artifact => artifact.name === 'env-vars');
+    if (artifact) {
+      fetch(`https://api.github.com/repos/yurirxmos/caplol-site/actions/artifacts/${artifact.id}/zip`, {
+        headers: {
+          Authorization: `Bearer ${envVars.GIT_KEY}`,
+        },
+      })
+        .then(response => response.blob())
+        .then(blob => {
+          const fileReader = new FileReader();
+          fileReader.onload = function () {
+            const envText = fileReader.result;
+            const envVars = Object.fromEntries(envText.split('\n').map(line => line.split('=')));
 
-      fetch('https://br1.api.riotgames.com/lol/league/v4/entries/by-summoner/' + jogadorId + '?api_key=' + apiKey)
-        .then(response => response.json())
-        .then(data => {
-          
-          var resultado = document.getElementById('resultado');
-          resultado.style.display = 'block';
+            const apiKey = envVars.API_KEY;
 
-          if (data[0] && data[0].tier && data[0].rank && data[0].leaguePoints) {
-            if (data[0].tier === 'DIAMOND' || data[0].tier === 'MASTER' || data[0].tier === 'GRANDMASTER' || data[0].tier === 'CHALLENGER') {
-              resultado.innerHTML = '<h1>Elo</h1> ' + '<h2>' + data[0].tier + ' ' + data[0].rank + ' ' + data[0].leaguePoints + ' LP' + '</h2>' + '<br>';
-              resultado.innerHTML += '<h4 id="restringido"><b>Sob certas restrições</b> <br> Você <u>pode jogar</u> o CAPLOL, mas possui restrições, verifique as regras!</h4>';
-            } else {
-              resultado.innerHTML = '<h1>Elo</h1> ' + '<h2>' + data[0].tier + ' ' + data[0].rank + ' ' + data[0].leaguePoints + ' LP' + '</h2>' + '<br>';
-              resultado.innerHTML += '<h1>Vitórias</h1> ' + '<h2>' + data[0].wins + '</h2>';
-              if (data[0].wins <= 35) {
-                resultado.innerHTML += '<h3><b>Inválido</b> <br> A quantidade de vitórias precisa ser maior que 35.</h3>';
-              } else {
-                resultado.innerHTML += '<br>' + '<h4><b>Válido</b> <br> Você está pronto para jogar o CAPLOL.</h4>';
-              }
-            }
-          } else {
-            resultado.innerHTML += '<h3><b>Não definido</b> <br> O jogador não foi encontrado ou não está ranqueado.</h3>';
-          }
-          
-        })
+            fetch('https://br1.api.riotgames.com/lol/summoner/v4/summoners/by-name/' + encodeURIComponent(nick) + '?api_key=' + apiKey)
+              .then(response => response.json())
+              .then(data => {
 
-        .catch(error => {
-          console.log('Erro na obtenção das informações do jogador', error);
+                var jogadorId = data.id;
+
+                fetch('https://br1.api.riotgames.com/lol/league/v4/entries/by-summoner/' + jogadorId + '?api_key=' + apiKey)
+                  .then(response => response.json())
+                  .then(data => {
+
+                    var resultado = document.getElementById('resultado');
+                    resultado.style.display = 'block';
+
+                    if (data[0] && data[0].tier && data[0].rank && data[0].leaguePoints) {
+                      if (data[0].tier === 'DIAMOND' || data[0].tier === 'MASTER' || data[0].tier === 'GRANDMASTER' || data[0].tier === 'CHALLENGER') {
+                        resultado.innerHTML = '<h1>Elo</h1> ' + '<h2>' + data[0].tier + ' ' + data[0].rank + ' ' + data[0].leaguePoints + ' LP' + '</h2>' + '<br>';
+                        resultado.innerHTML += '<h4 id="restringido"><b>Sob certas restrições</b> <br> Você <u>pode jogar</u> o CAPLOL, mas possui restrições, verifique as regras!</h4>';
+                      } else {
+                        resultado.innerHTML = '<h1>Elo</h1> ' + '<h2>' + data[0].tier + ' ' + data[0].rank + ' ' + data[0].leaguePoints + ' LP' + '</h2>' + '<br>';
+                        resultado.innerHTML += '<h1>Vitórias</h1> ' + '<h2>' + data[0].wins + '</h2>';
+                        if (data[0].wins <= 35) {
+                          resultado.innerHTML += '<h3><b>Inválido</b> <br> A quantidade de vitórias precisa ser maior que 35.</h3>';
+                        } else {
+                          resultado.innerHTML += '<br>' + '<h4><b>Válido</b> <br> Você está pronto para jogar o CAPLOL.</h4>';
+                        }
+                      }
+                    } else {
+                      resultado.innerHTML += '<h3><b>Não definido</b> <br> O jogador não foi encontrado ou não está ranqueado.</h3>';
+                    }
+
+                  })
+
+                  .catch(error => {
+                    console.log('Erro na obtenção das informações do jogador', error);
+                  });
+              })
+              .catch(error => {
+                console.log('Erro na obtenção do ID do jogador', error);
+              });
+          };
+          fileReader.readAsText(blob);
         });
-    })
-    .catch(error => {
-      console.log('Erro na obtenção do ID do jogador', error);
-    });
+    }
+  })
+  .catch(error => {
+    console.log('Erro ao obter os artefatos do GitHub Actions', error);
+  });
 }
