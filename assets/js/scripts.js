@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function atualizarSpoilers() {
     event.preventDefault();
-    if (spoilersVisiveis) {
+    if (!spoilersVisiveis) {
       jogosDiv.style.filter = "blur(3px)";
       jogosDiv.style.transition = "300ms"
       textoBotao.textContent = "MOSTRAR TODOS SPOILERS";
