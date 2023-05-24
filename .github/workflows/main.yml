@@ -3,15 +3,17 @@ name: Meu Fluxo de Trabalho
 on:
   push:
     branches:
-      - main
+    - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Configurar Variáveis de Ambiente
-      env:
-        API_KEY: ${{ secrets.API_KEY }}
+      - name: Checkout do código
+      uses: actions/checkout@v2
+
+      - name: Configurar ambiente
       run: |
-        echo "Minha chave de API: $API_KEY"
+        npm install
+        echo "API_KEY=${{ secrets.API_KEY }}" >> .env
