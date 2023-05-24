@@ -54,6 +54,7 @@ atualizarContador();
 // BUSCAR JOGADOR
 function pesquisarJogador() {
   event.preventDefault();
+  const apiKey = process.env.API_KEY;
   var nick = document.getElementById('nickInput').value;
 
   resultado.innerHTML = '';

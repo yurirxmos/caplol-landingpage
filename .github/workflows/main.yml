@@ -1,0 +1,17 @@
+name: Meu Fluxo de Trabalho
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Configurar Variáveis de Ambiente
+      env:
+        API_KEY: ${{ secrets.API_KEY }}
+      run: |
+        echo "Minha chave de API: $API_KEY"
