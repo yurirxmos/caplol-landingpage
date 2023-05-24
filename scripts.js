@@ -93,7 +93,11 @@ function pesquisarJogador() {
               if (data[0].tier === 'DIAMOND' || data[0].tier === 'MASTER' || data[0].tier === 'GRANDMASTER' || data[0].tier === 'CHALLENGER') {
                 resultado.innerHTML = '<h1>Elo</h1> ' + '<h2>' + data[0].tier + ' ' + data[0].rank + ' ' + data[0].leaguePoints + ' LP' + '</h2>' + '<br>';
                 resultado.innerHTML += '<h1>Vitórias</h1> ' + '<h2>' + data[0].wins + '</h2>';
-                resultado.innerHTML += '<h4 id="restringido"><b>Sob certas restrições</b> <br> Você <u>pode jogar</u> o CAPLOL, mas possui restrições, verifique as regras!</h4>';
+                if (data[0].wins <= 35) {
+                  resultado.innerHTML += '<h3><b>Inválido</b> <br> A quantidade de vitórias precisa ser maior que 35.</h3>';
+                } else {
+                  resultado.innerHTML += '<h4 id="restringido"><b>Sob certas restrições</b> <br> Você <u>pode jogar</u> o CAPLOL, mas possui restrições, verifique as regras!</h4>';
+                }
               } else {
                 resultado.innerHTML = '<h1>Elo</h1> ' + '<h2>' + data[0].tier + ' ' + data[0].rank + ' ' + data[0].leaguePoints + ' LP' + '</h2>' + '<br>';
                 resultado.innerHTML += '<h1>Vitórias</h1> ' + '<h2>' + data[0].wins + '</h2>';
@@ -107,7 +111,11 @@ function pesquisarJogador() {
               if (data[1].tier === 'DIAMOND' || data[1].tier === 'MASTER' || data[1].tier === 'GRANDMASTER' || data[1].tier === 'CHALLENGER') {
                 resultado.innerHTML = '<h1>Elo</h1> ' + '<h2>' + data[1].tier + ' ' + data[1].rank + ' ' + data[1].leaguePoints + ' LP' + '</h2>' + '<br>';
                 resultado.innerHTML += '<h1>Vitórias</h1> ' + '<h2>' + data[1].wins + '</h2>';
-                resultado.innerHTML += '<h4 id="restringido"><b>Sob certas restrições</b> <br> Você <u>pode jogar</u> o CAPLOL, mas possui restrições, verifique as regras!</h4>';
+                if (data[1].wins <= 35) {
+                  resultado.innerHTML += '<h3><b>Inválido</b> <br> A quantidade de vitórias precisa ser maior que 35.</h3>';
+                } else {
+                  resultado.innerHTML += '<h4 id="restringido"><b>Sob certas restrições</b> <br> Você <u>pode jogar</u> o CAPLOL, mas possui restrições, verifique as regras!</h4>';
+                }
               } else {
                 resultado.innerHTML = '<h1>Elo</h1> ' + '<h2>' + data[1].tier + ' ' + data[1].rank + ' ' + data[1].leaguePoints + ' LP' + '</h2>' + '<br>';
                 resultado.innerHTML += '<h1>Vitórias</h1> ' + '<h2>' + data[1].wins + '</h2>';
