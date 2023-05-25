@@ -112,6 +112,32 @@ hr {
     border-bottom: solid 1px #ec3737;
 }
 
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #222222;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-toggle img {
+    vertical-align: middle;
+    width: 5px;
+    height: 5px;
+}
+
+.dropdown-menu a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 
 .contagem-inicio {
     display: block;
@@ -857,6 +883,7 @@ hr {
         transition: 500ms;
         border-bottom: solid 1px #ec3737;
     }
+
 
     .bloco h1 {
         font-size: 20px;
