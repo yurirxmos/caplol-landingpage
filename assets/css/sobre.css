@@ -1,4 +1,8 @@
 .sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: #242424;
 }
 
@@ -30,7 +34,13 @@
     margin: 0;
 }
 
-img {
+.sobre img {
+
+    width: 65%;
+    height: 65%;    
+}
+
+.sobre-conteudo img {
     width: 300px;
     height: 300px;
 }
