@@ -5,6 +5,7 @@
     --lbd: rgb(247, 192, 90);
     --unb: rgb(90, 210, 247);
     --hez: rgb(235, 235, 235);
+    --fag: rgb(234, 90, 247);
 
     --vitoria: rgb(153, 255, 153);
     --derrota: rgb(255, 153, 153);
@@ -286,26 +287,29 @@ hr {
     font-weight: 1000;
 }
 
-.mvp-conteudo span#INV {
+span#INV {
     color: var(--inv);
 }
 
-.mvp-conteudo span#INTZ {
+span#INTZ {
     color: var(--intz);
 }
 
-.mvp-conteudo span#OLY {
+span#OLY {
     color: var(--oly);
 }
 
-.mvp-conteudo span#LBD {
+span#LBD {
     color: var(--lbd);
 }
 
-.mvp-conteudo span#UNB {
+span#UNB {
     color: var(--unb);
 }
 
+span#FAG {
+    color: var(--fag);
+}
 
 #regras a {
     margin-top: 1rem;
