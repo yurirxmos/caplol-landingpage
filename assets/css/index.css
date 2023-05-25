@@ -593,6 +593,13 @@ hr {
     text-align: center;
 }
 
+.nicks div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
 .nicks {
     display: flex;
     justify-content: center;
@@ -600,6 +607,12 @@ hr {
     color: white;
     gap: 10px;
     margin: 1rem;
+}
+
+.nicks img {
+    margin: 0;
+    width: 15px;
+    height: 15px;
 }
 
 .tabela {
