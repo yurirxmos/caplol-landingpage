@@ -315,4 +315,8 @@ img {
         width: 150px;
         height: 150px;
     }
+
+    .resultado {
+        width: 90%;
+    }
 }
