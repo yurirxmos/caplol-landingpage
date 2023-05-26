@@ -7,6 +7,10 @@
     --hez: rgb(235, 235, 235);
     --fag: rgb(234, 90, 247);
     --ump: rgb(92, 72, 72);
+    --wol: rgb(35, 37, 163);
+    --idn: rgb(247, 90, 90);
+    --zdc: rgb(196, 0, 0);
+    --vde: rgb(90, 247, 208);
 
     --vitoria: rgb(153, 255, 153);
     --derrota: rgb(255, 153, 153);
@@ -314,6 +318,22 @@ span#FAG {
 
 span#UMP {
     color: var(--ump);
+}
+
+span#WOL {
+    color: var(--wol);
+}
+
+span#IDN {
+    color: var(--idn);
+}
+
+span#ZDC {
+    color: var(--zdc);
+}
+
+span#VDE {
+    color: var(--vde);
 }
 
 #regras a {
