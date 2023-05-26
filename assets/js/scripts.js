@@ -68,10 +68,9 @@ function verificarInput() {
 }
 
 function pesquisarJogador() {
+  const API_KEY = "RGAPI-7baeb44a-4ade-4482-b126-2bb126cdbe11";
   event.preventDefault();
   var nick = document.getElementById('nickInput').value;
-  const API_KEY = "RGAPI-7baeb44a-4ade-4482-b126-2bb126cdbe11";
-  
 
   resultado.innerHTML = '';
 
@@ -90,9 +89,29 @@ function pesquisarJogador() {
 
           if (data && data.length > 0) {
             const playerData = data[0].queueType === 'RANKED_SOLO_5x5' ? data[0] : data[1];
-          
-            resultado.innerHTML = '<h1>Elo</h1> ' + '<h2>' + playerData.tier + ' ' + playerData.rank + ' ' + playerData.leaguePoints + ' LP' + '</h2>' + '<br>';
+            
+            var tierImageSrc = '';
+            if (playerData.tier === 'BRONZE') {
+              tierImageSrc = '<img src="./assets/img/elos/bronze.webp">';
+            } else if (playerData.tier === 'SILVER') {
+              tierImageSrc = '<img src="./assets/img/elos/silver.webp">';
+            } else if (playerData.tier === 'GOLD') {
+              tierImageSrc = '<img src="./assets/img/elos/gold.webp">';
+            } else if (playerData.tier === 'PLATINUM') {
+              tierImageSrc = '<img src="./assets/img/elos/platinum.webp">';
+            } else if (playerData.tier === 'DIAMOND') {
+              tierImageSrc = '<img src="./assets/img/elos/diamond.webp">';
+            } else if (playerData.tier === 'MASTER') {
+              tierImageSrc = '<img src="./assets/img/elos/master.webp">';
+            } else if (playerData.tier === 'GRANDMASTER') {
+              tierImageSrc = '<img src="./assets/img/elos/grandmaster.webp">';
+            } else if (playerData.tier === 'CHALLENGER') {
+              tierImageSrc = '<img src="./assets/img/elos/challenger.webp">';
+            }
+            
+            resultado.innerHTML = tierImageSrc + '<h2>' + playerData.tier + ' ' + playerData.rank + ' ' + playerData.leaguePoints + ' LP' + '</h2>' + '<br>';
             resultado.innerHTML += '<h1>Vitórias</h1> ' + '<h2>' + playerData.wins + '</h2>';
+            
           
             if (playerData.tier === 'DIAMOND' || playerData.tier === 'MASTER' || playerData.tier === 'GRANDMASTER' || playerData.tier === 'CHALLENGER') {
               if (playerData.wins < 35) {
@@ -104,7 +123,7 @@ function pesquisarJogador() {
               if (playerData.wins < 35) {
                 resultado.innerHTML += '<h3><b>Inválido</b> <br> A quantidade de vitórias precisa ser maior que 35.</h3>';
               } else {
-                resultado.innerHTML += '<br>' + '<h4><b>Válido</b> <br> Você está pronto para jogar o CAPLOL.</h4>';
+                resultado.innerHTML += '<h4><b>Válido</b> <br> Você está pronto para jogar o CAPLOL.</h4>';
               }
             }
           } else {

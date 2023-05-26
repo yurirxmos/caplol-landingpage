@@ -417,6 +417,11 @@ span#FAG {
     font-weight: 1000;
 }
 
+.resultado img {
+    width: 80px;
+    height: 80px;
+}
+
 .resultado h1:nth-child(1) {
     margin-top: 1rem;
 }
@@ -451,10 +456,11 @@ span#FAG {
     margin-bottom: 1rem;
     font-weight: 400;
     color: #ffffff;
-    background-color: #ec3737;
     border-radius: 4px;
     width: 60%;
     padding: 5px;
+
+    background-color: #ec3737;
 
 }
 
@@ -469,10 +475,11 @@ span#FAG {
     margin-bottom: 1rem;
     font-weight: 400;
     color: #ffffff;
-    background-color: #208f3c;
     border-radius: 4px;
     width: 60%;
     padding: 5px;
+
+    background-color: #208f3c;
 
 }
 
