@@ -95,13 +95,13 @@ function pesquisarJogador() {
             resultado.innerHTML += '<h1>Vitórias</h1> ' + '<h2>' + playerData.wins + '</h2>';
           
             if (playerData.tier === 'DIAMOND' || playerData.tier === 'MASTER' || playerData.tier === 'GRANDMASTER' || playerData.tier === 'CHALLENGER') {
-              if (playerData.wins <= 35) {
+              if (playerData.wins < 35) {
                 resultado.innerHTML += '<h3><b>Inválido</b> <br> A quantidade de vitórias precisa ser maior que 35.</h3>';
               } else {
                 resultado.innerHTML += '<h4 id="restringido"><b>Sob certas restrições</b> <br> Você <u>pode jogar</u> o CAPLOL, mas possui restrições, verifique as regras!</h4>';
               }
             } else {
-              if (playerData.wins <= 35) {
+              if (playerData.wins < 35) {
                 resultado.innerHTML += '<h3><b>Inválido</b> <br> A quantidade de vitórias precisa ser maior que 35.</h3>';
               } else {
                 resultado.innerHTML += '<br>' + '<h4><b>Válido</b> <br> Você está pronto para jogar o CAPLOL.</h4>';
