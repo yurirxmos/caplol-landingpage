@@ -60,21 +60,26 @@
     <!-- VEFIFICAÇÃO -->
 
     <div class="bloco" id="verificacao">
-      <h2>\ DESCUBRA SE SUA CONTA ESTÁ APTA /</h2>
+      <h2>\ DESCUBRA SE SUA EQUIPE ESTÁ APTA /</h2>
       <br />
       <h1>VERIFICAR</h1>
     </div>
 
     <div class="verificar">
       <form class="verificar-conteudo" onsubmit="return false;">
-        <input id="nickInput" type="text" placeholder="Insira o nick aqui" />
+        <input id="nickInput1" type="text" placeholder="Insira o nick aqui" />
+        <input id="nickInput2" type="text" placeholder="Insira o nick aqui" />
+        <input id="nickInput3" type="text" placeholder="Insira o nick aqui" />
+        <input id="nickInput4" type="text" placeholder="Insira o nick aqui" />
+        <input id="nickInput5" type="text" placeholder="Insira o nick aqui" />
         <div class="erroMensagem" id="erroMensagem"></div>
-        <!-- Elemento para exibir mensagem de erro -->
-        <button type="submit" onclick="verificarInput()">pesquisar</button>
+        <button type="submit" onclick="verificarInputs()">pesquisar</button>
       </form>
     </div>
+    
 
-    <div class="resultado" id="resultado"></div>
+    <div id="resultadosContainer"></div>
+
 
     <div class="bloco" id="registro">
       <h2>\ E AÍ, QUER PARTICIPAR? /</h2>

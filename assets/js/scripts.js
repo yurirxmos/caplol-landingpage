@@ -1,5 +1,5 @@
 // BOTÃO DE MOSTRAR/OCULTAR JOGOS
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   var botao = document.getElementById("spoilerButton");
   var imagem = document.querySelector(".mostrarJogos img");
   var jogosDiv = document.querySelector(".jogos");
@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", function() {
       textoBotao.textContent = "OCULTAR TODOS SPOILERS";
       imagem.src = "/assets/img/icones/spoilers-on.png";
     }
-  }  
+  }
 
   atualizarSpoilers();
 
-  botao.addEventListener("click", function() {
+  botao.addEventListener("click", function () {
     spoilersVisiveis = !spoilersVisiveis;
     atualizarSpoilers();
   });
@@ -51,47 +51,58 @@ function atualizarContador() {
 atualizarContador();
 
 
-// BUSCAR JOGADOR
-function verificarInput() {
-  var nickInput = document.getElementById("nickInput");
-  var nick = nickInput.value.trim(); // Remove espaços em branco do início e do fim do valor
+function verificarInputs() {
+  limparResultados();
 
-  var erroMensagem = document.getElementById("erroMensagem"); // Elemento para exibir mensagem de erro
+  var nicks = [
+    document.getElementById('nickInput1').value,
+    document.getElementById('nickInput2').value,
+    document.getElementById('nickInput3').value,
+    document.getElementById('nickInput4').value,
+    document.getElementById('nickInput5').value
+  ];
 
-  if (nick !== "") {
-    pesquisarJogador();
-    erroMensagem.textContent = "";
-  } else {
-    erroMensagem.textContent = "Por favor, insira um nick válido.";
-    
+  nicks.forEach(function (nick) {
+    if (nick.trim() !== '') {
+      pesquisarJogador(nick);
+    }
+  });
+}
+
+function limparResultados() {
+  var resultadosContainer = document.getElementById('resultadosContainer');
+  while (resultadosContainer.firstChild) {
+    resultadosContainer.firstChild.remove();
   }
 }
 
-function pesquisarJogador() {
+
+function pesquisarJogador(nick) {
   const API_KEY = "RGAPI-7baeb44a-4ade-4482-b126-2bb126cdbe11";
   event.preventDefault();
-  var nick = document.getElementById('nickInput').value;
 
-  resultado.innerHTML = '';
+  // Cria uma nova div de resultados
+  var novaDivResultados = document.createElement('div');
+  novaDivResultados.className = 'resultado';
+  novaDivResultados.style.display = 'flex';
 
   fetch('https://br1.api.riotgames.com/lol/summoner/v4/summoners/by-name/' + encodeURIComponent(nick) + '?api_key=' + API_KEY)
     .then(response => response.json())
     .then(data => {
-      
+
       var jogadorId = data.id;
 
       fetch('https://br1.api.riotgames.com/lol/league/v4/entries/by-summoner/' + jogadorId + '?api_key=' + API_KEY)
         .then(response => response.json())
         .then(data => {
 
-          var resultado = document.getElementById('resultado');
-          resultado.style.display = 'block';
-
           if (data && data.length > 0) {
             const playerData = data[0].queueType === 'RANKED_SOLO_5x5' ? data[0] : data[1];
-            
+
             var tierImageSrc = '';
-            if (playerData.tier === 'BRONZE') {
+            if (playerData.tier === 'IRON') {
+              tierImageSrc = '<img src="./assets/img/elos/iron.webp">';
+            } else if (playerData.tier === 'BRONZE') {
               tierImageSrc = '<img src="./assets/img/elos/bronze.webp">';
             } else if (playerData.tier === 'SILVER') {
               tierImageSrc = '<img src="./assets/img/elos/silver.webp">';
@@ -108,28 +119,38 @@ function pesquisarJogador() {
             } else if (playerData.tier === 'CHALLENGER') {
               tierImageSrc = '<img src="./assets/img/elos/challenger.webp">';
             }
-            
-            resultado.innerHTML = tierImageSrc + '<h2>' + playerData.tier + ' ' + playerData.rank + ' ' + playerData.leaguePoints + ' LP' + '</h2>' + '<br>';
-            resultado.innerHTML += '<h1>Vitórias</h1> ' + '<h2>' + playerData.wins + '</h2>';
-            
-          
+
+            novaDivResultados.innerHTML =
+              tierImageSrc +
+              playerData.summonerName +
+              '<div class="jogador">' +
+              '<h2>' +
+              playerData.tier + ' ' + playerData.rank + ' ' + playerData.leaguePoints + ' LP' +
+              '</h2>' +
+              '<h2>' +
+              playerData.wins +
+              ' vitórias </h2>';
+
             if (playerData.tier === 'DIAMOND' || playerData.tier === 'MASTER' || playerData.tier === 'GRANDMASTER' || playerData.tier === 'CHALLENGER') {
               if (playerData.wins < 35) {
-                resultado.innerHTML += '<h3><b>Inválido</b> <br> A quantidade de vitórias precisa ser maior que 35.</h3>';
+                novaDivResultados.innerHTML += '<h3><b>Inválido</b> <br> A quantidade de vitórias precisa ser maior que 35.</h3>';
               } else {
-                resultado.innerHTML += '<h4 id="restringido"><b>Sob certas restrições</b> <br> Você <u>pode jogar</u> o CAPLOL, mas possui restrições, verifique as regras!</h4>';
+                novaDivResultados.innerHTML += '<h4 id="restringido"><b>Sob certas restrições</b> <br> Você pode jogar o CAPLOL, mas possui restrições, verifique as regras!</h4>';
               }
             } else {
               if (playerData.wins < 35) {
-                resultado.innerHTML += '<h3><b>Inválido</b> <br> A quantidade de vitórias precisa ser maior que 35.</h3>';
+                novaDivResultados.innerHTML += '<h3><b>Inválido</b> <br> A quantidade de vitórias precisa ser maior que 35.</h3>';
               } else {
-                resultado.innerHTML += '<h4><b>Válido</b> <br> Você está pronto para jogar o CAPLOL.</h4>';
+                novaDivResultados.innerHTML += '<h4><b>Válido</b> <br> Você está pronto para jogar o CAPLOL.</h4>';
               }
             }
           } else {
-            resultado.innerHTML += '<h3><b>Não definido</b> <br> O jogador não foi encontrado ou não está ranqueado.</h3>';
-          }          
-          
+            novaDivResultados.innerHTML += '<h3><b>Não definido</b> <br> O jogador não foi encontrado ou não está ranqueado.</h3>';
+          }
+
+          // Adiciona a nova div de resultados ao contêiner
+          var resultadosContainer = document.getElementById('resultadosContainer');
+          resultadosContainer.appendChild(novaDivResultados);
         })
 
         .catch(error => {
@@ -142,11 +163,13 @@ function pesquisarJogador() {
 }
 
 
+
+
 //DIV INSCRIÇÃO
 function toggleFormInscricao() {
   var checkbox = document.getElementById("myCheckbox");
   var formInscricao = document.getElementById("form-inscricao");
-  
+
   if (checkbox.checked) {
     formInscricao.style.display = "block";
   } else {
@@ -163,7 +186,7 @@ function organizarTabela() {
   var liItems = Array.from(tabela.getElementsByTagName('li'));
 
   // Ordena os elementos com base no número de vitórias e tempo
-  liItems.sort(function(a, b) {
+  liItems.sort(function (a, b) {
     // Obtém os elementos de pontuação (vitórias) e tempo de cada <li>
     var scoreA = parseInt(a.getElementsByClassName('score')[1].innerText);
     var scoreB = parseInt(b.getElementsByClassName('score')[1].innerText);
@@ -188,7 +211,7 @@ function organizarTabela() {
   });
 
   // Atualiza a tabela com os elementos reordenados
-  liItems.forEach(function(li, index) {
+  liItems.forEach(function (li, index) {
     // Atualiza a posição no <li>
     li.getElementsByTagName('b')[0].innerText = (index + 1) + '.';
 
