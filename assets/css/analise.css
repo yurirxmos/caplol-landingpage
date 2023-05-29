@@ -1,0 +1,307 @@
+#verificacao h1 {
+    font-weight: 1000;
+    font-size: 32px;
+    letter-spacing: 0px;
+    color: white;
+}
+
+.verificar-conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
+
+    margin-top: 0.3rem 2rem;
+    margin-bottom: 10px;
+}
+
+.verificar-conteudo input {
+    margin: 0.2rem;
+    padding: 0.7rem 0.5rem;
+    text-align: center;
+    background-color: #181818;
+    border-radius: 13px;
+    border: none;
+    font-size: 16px;
+
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.verificar-conteudo input:focus {
+    border: none;
+    outline: none;
+}
+
+.verificar-conteudo ::placeholder {
+    font-size: 13px;
+    opacity: 40%;
+}
+
+.verificar-conteudo button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 1rem;
+
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+}
+
+.verificar-conteudo button:hover {
+    background-color: #ec3737;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+
+#inputsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 60%;
+}
+
+.erroMensagem {
+    font-size: 12px;
+    color: #ec3737;
+}
+
+#addButton {
+    padding: 0.4rem 2rem;
+}
+
+#resultadosContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.resultado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 15%;
+    min-height: 55vh;
+    background-color: #181818;
+    border-radius: 20px;
+    color: white;
+}
+
+
+.jogador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.jogador h2 {
+    margin-top: 8px !important;
+}
+
+.resultado h1 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-shadow: 2px 0px 4px black;
+    color: #ffffff;
+    font-weight: 1000;
+}
+
+.resultado img {
+    align-self: center;
+    width: 80px;
+    height: 80px;
+}
+
+.resultado h1:nth-child(1) {
+    margin-top: 1rem;
+}
+
+.resultado h1:nth-child(2) {
+    margin-bottom: 0;
+}
+
+.resultado h2 {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15px;
+    font-size: 16px;
+    margin-bottom: 0;
+    text-shadow: 2px 0px 4px black;
+    color: #ffffff;
+    background-color: #222222;
+    border-radius: 4px;
+    width: fit-content;
+    padding: 5px;
+}
+
+.resultado h3 {
+    /*  RESULTADO INVALIDO */
+
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1rem;
+    font-size: 12px;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    color: #ffffff;
+    border-radius: 4px;
+    width: 60%;
+    min-height: 10vh;
+    padding: 5px;
+
+    background-color: #ec3737;
+
+}
+
+.resultado h4 {
+    /*  RESULTADO VALIDADO */
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1rem;
+    font-size: 12px;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    color: #ffffff;
+    border-radius: 4px;
+    width: 60%;
+    min-height: 10vh;
+    padding: 5px;
+
+    background-color: #208f3c;
+}
+
+.resultado h4#restringido {
+    /*  RESULTADO RESTRINGIDO */
+    background-color: rgb(103, 103, 255);
+
+}
+
+.conta-conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
+
+    margin-top: 0.3rem 2rem;
+    margin-bottom: 10px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper input {
+    padding-left: 30px;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 20px;
+    color: white;
+}
+
+.conta-conteudo input {
+    margin: 0.2rem;
+    padding: 0.7rem 2.5rem;
+    text-align: center;
+    background-color: #181818;
+    border-radius: 13px;
+    border: none;
+    font-size: 16px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.conta-conteudo input::placeholder {
+    color: rgb(255, 62, 62);
+}
+
+.conta-conteudo input:focus {
+    border: none;
+    outline: none;
+}
+
+.conta-conteudo ::placeholder {
+    font-size: 13px;
+    opacity: 40%;
+}
+
+.conta-conteudo button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 1rem;
+
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+}
+
+.conta-conteudo button:hover {
+    background-color: #ec3737;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    .inscricao-conteudo {
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .texto {
+        width: 100%;
+    }
+
+    .inscricao-conteudo h1 {
+        text-align: center;
+    }
+
+    .inscricao-conteudo img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .resultado {
+        width: 90%;
+    }
+}

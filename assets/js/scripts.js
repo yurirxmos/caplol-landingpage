@@ -28,10 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
     atualizarSpoilers();
   });
 });
-
-
-
-// CONTADOR NA TELA 
 var dataAlvo = new Date("2023-07-01"); // Define a data alvo
 
 function atualizarContador() {
@@ -47,25 +43,56 @@ function atualizarContador() {
   contadorElemento.textContent = dias + "d " + horas + "h " + minutos + "m " + segundos + "s";
   setTimeout(atualizarContador, 1000);
 }
-
 atualizarContador();
 
+function adicionarInput() {
+  var inputsContainer = document.getElementById('inputsContainer');
+  var numInputs = inputsContainer.childElementCount;
+
+  if (numInputs >= 10) {
+    return;
+  }
+
+  var newInput = document.createElement('input');
+  newInput.type = 'text';
+  newInput.placeholder = 'Insira o nick aqui';
+  newInput.id = 'nickInput' + numInputs;
+
+  inputsContainer.appendChild(newInput);
+
+  if (numInputs + 1 >= 10) {
+    document.getElementById('addButton').style.display = "none";
+  }
+}
 
 function verificarInputs() {
   limparResultados();
 
-  var nicks = [
-    document.getElementById('nickInput1').value,
-    document.getElementById('nickInput2').value,
-    document.getElementById('nickInput3').value,
-    document.getElementById('nickInput4').value,
-    document.getElementById('nickInput5').value
-  ];
+  var inputsContainer = document.getElementById('inputsContainer');
+  var inputs = inputsContainer.getElementsByTagName('input');
+  var nicks = [];
+
+  for (var i = 0; i < inputs.length; i++) {
+    var inputValue = inputs[i].value;
+
+    if (inputValue.trim() !== '') {
+      nicks.push(inputValue);
+    }
+  }
+
+  var erroMensagem = document.getElementById('erroMensagem');
+  if (nicks.length === 0) {
+    erroMensagem.textContent = 'Preencha pelo menos um campo.';
+    erroMensagem.style.display = 'block';
+    return;
+  } else {
+    erroMensagem.style.display = 'none';
+  }
+
+  
 
   nicks.forEach(function (nick) {
-    if (nick.trim() !== '') {
-      pesquisarJogador(nick);
-    }
+    pesquisarJogador(nick);
   });
 }
 
@@ -125,7 +152,7 @@ function pesquisarJogador(nick) {
               playerData.summonerName +
               '<div class="jogador">' +
               '<h2>' +
-              playerData.tier + ' ' + playerData.rank + ' ' + playerData.leaguePoints + ' LP' +
+              playerData.tier + ' ' + playerData.rank + '<br>' + playerData.leaguePoints + ' LP' +
               '</h2>' +
               '<h2>' +
               playerData.wins +
@@ -135,13 +162,13 @@ function pesquisarJogador(nick) {
               if (playerData.wins < 35) {
                 novaDivResultados.innerHTML += '<h3><b>Inválido</b> <br> A quantidade de vitórias precisa ser maior que 35.</h3>';
               } else {
-                novaDivResultados.innerHTML += '<h4 id="restringido"><b>Sob certas restrições</b> <br> Você pode jogar o CAPLOL, mas possui restrições, verifique as regras!</h4>';
+                novaDivResultados.innerHTML += '<h4 id="restringido"><b>Condicionado</b> <br> Você está valido, porém verifique as regras!</h4>';
               }
             } else {
               if (playerData.wins < 35) {
                 novaDivResultados.innerHTML += '<h3><b>Inválido</b> <br> A quantidade de vitórias precisa ser maior que 35.</h3>';
               } else {
-                novaDivResultados.innerHTML += '<h4><b>Válido</b> <br> Você está pronto para jogar o CAPLOL.</h4>';
+                novaDivResultados.innerHTML += '<h4><b>Válido</b> <br> Você está pronto para enfrentar o desafio do CAPLOL!</h4>';
               }
             }
           } else {
@@ -161,9 +188,6 @@ function pesquisarJogador(nick) {
       console.log('Erro na obtenção do ID do jogador', error);
     });
 }
-
-
-
 
 //DIV INSCRIÇÃO
 function toggleFormInscricao() {
@@ -219,6 +243,4 @@ function organizarTabela() {
     tabela.appendChild(li);
   });
 }
-
-// Chama a função para organizar a tabela
 organizarTabela();

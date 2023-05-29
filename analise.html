@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CAPLOL | Inscrição</title>
+    <title>CAPLOL | Análise</title>
     <head>
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
       />
       <link rel="stylesheet" type="text/css" href="/assets/css/index.css" />
-      <link rel="stylesheet" type="text/css" href="/assets/css/inscricao.css" />
+      <link rel="stylesheet" type="text/css" href="/assets/css/analise.css" />
       <link rel="icon" href="/assets/img/icones/favicon.ico" />
+      <script
+        src="https://kit.fontawesome.com/8d2e014d2a.js"
+        crossorigin="anonymous"
+      ></script>
     </head>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,12 +22,6 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8407466269684056"
-      crossorigin="anonymous"
-    ></script>
   </head>
 
   <body>
@@ -55,30 +53,55 @@
         </li>
       </ul>
     </nav>
-
     <hr />
 
-    <div class="bloco" id="registro">
-      <h2>\ E AÍ, QUER PARTICIPAR? /</h2>
+    <!-- VEFIFICAÇÃO -->
+
+    <div class="bloco" id="verificacao">
+      <h2>\ DESCUBRA SE SUA EQUIPE ESTÁ APTA /</h2>
       <br />
-      <h1>INSCREVER TIME</h1>
+      <h1>VERIFICAR</h1>
     </div>
 
-    <div class="checkbox">
-      <input
-        type="checkbox"
-        id="myCheckbox"
-        name="myCheckbox"
-        onchange="toggleFormInscricao()"
-      />
-      <label for="myCheckbox">
-        Concordo que li e estou ciente das
-        <a href="/regras.html" target="_blank">regras</a></label>
+    <div class="verificar">
+      <form class="verificar-conteudo" onsubmit="return false;">
+        <div id="inputsContainer">
+          <input id="nickInput0" type="text" placeholder="Insira o nick aqui" />
+          <input id="nickInput1" type="text" placeholder="Insira o nick aqui" />
+          <input id="nickInput2" type="text" placeholder="Insira o nick aqui" />
+          <input id="nickInput3" type="text" placeholder="Insira o nick aqui" />
+          <input id="nickInput4" type="text" placeholder="Insira o nick aqui" />
+        </div>
+        <div class="erroMensagem" id="erroMensagem"></div>
+        <button type="button" onclick="adicionarInput()" id="addButton">
+          +
+        </button>
+        <button type="submit" onclick="verificarInputs()">pesquisar</button>
+      </form>
     </div>
 
-    <div class="form-inscricao" id="form-inscricao" style="display: none">
-      <a>INSCRIÇÕES ENCERRADAS</a>
+    <div id="resultadosContainer"></div>
+
+    <hr class="hr-ball" />
+
+    <!-- VEFIFICAÇÃO -->
+
+    <div class="bloco" id="verificacao">
+      <h2>\ FAÇA A ANÁLISE DA SUA /</h2>
+      <br />
+      <h1>CONTA</h1>
     </div>
+
+    <div class="conta">
+      <form class="conta-conteudo">
+        <div class="input-wrapper">
+          <input type="text" placeholder="Função em desenvolvimento" disabled/>
+          <i class="fab fa-searchengin"></i>
+        </div>
+      </form>
+    </div>
+
+    <hr class="hr-ball" />
 
     <hr />
     <div class="icones">
