@@ -120,26 +120,18 @@
 }
 
 .resultado h1 {
-    font-size: 18px;
+    font-size: 14px;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
     text-shadow: 2px 0px 4px black;
     color: #ffffff;
-    font-weight: 1000;
+    font-weight: 800;
 }
 
 .resultado img {
     align-self: center;
     width: 80px;
     height: 80px;
-}
-
-.resultado h1:nth-child(1) {
-    margin-top: 1rem;
-}
-
-.resultado h1:nth-child(2) {
-    margin-bottom: 0;
 }
 
 .resultado h2 {
