@@ -10,10 +10,6 @@
       <link rel="stylesheet" type="text/css" href="/assets/css/index.css" />
       <link rel="stylesheet" type="text/css" href="/assets/css/analise.css" />
       <link rel="icon" href="/assets/img/icones/favicon.ico" />
-      <script
-        src="https://kit.fontawesome.com/8d2e014d2a.js"
-        crossorigin="anonymous"
-      ></script>
     </head>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,7 +24,9 @@
     <!-- HEADER -->
 
     <div class="header">
-      <h1>CAPLOL</h1>
+      <a href="https://www.caplol.site/">
+        <img src="/assets/img/icones/caplol.png">
+      </a>
     </div>
 
     <!-- NAVBAR -->
@@ -86,19 +84,63 @@
 
     <!-- VEFIFICAÇÃO -->
 
-    <div class="bloco" id="verificacao">
-      <h2>\ FAÇA A ANÁLISE DA SUA /</h2>
+    <div class="bloco" id="pareamento">
+      <h2>\ FAÇA A ANÁLISE DE /</h2>
       <br />
-      <h1>CONTA</h1>
+      <h1>PAREAMENTO DE TIMES</h1>
+      <button type="submit" class="parearBotao" >PAREAR</button>
     </div>
-
-    <div class="conta">
-      <form class="conta-conteudo">
-        <div class="input-wrapper">
-          <input type="text" placeholder="Função em desenvolvimento" disabled/>
-          <i class="fab fa-searchengin"></i>
+    
+    <div class="pareamento">
+      <div class="coluna" id="coluna-1">
+        <div class="coluna-input">
+            <img src="./assets/img/ranked-positions/top.png" alt="lane">
+            <input type="text">
         </div>
-      </form>
+        <div class="coluna-input">
+            <img src="./assets/img/ranked-positions/jungle.png" alt="lane">
+            <input type="text">
+        </div>
+        <div class="coluna-input">
+            <img src="./assets/img/ranked-positions/mid.png" alt="lane">
+            <input type="text">
+        </div>
+        <div class="coluna-input">
+            <img src="./assets/img/ranked-positions/adc.png" alt="lane">
+            <input type="text">
+        </div>
+        <div class="coluna-input">
+            <img src="./assets/img/ranked-positions/sup.png" alt="lane">
+            <input type="text">
+        </div>
+      </div>
+      
+    
+      <div id="dados">
+      </div>
+
+      <div class="coluna" id="coluna-2">
+        <div class="coluna-input">
+            <img src="./assets/img/ranked-positions/top.png" alt="lane">
+            <input type="text">
+        </div>
+        <div class="coluna-input">
+            <img src="./assets/img/ranked-positions/jungle.png" alt="lane">
+            <input type="text">
+        </div>
+        <div class="coluna-input">
+            <img src="./assets/img/ranked-positions/mid.png" alt="lane">
+            <input type="text">
+        </div>
+        <div class="coluna-input">
+            <img src="./assets/img/ranked-positions/adc.png" alt="lane">
+            <input type="text">
+        </div>
+        <div class="coluna-input">
+            <img src="./assets/img/ranked-positions/sup.png" alt="lane">
+            <input type="text">
+        </div>
+      </div>
     </div>
 
     <hr class="hr-ball" />
@@ -122,6 +164,8 @@
         /YOUTUBE</a
       >
     </div>
+
+    
 
     <script src="/assets/js/scripts.js"></script>
     <script src="/assets/js/api-riot.js"></script>
