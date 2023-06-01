@@ -706,6 +706,43 @@ span#VDE {
     filter: invert(100%);
 }
 
+.contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
+    margin-top: 5rem;
+    font-size: 11px;
+    color: rgb(105, 105, 105);
+}
+
+.contato p {
+    margin: 0;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+.contato a {
+    text-decoration: none;
+    color: rgb(105, 105, 105);
+}
+
+.contato a:hover {
+    transition: 300ms;
+    color: #ec3737;
+    cursor: pointer;
+}
+
+.contato img {
+    width: 10px;
+    margin-right: 5px;
+    filter: invert(70%);
+    vertical-align: middle;
+}
+
+
 .icones {
     margin-top: 2rem;
     margin-bottom: 2rem;
