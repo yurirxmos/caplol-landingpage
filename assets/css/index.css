@@ -96,6 +96,7 @@ hr {
     margin-bottom: 0.8rem;
     display: flex;
     justify-content: center;
+    color: #333;
 }
 
 .navbar-ul {
