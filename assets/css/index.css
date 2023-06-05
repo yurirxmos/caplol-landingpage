@@ -156,6 +156,60 @@ hr {
     display: block;
 }
 
+.premiacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.premiacao-header h1{
+    font-family: 'StretchPro';
+    font-feature-settings: "liga" 1;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    color: white;
+}
+
+.premiacao-header h2 {
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0px;
+    color: white;
+    margin-bottom: -30px;
+}
+
+.premiacao-valor {
+    margin-top: 1rem;
+    background-color: #111111;
+    padding: 0.5rem 5rem;
+    border-radius: 25px;
+}
+
+.premiacao-valor h2 {
+    font-weight: 1000;
+}
+
+.premiacao-conteudo :hover {
+    filter: invert(100%);
+    color: black;
+    transition: 500ms;
+    cursor: default;
+    cursor: pointer;
+}
+
+.premiacao-conteudo img {
+    margin-top: 2rem;
+    width: 80%;
+}
+
+.premiacao-conteudo a:hover {
+    filter: invert(0%);
+    
+}
 
 .contagem-inicio {
     display: block;
