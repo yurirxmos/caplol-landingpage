@@ -1025,11 +1025,6 @@ span#VDE {
         width: auto;
     }
 
-    .icones {
-        flex-direction: column;
-        gap: 20px;
-    }
-
     .resultado {
         width: 90%;
     }
