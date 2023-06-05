@@ -2,20 +2,24 @@
 document.addEventListener("DOMContentLoaded", function () {
   var botao = document.getElementById("spoilerButton");
   var imagem = document.querySelector(".mostrarJogos img");
-  var jogosDiv = document.querySelector(".jogos");
+  var jogosDivs = document.querySelectorAll(".jogo"); // Alterado para .jogo
   var textoBotao = document.getElementById("buttonText");
   var spoilersVisiveis = false;
 
   function atualizarSpoilers() {
     event.preventDefault();
     if (!spoilersVisiveis) {
-      jogosDiv.style.filter = "blur(3px)";
-      jogosDiv.style.transition = "300ms"
+      jogosDivs.forEach(function (div) { 
+        div.style.filter = "blur(2.5px)";
+        div.style.transition = "300ms";
+      });
       textoBotao.textContent = "MOSTRAR TODOS SPOILERS";
       imagem.src = "/assets/img/icones/spoilers-off.png";
     } else {
-      jogosDiv.style.filter = "none";
-      jogosDiv.style.transition = "300ms"
+      jogosDivs.forEach(function (div) { 
+        div.style.filter = "none";
+        div.style.transition = "300ms";
+      });
       textoBotao.textContent = "OCULTAR TODOS SPOILERS";
       imagem.src = "/assets/img/icones/spoilers-on.png";
     }
@@ -28,8 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
     atualizarSpoilers();
   });
 });
-var dataAlvo = new Date("2023-07-01"); // Define a data alvo
 
+
+
+var dataAlvo = new Date("2023-07-01"); // Define a data alvo
 function atualizarContador() {
 
   var dataAtual = new Date();
