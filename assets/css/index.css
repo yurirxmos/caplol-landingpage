@@ -199,21 +199,26 @@ hr {
 
 .premiacao-valor {
     margin-top: 1rem;
-    background-color: #111111;
-    padding: 0.5rem 5rem;
-    border-radius: 25px;
+}
+
+.premiacao-valor h1 {
+    margin: 0;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
 }
 
 .premiacao-valor h2 {
+    color: #4fc96d;
+    margin: 0;
     font-weight: 1000;
 }
 
-.premiacao-conteudo :hover {
-    filter: invert(100%);
-    color: black;
-    transition: 500ms;
-    cursor: default;
-    cursor: pointer;
+.premiacao-conteudo {
+    margin-top: 1rem;
+    border-radius: 25px;
+    background-color: #191919;
+    padding-bottom: 1.5rem;
 }
 
 .premiacao-conteudo img {
@@ -221,9 +226,9 @@ hr {
     width: 80%;
 }
 
-.premiacao-conteudo a:hover {
-    filter: invert(0%);
-
+.premiacao-conteudo a img:hover {
+    transition: 400ms;
+    filter: invert(100%);
 }
 
 .contagem-inicio {
@@ -522,8 +527,9 @@ span#VDE {
     margin-right: auto;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
-    opacity: 10%;
+    opacity: 3%;
     width: 100%;
+    color: rgb(255, 255, 255)
 }
 
 .equipes-info h2 {
