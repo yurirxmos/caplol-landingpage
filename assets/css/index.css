@@ -486,7 +486,7 @@ span#VDE {
     flex-direction: column;
     width: 300px;
     height: auto;
-    min-height: 500px;
+    min-height: 520px;
     border-radius: 20px;
     background-color: rgb(24, 24, 24);
     margin-bottom: 10px;
@@ -616,6 +616,11 @@ span#VDE {
 .nicks hr {
     opacity: 4%;
     margin: 0;
+}
+
+.nicks #reserva {
+    opacity: 50%;
+    font-size: 11px;
 }
 
 .tabela-explicacao {
@@ -898,7 +903,7 @@ span#VDE {
 
 .footer hr {
     opacity: 30%;
-    width: 40%;
+    width: 60%;
 }
 
 .footer #logo {
