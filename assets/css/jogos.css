@@ -60,8 +60,8 @@
     flex-wrap: wrap;
     padding: 2rem 0;
     gap: 40px;
-    width: 350px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     border-radius: 20px;
     background-color: rgb(24, 24, 24);
     margin-bottom: 10px;
@@ -88,7 +88,7 @@
 .jogo b:hover {
     color: #ec3737;
     transition: 300ms;
-    cursor: default;
+    cursor: pointer;
 }
 
 .jogo img {

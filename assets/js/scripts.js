@@ -33,9 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
-var dataAlvo = new Date("2023-07-01"); // Define a data alvo
+var dataAlvo = new Date("2023-07-02"); // Define a data alvo
 function atualizarContador() {
 
   var dataAtual = new Date();
