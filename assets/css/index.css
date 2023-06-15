@@ -579,7 +579,7 @@ span#VDE {
 }
 
 .titulos div#campeao:hover::before {
-    cursor: auto;
+    cursor: help;
     content: "Conquista adquirida ao se consagrar campeão do CAPLOL.";
     position: absolute;
     top: -70px;
