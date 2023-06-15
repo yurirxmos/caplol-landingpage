@@ -2,7 +2,7 @@
     --inv: rgb(86, 145, 255);
     --intz: rgb(255, 153, 238);
     --oly: rgb(255, 216, 42);
-    --lbd: rgb(247, 192, 90);
+    --deb: rgb(121, 247, 90);
     --unb: rgb(90, 210, 247);
     --hez: rgb(235, 235, 235);
     --fag: rgb(234, 90, 247);
@@ -473,6 +473,7 @@ span#VDE {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 60px;
+    margin-top: 2rem;
 }
 
 .equipes>div {
@@ -488,7 +489,7 @@ span#VDE {
     flex-direction: column;
     width: 300px;
     height: auto;
-    min-height: 520px;
+    min-height: 550px;
     border-radius: 20px;
     background-color: rgb(24, 24, 24);
     margin-bottom: 10px;
@@ -550,13 +551,12 @@ span#VDE {
     font-size: 13px;
 }
 
-.titulos {
-    position: relative;
+.titulos { 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0px;
+    gap: 5px;
 }
 
 .titulos img {
@@ -565,32 +565,57 @@ span#VDE {
     height: 10px;
 }
 
-.titulos p {
-    margin: 1px;
-    font-size: 8px;
-    color: rgb(255, 187, 0);
-}
-
-.titulo {
+.titulos div {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 3px;
+
+    padding: 8px;
+    border-radius: 20px;
+    background-color: #111111;
 }
 
-.titulos .titulo:hover::before {
+.titulos div#campeao:hover::before {
     cursor: auto;
-    content: "Troféu conquistado ao ganhar o CAPLOL 2023.1";
+    content: "Conquista adquirida ao se consagrar campeão do CAPLOL.";
     position: absolute;
     top: -70px;
-    left: 0;
-    padding: 5px;
-    background-color: #000;
+    width: 220px;
+    padding: 15px;
+    background-color: #000000;
     color: #fff;
     border-radius: 4px;
     font-size: 14px;
     text-align: center;
+}
+
+.titulos div#campeao p {
+    font-weight: 600;
+    color: rgb(255, 196, 0);
+    margin: 0;
+}
+
+.titulos div#veterano:hover::before {
+    cursor: auto;
+    content: "Conquista adquirida ao participar de uma edição anterior do CAPLOL.";
+    position: absolute;
+    top: -90px;
+    width: 220px;
+    padding: 15px;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.titulos div#veterano p {
+    font-weight: 600;
+    color: rgb(196, 196, 196);
+    margin: 0;
 }
 
 .nicks {
@@ -750,8 +775,8 @@ span#VDE {
     color: var(--oly);
 }
 
-.tabela-conteudo span#LBD {
-    color: var(--lbd);
+.tabela-conteudo span#DEB {
+    color: var(--deb);
 }
 
 .tabela-conteudo span#UNB {
