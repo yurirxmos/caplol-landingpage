@@ -1,24 +1,23 @@
-// BOTÃO DE MOSTRAR/OCULTAR JOGOS
 document.addEventListener("DOMContentLoaded", function () {
   var botao = document.getElementById("spoilerButton");
   var imagem = document.querySelector(".mostrarJogos img");
-  var jogosDivs = document.querySelectorAll(".jogo"); // Alterado para .jogo
+  var jogosDivs = document.querySelectorAll(".jogo");
   var textoBotao = document.getElementById("buttonText");
   var spoilersVisiveis = false;
 
   function atualizarSpoilers() {
     event.preventDefault();
     if (!spoilersVisiveis) {
-      jogosDivs.forEach(function (div) { 
-        div.style.filter = "blur(2.5px)";
-        div.style.transition = "300ms";
+      jogosDivs.forEach(function (jogoDiv) {
+        var placarH3 = jogoDiv.querySelector("#placar");
+        placarH3.style.filter = "blur(2.5px) grayscale(100%)";
       });
       textoBotao.textContent = "MOSTRAR TODOS SPOILERS";
       imagem.src = "/assets/img/icones/spoilers-off.png";
     } else {
-      jogosDivs.forEach(function (div) { 
-        div.style.filter = "none";
-        div.style.transition = "300ms";
+      jogosDivs.forEach(function (jogoDiv) {
+        var placarH3 = jogoDiv.querySelector("#placar");
+        placarH3.style.filter = "none";
       });
       textoBotao.textContent = "OCULTAR TODOS SPOILERS";
       imagem.src = "/assets/img/icones/spoilers-on.png";
@@ -32,6 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
     atualizarSpoilers();
   });
 });
+
+
+
 
 var dataAlvo = new Date("2023-07-02"); // Define a data alvo
 function atualizarContador() {
