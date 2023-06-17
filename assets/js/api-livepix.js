@@ -1,5 +1,5 @@
 
-const clientId = '321e7b89-be07-4128-a67a-d8e98703643d';
+/*const clientId = '321e7b89-be07-4128-a67a-d8e98703643d';
 const clientSecret = 'H76+jUjGX2ThoP2jI8rA/LsxuP/D0LsqLLqJWAL0G2k9HMu61z2ahp84gJFQaxadqspaZLHMHDoOpGJ61O6BZlDbLULRH+D8Ifa4sGgRtxx11jqzxcH5oQAVhTP2TQYnWGTdR4bmH8OkxU2/5WZEm6Ehrse17WMqZfASxdms+Cs';
 const scope = 'wallet:read';
 
@@ -22,3 +22,4 @@ fetch(url, {
         console.log(url);
         console.log('Erro:', error);
     });
+*/
