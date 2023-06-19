@@ -40,11 +40,16 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 40px;
+    gap: 100px;
     margin: 3rem;
 }
 
 .jogos-botoes a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     font-size: 11px;
     text-transform: uppercase;
     text-decoration: none;
@@ -52,9 +57,15 @@
 }
 
 .jogos-botoes a:hover {
-    opacity: 80%;
+    color: #ec3737;
     transition: 300ms;
     cursor: pointer;
+}
+
+.jogos-botoes img {
+    width: 14px;
+    vertical-align: middle;
+    margin-right: 5px;
 }
 
 .jogos {
@@ -63,7 +74,7 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 70px;
     opacity: 1;
     transition: opacity 0.5s;
 }
@@ -82,11 +93,10 @@
     flex-wrap: wrap;
     padding: 2rem 0;
     gap: 40px;
-    width: 280px;
+    width: 300px;
     height: 305px;
     border-radius: 20px;
     background-color: rgb(24, 24, 24);
-    margin-bottom: 10px;
 }
 
 .jogos-lista h2 {
@@ -112,11 +122,11 @@
 }
 
 .jogos-lista .order-0 b {
-    color: #ff5151;
+    color: #e03b3b;
 }
 
 .jogo {
-    margin-top: 10px;
+    margin-top: 11px;
     text-align: center;
 }
 
