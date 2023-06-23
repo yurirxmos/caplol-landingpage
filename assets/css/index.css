@@ -39,6 +39,23 @@ html {
     }
 }
 
+@keyframes piscar {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .piscar {
+    animation: piscar 1250ms infinite;
+  }
+  
+
 body {
     scroll-behavior: smooth;
     margin: 0;

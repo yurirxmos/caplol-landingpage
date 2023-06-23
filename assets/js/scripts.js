@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 var dataAlvo = new Date("2023-07-02"); // Define a data alvo
 function atualizarContador() {
-
   var dataAtual = new Date();
   var diferenca = dataAlvo.getTime() - dataAtual.getTime();
   var dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
@@ -47,9 +46,11 @@ function atualizarContador() {
   var contadorElemento = document.getElementById("contador");
 
   contadorElemento.textContent = dias + "d " + horas + "h " + minutos + "m " + segundos + "s";
+  contadorElemento.classList.toggle("piscar"); // Adiciona/remova a classe 'piscar'
   setTimeout(atualizarContador, 1000);
 }
 atualizarContador();
+
 
 //DIV INSCRIÇÃO
 function toggleFormInscricao() {
