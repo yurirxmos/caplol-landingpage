@@ -52,7 +52,7 @@ html {
   }
   
   .piscar {
-    animation: piscar 1250ms infinite;
+    animation: piscar 1s infinite;
   }
   
 
@@ -257,15 +257,29 @@ hr {
     text-align: center;
     margin-top: 2rem;
     padding: 1rem;
-    background-color: #640000;
+    background-color: #850000;
+    width: 40%;
+    border-radius: 20px;
 }
 
 .contagem-inicio h1 {
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 1000;
-    font-size: 30px;
+    font-size: 20px;
     color: white;
+}
+
+.contagem-inicio h2 {
+    font-size: 16px;
+}
+
+.contagem-inicio hr{
+    margin-bottom: 15px;
+}
+
+.contagem-inicio img {
+    width: 25px;
 }
 
 #contador {
