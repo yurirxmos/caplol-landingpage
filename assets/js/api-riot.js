@@ -140,10 +140,6 @@ function pesquisarJogador(nick) {
         });
 }
 
-
-
-
-
 function obterTierEWinrate(nick, inputElement) {
     const API_KEY = "RGAPI-7baeb44a-4ade-4482-b126-2bb126cdbe11";
 

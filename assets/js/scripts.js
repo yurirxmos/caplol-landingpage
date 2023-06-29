@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!spoilersVisiveis) {
       jogosDivs.forEach(function (jogoDiv) {
         var placarH3 = jogoDiv.querySelector("#placar");
-        placarH3.style.filter = "blur(2.5px) grayscale(100%)";
+        placarH3.style.filter = "blur(3px) grayscale(100%)";
       });
       textoBotao.textContent = "MOSTRAR TODOS SPOILERS";
       imagem.src = "/assets/img/icones/spoilers-off.png";
@@ -31,9 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
     atualizarSpoilers();
   });
 });
-
-
-
 
 var dataAlvo = new Date("2023-07-02"); // Define a data alvo
 function atualizarContador() {
