@@ -251,6 +251,7 @@ hr {
 }
 
 .contagem-inicio {
+    position: relative;
     display: block;
     margin-right: auto;
     margin-left: auto;
@@ -258,7 +259,7 @@ hr {
     margin-top: 2rem;
     padding: 1rem;
     background-color: #850000;
-    width: 40%;
+    width: 25%;
     border-radius: 20px;
 }
 
@@ -271,15 +272,25 @@ hr {
 }
 
 .contagem-inicio h2 {
-    font-size: 16px;
+    font-size: 13px;
+    margin-top: 1rem;
+    margin-bottom: 0;
 }
 
-.contagem-inicio hr{
-    margin-bottom: 15px;
+.contagem-inicio #fechar {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    cursor: pointer;
+
+    color: white;
+    font-weight: 900;
+    font-size: 12px;
 }
 
-.contagem-inicio img {
-    width: 25px;
+.contagem-inicio #fechar:hover {
+    opacity: 50%;
+    transition: 300ms;
 }
 
 #contador {

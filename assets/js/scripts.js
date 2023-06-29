@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// CONTADOR
 var dataAlvo = new Date("2023-07-02"); // Define a data alvo
 function atualizarContador() {
   var dataAtual = new Date();
@@ -47,6 +48,12 @@ function atualizarContador() {
   setTimeout(atualizarContador, 1000);
 }
 atualizarContador();
+
+// FECHAR DIV CONTADOR
+document.getElementById("fechar").addEventListener("click", function() {
+  var contagemInicio = document.querySelector(".contagem-inicio");
+  contagemInicio.style.display = "none";
+});
 
 
 //DIV INSCRIÇÃO
