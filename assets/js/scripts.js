@@ -32,26 +32,35 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// CONTADOR
-var dataAlvo = new Date("2023-07-02"); // Define a data alvo
-function atualizarContador() {
-  var dataAtual = new Date();
-  var diferenca = dataAlvo.getTime() - dataAtual.getTime();
-  var dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
-  var horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
-  var segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
-  var contadorElemento = document.getElementById("contador");
 
-  contadorElemento.textContent = dias + "d " + horas + "h " + minutos + "m " + segundos + "s";
-  contadorElemento.classList.toggle("piscar"); // Adiciona/remova a classe 'piscar'
-  setTimeout(atualizarContador, 1000);
-}
-atualizarContador();
+const clientID = '6hmm4v0bbrrxkq69pefcg9il2qee6x';
+const accessToken = 'SEU_ACCESS_TOKEN';
+const channelName = 'caploltwitch';
 
-// FECHAR DIV CONTADOR
-document.getElementById("fechar").addEventListener("click", function() {
-  var contagemInicio = document.querySelector(".contagem-inicio");
+fetch(`https://api.twitch.tv/helix/streams?user_login=${channelName}`, {
+  headers: {
+    'Client-ID': clientID,
+    Authorization: `Bearer ${accessToken}`,
+  },
+})
+  .then((response) => response.json())
+  .then((data) => {
+    if (data.data.length === 0) {
+      console.log('O streamer não está online.');
+    } else {
+      const popup = document.getElementsByClassName("popup");
+      popup.style.display = "flex";
+    }
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+
+
+// FECHAR POPUP
+document.getElementById("fechar").addEventListener("click", function () {
+  var contagemInicio = document.querySelector(".popup");
   contagemInicio.style.display = "none";
 });
 
