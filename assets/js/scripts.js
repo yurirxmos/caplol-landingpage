@@ -34,8 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 const clientID = '6hmm4v0bbrrxkq69pefcg9il2qee6x';
-const accessToken = 'SEU_ACCESS_TOKEN';
+const accessToken = '3usn5x2rqsr088islwd28pdenbuv95';
 const channelName = 'caploltwitch';
+const popup = document.getElementsByClassName("popup");
 
 fetch(`https://api.twitch.tv/helix/streams?user_login=${channelName}`, {
   headers: {
@@ -46,17 +47,14 @@ fetch(`https://api.twitch.tv/helix/streams?user_login=${channelName}`, {
   .then((response) => response.json())
   .then((data) => {
     if (data.data.length === 0) {
-      console.log('O streamer não está online.');
+      popup.style.display = "none";
     } else {
-      const popup = document.getElementsByClassName("popup");
       popup.style.display = "flex";
     }
   })
   .catch((error) => {
     console.error(error);
   });
-
-
 
 // FECHAR POPUP
 document.getElementById("fechar").addEventListener("click", function () {
