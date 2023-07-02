@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
+/*
 const clientID = '6hmm4v0bbrrxkq69pefcg9il2qee6x';
 const accessToken = '3usn5x2rqsr088islwd28pdenbuv95';
 const channelName = 'caploltwitch';
@@ -61,7 +61,7 @@ document.getElementById("fechar").addEventListener("click", function () {
   var contagemInicio = document.querySelector(".popup");
   contagemInicio.style.display = "none";
 });
-
+*/
 
 //DIV INSCRIÇÃO
 function toggleFormInscricao() {
@@ -77,14 +77,14 @@ function toggleFormInscricao() {
 
 // Função para organizar a tabela
 function organizarTabela() {
-
   var tabela = document.querySelector('.tabela-conteudo');
-
   var liItems = Array.from(tabela.getElementsByTagName('li'));
 
   liItems.sort(function (a, b) {
     var scoreA = parseInt(a.getElementsByClassName('score')[1].innerText);
     var scoreB = parseInt(b.getElementsByClassName('score')[1].innerText);
+    var defeatA = parseInt(a.getElementsByClassName('score')[2].innerText);
+    var defeatB = parseInt(b.getElementsByClassName('score')[2].innerText);
     var timeA = a.getElementsByClassName('placar')[0].innerText.split('|')[0].trim();
     var timeB = b.getElementsByClassName('placar')[0].innerText.split('|')[0].trim();
 
@@ -93,27 +93,21 @@ function organizarTabela() {
     } else if (scoreA < scoreB) {
       return 1;
     } else {
-      if (scoreA === 0 && scoreB === 0) {
-
-        var defeatA = parseInt(a.getElementsByClassName('score')[2].innerText);
-        var defeatB = parseInt(b.getElementsByClassName('score')[2].innerText);
-
-        if (defeatA > defeatB) {
-          return 1;
-        } else if (defeatA < defeatB) {
-          return -1;
-        }
-      }
-
-      if (timeA > timeB) {
+      if (defeatA > defeatB) {
         return 1;
-      } else if (timeA < timeB) {
+      } else if (defeatA < defeatB) {
         return -1;
       } else {
-        return 0;
+        // Caso as vitórias e derrotas sejam iguais, verificar o tempo
+        if (timeA < timeB) {
+          return -1;
+        } else if (timeA > timeB) {
+          return 1;
+        } else {
+          return 0;
+        }
       }
     }
-
   });
 
   liItems.forEach(function (li, index) {
@@ -121,4 +115,5 @@ function organizarTabela() {
     tabela.appendChild(li);
   });
 }
+
 organizarTabela();
