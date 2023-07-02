@@ -7,22 +7,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function atualizarSpoilers() {
     event.preventDefault();
-    if (!spoilersVisiveis) {
-      jogosDivs.forEach(function (jogoDiv) {
-        var placarH3 = jogoDiv.querySelector("#placar");
-        placarH3.style.filter = "blur(3px) grayscale(100%)";
-      });
-      textoBotao.textContent = "MOSTRAR TODOS SPOILERS";
-      imagem.src = "/assets/img/icones/spoilers-off.png";
-    } else {
-      jogosDivs.forEach(function (jogoDiv) {
-        var placarH3 = jogoDiv.querySelector("#placar");
-        placarH3.style.filter = "none";
-      });
-      textoBotao.textContent = "OCULTAR TODOS SPOILERS";
-      imagem.src = "/assets/img/icones/spoilers-on.png";
-    }
+    var jogosListas = document.querySelectorAll('.jogos-lista#feito');
+    jogosListas.forEach(function (jogosListaDiv) {
+      if (!spoilersVisiveis) {
+        jogosListaDiv.style.opacity = "";
+        var jogosDivs = jogosListaDiv.querySelectorAll(".jogo");
+        jogosDivs.forEach(function (jogoDiv) {
+          var placarH3 = jogoDiv.querySelector("#placar");
+          placarH3.style.filter = "blur(3px) grayscale(100%)";
+        });
+        textoBotao.textContent = "MOSTRAR TODOS SPOILERS";
+        imagem.src = "/assets/img/icones/spoilers-off.png";
+      } else {
+        jogosListaDiv.style.opacity = "1";
+        var jogosDivs = jogosListaDiv.querySelectorAll(".jogo");
+        jogosDivs.forEach(function (jogoDiv) {
+          var placarH3 = jogoDiv.querySelector("#placar");
+          placarH3.style.filter = "none";
+        });
+        textoBotao.textContent = "OCULTAR TODOS SPOILERS";
+        imagem.src = "/assets/img/icones/spoilers-on.png";
+      }
+    });
   }
+  
+  
+  
+  
 
   atualizarSpoilers();
 
