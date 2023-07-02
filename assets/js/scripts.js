@@ -43,36 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-/*
-const clientID = '6hmm4v0bbrrxkq69pefcg9il2qee6x';
-const accessToken = '3usn5x2rqsr088islwd28pdenbuv95';
-const channelName = 'caploltwitch';
-const popup = document.getElementsByClassName("popup");
-
-fetch(`https://api.twitch.tv/helix/streams?user_login=${channelName}`, {
-  headers: {
-    'Client-ID': clientID,
-    Authorization: `Bearer ${accessToken}`,
-  },
-})
-  .then((response) => response.json())
-  .then((data) => {
-    if (data.data.length === 0) {
-      popup.style.display = "none";
-    } else {
-      popup.style.display = "flex";
-    }
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
 // FECHAR POPUP
 document.getElementById("fechar").addEventListener("click", function () {
   var contagemInicio = document.querySelector(".popup");
   contagemInicio.style.display = "none";
 });
-*/
 
 //DIV INSCRIÇÃO
 function toggleFormInscricao() {

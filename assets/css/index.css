@@ -256,6 +256,8 @@ hr {
 .popup {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     cursor: pointer;
     text-decoration: none;
@@ -275,18 +277,20 @@ hr {
 .popup h1 {
     margin: 0;
     font-weight: 1000;
-    font-size: 15px;
+    font-size: 13px;
     color: white;
 }
 
 .popup h2 {
-    font-size: 13px;
+    font-size: 11px;
     margin-top: 5px;
     margin-bottom: 0;
 }
 
 .popup img {
-    width: 55px;
+    width: 12%;
+    height: 12%;
+    vertical-align: middle;
 }
 
 .popup #fechar {
