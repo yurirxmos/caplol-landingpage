@@ -1,3 +1,4 @@
+// MOSTRAR/OCULTAR SPOILERS
 document.addEventListener("DOMContentLoaded", function () {
   var botao = document.getElementById("spoilerButton");
   var imagem = document.querySelector(".mostrarJogos img");
@@ -43,13 +44,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// CORREÇÃO PARA A PRIMEIRA DIV DE JOGOS
+window.addEventListener('DOMContentLoaded', () => {
+  const jogosListaDivs = document.querySelectorAll('.jogos-lista');
+
+  jogosListaDivs.forEach((jogosListaDiv) => {
+    const jogoDivs = jogosListaDiv.querySelectorAll('.jogo');
+    if (jogoDivs.length === 1) {
+      jogosListaDiv.style.height = '305px';
+    }
+  });
+});
+
 // FECHAR POPUP
 document.getElementById("fechar").addEventListener("click", function () {
   var contagemInicio = document.querySelector(".popup");
   contagemInicio.style.display = "none";
 });
 
-//DIV INSCRIÇÃO
+// DIV INSCRIÇÃO
 function toggleFormInscricao() {
   var checkbox = document.getElementById("myCheckbox");
   var formInscricao = document.getElementById("form-inscricao");
@@ -101,5 +114,4 @@ function organizarTabela() {
     tabela.appendChild(li);
   });
 }
-
 organizarTabela();
