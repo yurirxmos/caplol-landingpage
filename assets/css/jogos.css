@@ -179,3 +179,10 @@
 #derrota {
     color: var(--derrota);
 }
+
+@media only screen and (max-width: 768px) {
+    .jogos-botoes {
+        gap: 30px;
+        flex-direction: column;
+    }
+}
