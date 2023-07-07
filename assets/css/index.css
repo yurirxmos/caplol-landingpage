@@ -1,13 +1,13 @@
 :root {
     --inv: rgb(86, 145, 255);
     --intz: rgb(255, 153, 238);
-    --oly: rgb(255, 216, 42);
+    --oly: rgb(255, 198, 42);
     --deb: rgb(121, 247, 90);
     --unb: rgb(90, 210, 247);
     --hez: rgb(235, 235, 235);
     --fag: rgb(234, 90, 247);
     --ump: rgb(92, 72, 72);
-    --wol: rgb(35, 37, 163);
+    --tdw: rgb(255, 251, 0);
     --idn: rgb(247, 90, 90);
     --zdc: #c40000;
     --vde: rgb(90, 247, 208);
@@ -481,8 +481,8 @@ span#UMP {
     color: var(--ump);
 }
 
-span#WOL {
-    color: var(--wol);
+span#TDW {
+    color: var(--tdw);
 }
 
 span#IDN {
