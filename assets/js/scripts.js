@@ -1,61 +1,3 @@
-// MOSTRAR/OCULTAR SPOILERS
-document.addEventListener("DOMContentLoaded", function () {
-  var botao = document.getElementById("spoilerButton");
-  var imagem = document.querySelector(".mostrarJogos img");
-  var jogosDivs = document.querySelectorAll(".jogo");
-  var textoBotao = document.getElementById("buttonText");
-  var spoilersVisiveis = false;
-
-  function atualizarSpoilers() {
-    event.preventDefault();
-    var jogosListas = document.querySelectorAll('.jogos-lista#feito');
-    jogosListas.forEach(function (jogosListaDiv) {
-      if (!spoilersVisiveis) {
-        jogosListaDiv.style.opacity = "";
-        var jogosDivs = jogosListaDiv.querySelectorAll(".jogo");
-        jogosDivs.forEach(function (jogoDiv) {
-          var placarH3 = jogoDiv.querySelector("#placar");
-          placarH3.style.filter = "blur(3px) grayscale(100%)";
-        });
-        textoBotao.textContent = "MOSTRAR TODOS SPOILERS";
-        imagem.src = "/assets/img/icones/spoilers-off.png";
-      } else {
-        jogosListaDiv.style.opacity = "1";
-        var jogosDivs = jogosListaDiv.querySelectorAll(".jogo");
-        jogosDivs.forEach(function (jogoDiv) {
-          var placarH3 = jogoDiv.querySelector("#placar");
-          placarH3.style.filter = "none";
-        });
-        textoBotao.textContent = "OCULTAR TODOS SPOILERS";
-        imagem.src = "/assets/img/icones/spoilers-on.png";
-      }
-    });
-  }
-  
-  
-  
-  
-
-  atualizarSpoilers();
-
-  botao.addEventListener("click", function () {
-    spoilersVisiveis = !spoilersVisiveis;
-    atualizarSpoilers();
-  });
-});
-
-// CORREÇÃO PARA A PRIMEIRA DIV DE JOGOS
-window.addEventListener('DOMContentLoaded', () => {
-  const jogosListaDivs = document.querySelectorAll('.jogos-lista');
-
-  jogosListaDivs.forEach((jogosListaDiv) => {
-    const jogoDivs = jogosListaDiv.querySelectorAll('.jogo');
-    if (jogoDivs.length === 1 || jogoDivs.length === 2) {
-      jogosListaDiv.style.height = '305px';
-    }    
-  });
-});
-
 // FECHAR POPUP
 document.getElementById("fechar").addEventListener("click", function () {
   var contagemInicio = document.querySelector(".popup");
@@ -74,7 +16,7 @@ function toggleFormInscricao() {
   }
 }
 
-// Função para organizar a tabela
+// ORDENAÇÃO TABELA
 function organizarTabela() {
   var tabela = document.querySelector('.tabela-conteudo');
   var liItems = Array.from(tabela.getElementsByTagName('li'));
@@ -115,3 +57,46 @@ function organizarTabela() {
   });
 }
 organizarTabela();
+
+
+// ORDENAÇÃO DE MVP
+const dados =
+  `
+Eduardo Garen/200/DEB/top.png
+VDE Thigas/200/VDE/sup.png
+hydruZ mete fofo/100/FAG/mid.png
+Askedre/100/UNB/mid.png
+HEZ Ivankob xB/100/HEZ/mid.png
+Um anão mt loko/100/UMP/mid.png
+INV yuridela/300/INV/adc.png
+POKIN PEGA MEMO/100/UMP/mid.png
+ZDC Tekashi/100/ZDC/mid.png
+INTZ Wenddel/100/INTZ/mid.png
+Carloniii/100/DEB/mid.png
+Rakão/100/DEB/mid.png
+`;
+
+const linhas = dados.split('\n');
+
+const jogadores = linhas.map((linha) => {
+  const [nome, pontos, time, lane] = linha.split('/');
+  return { nome: nome.trim(), pontos: parseInt(pontos.trim()), time: time.trim(), lane: lane.trim() };
+});
+
+const jogadoresOrdenados = jogadores.sort((a, b) => b.pontos - a.pontos);
+
+const mvpConteudo = document.querySelector('.mvp-conteudo');
+jogadoresOrdenados.forEach((jogador, index) => {
+  const li = mvpConteudo.querySelector(`#posicao-${index + 1}`);
+  const imagemElement = li.querySelector('img');
+  const nomeElement = li.querySelectorAll('h2')[0];
+  const pontosElement = li.querySelectorAll('h2')[1];
+  const timeElement = li.querySelector('span');
+  const laneElement = li.querySelectorAll('img')[1];
+
+  imagemElement.src = `./assets/img/ranked-positions/${jogador.lane}`;
+  nomeElement.textContent = jogador.nome;
+  pontosElement.textContent = jogador.pontos.toString();
+  timeElement.textContent = jogador.time;
+  laneElement.src = `./assets/img/ranked-positions/${jogador.lane}`;
+});

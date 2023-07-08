@@ -1,3 +1,7 @@
+.hidden {
+    display: none;
+}
+
 .mostrarJogos img {
     display: block;
     margin-left: auto;
@@ -7,7 +11,6 @@
     height: 20px;
     margin-bottom: 0.5rem;
     filter: brightness(100%) invert(1);
-
 }
 
 .mostrarJogos button {
@@ -33,6 +36,50 @@
     background-color: #ec3737;
     cursor: pointer;
     transition: 400ms;
+}
+
+
+.seletor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.seletor h1 {
+    font-family: 'StretchPro', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-feature-settings: "liga"1;
+    color: white;
+}
+
+.seletor h2 {
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0px;
+    color: white;
+    margin-bottom: -30px;
+}
+
+.seletor select {
+    margin-bottom: 1rem;
+    height: 6vh;
+    width: 40vh;
+    margin-bottom: 2rem;
+    min-width: 80px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.seletor select:focus-visible {
+    outline: none;
 }
 
 .jogos-botoes {
@@ -94,8 +141,8 @@
     flex-wrap: wrap;
     padding: 2rem 0;
     gap: 40px;
-    width: 300px;
-    height: fit-content;
+    width: 260px;
+    min-height: 340px;
     border-radius: 20px;
     background-color: rgb(24, 24, 24);
 }
@@ -126,16 +173,33 @@
     color: #e03b3b;
 }
 
-.jogos-folga {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 40px;
+.jogos-lista .order-1 {
+    font-size: 11px;
+    font-weight: 200;
+    color: white;
+    top: 20px;
+    position: absolute;
 }
 
-.jogos #feito {
-    border: solid 1px rgba(0, 128, 0, 0.425);
-    opacity: 40%;
+.jogos-lista .order-1 b {
+    color: #e03b3b;
+}
+
+.jogos-lista .order-2 {
+    font-size: 11px;
+    font-weight: 200;
+    color: white;
+    top: 40px;
+    position: absolute;
+}
+
+.jogos-lista .order-2 b {
+    color: #e03b3b;
+}
+
+.jogos #feito img {
+    width: 12px;
+    vertical-align: text-top;
 }
 
 .jogo {
@@ -155,21 +219,6 @@
     margin: 5px;
     margin-bottom: 10px;
     vertical-align: middle;
-}
-
-.folga {
-    margin-top: 5px;
-    margin-bottom: -15px;
-    opacity: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.folga h2 {
-    font-size: 15px;
-    font-weight: 800;
 }
 
 #vitoria {

@@ -68,13 +68,6 @@
       <h1>JOGOS</h1>
     </div>
 
-    <div class="mostrarJogos">
-      <img src="/assets/img/icones/spoilers-off.png" />
-      <button id="spoilerButton">
-        <span id="buttonText">OCULTAR TODOS SPOILERS</span>
-      </button>
-    </div>
-
     <div class="jogos-botoes">
       <a href="/#tabela">
         <img src="./assets/img/icones/tabela.png" />
@@ -92,9 +85,34 @@
       </a>
     </div>
 
+    <div class="seletor">
+      <h2>\ BUSCA AVANÇADA /</h2>
+      <br />
+      <h1>SELECIONE UM TIME</h1>
+      <select id="selectTime">
+        <option value="">Todos os times</option>
+        <option value="INV">Invasora</option>
+        <option value="DEB">Debug</option>
+        <option value="VDE">Vivo Dibre E-Sports</option>
+        <option value="ZDC">Zodiac</option>
+        <option value="FAG">Free Agents Gang</option>
+        <option value="UMP">Ursos Mansos e Pelados</option>
+        <option value="IDN">Inimigos do Nexus</option>
+        <option value="UNB">União Bagre</option>
+        <option value="HEZ">Heros Zero</option>
+        <option value="OLY">Olympus Fortify Gaming</option>
+        <option value="INTZ">Inúteis Não Tem veZ</option>
+      </select>
+    </div>
+    
+
     <div class="jogos">
       <div class="jogos-lista" id="feito">
-        <h1 class="order-0">01/07 | <b>SÁBADO</b></h1>
+        <h1 class="order-0">
+          01/07 | <b>SÁBADO</b> 
+          <img src="./assets/img/icones/check.png" />
+        </h1>
+
         <div class="jogo">
           <h2>
             <img src="./assets/img/equipes/invasora-logo.png" />
@@ -113,7 +131,10 @@
       </div>
 
       <div class="jogos-lista" id="feito">
-        <h1 class="order-0">02/07 | <b>DOMINGO</b></h1>
+        <h1 class="order-0">
+          02/07 | <b>DOMINGO</b>
+          <img src="./assets/img/icones/check.png" />
+        </h1>
 
         <div class="jogo">
           <h2>
@@ -146,26 +167,13 @@
             <span id="vitoria">1</span> : <span id="derrota">0</span>
           </h3>
         </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/wol-logo.png" />
-
-            <b>TDW</b>
-            x
-            <b>IDN</b>
-
-            <img src="./assets/img/equipes/idn-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>16:00</b></h3>
-          <h3 id="placar">
-            <span id="derrota">JOGO ANULADO</span>
-          </h3>
-        </div>
       </div>
 
       <div class="jogos-lista" id="feito">
-        <h1 class="order-0">03/07 | <b>SEGUNDA-FEIRA</b></h1>
+        <h1 class="order-0">
+          03/07 | <b>SEGUNDA-FEIRA</b>
+          <img src="./assets/img/icones/check.png" />
+        </h1>
         <div class="jogo">
           <h2>
             <img src="./assets/img/equipes/unb-logo.png" />
@@ -216,7 +224,11 @@
       </div>
 
       <div class="jogos-lista" id="feito">
-        <h1 class="order-0">04/07 | <b>TERÇA-FEIRA</b></h1>
+        <h1 class="order-0">
+          04/07 | <b>TERÇA-FEIRA</b>
+          <img src="./assets/img/icones/check.png" />
+        </h1>
+
         <div class="jogo">
           <h2>
             <img src="./assets/img/equipes/invasora-logo.png" />
@@ -266,7 +278,10 @@
       </div>
 
       <div class="jogos-lista" id="feito">
-        <h1 class="order-0">05/07 | <b>QUARTA-FEIRA</b></h1>
+        <h1 class="order-0">
+          05/07 | <b>QUARTA-FEIRA</b>
+          <img src="./assets/img/icones/check.png" />
+        </h1>
         <div class="jogo">
           <h2>
             <img src="./assets/img/equipes/deb-logo.png" />
@@ -317,22 +332,10 @@
       </div>
 
       <div class="jogos-lista" id="feito">
-        <h1 class="order-0">06/07 | <b>QUINTA-FEIRA</b></h1>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/olympus-logo.png" />
-
-            <b>OLY</b>
-            x
-            <b>TDW</b>
-
-            <img src="./assets/img/equipes/wol-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>20:00</b></h3>
-          <h3 id="placar">
-            <span id="derrota">JOGO ANULADO</span>
-          </h3>
-        </div>
+        <h1 class="order-0">
+          06/07 | <b>QUINTA-FEIRA</b>
+          <img src="./assets/img/icones/check.png" />
+        </h1>
 
         <div class="jogo">
           <h2>
@@ -368,7 +371,10 @@
       </div>
 
       <div class="jogos-lista" id="feito">
-        <h1 class="order-0">07/07 | <b>SEXTA-FEIRA</b></h1>
+        <h1 class="order-0">
+          07/07 | <b>SEXTA-FEIRA</b>
+          <img src="./assets/img/icones/check.png" />
+        </h1>
 
         <div class="jogo">
           <h2>
@@ -400,30 +406,6 @@
           <h3 id="placar">
             <span id="derrota">0</span> : <span id="vitoria">1</span>
           </h3>
-        </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/wol-logo.png" />
-
-            <b>TDW</b>
-            x
-            <b>UNB</b>
-
-            <img src="./assets/img/equipes/unb-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>22:30</b></h3>
-          <h3 id="placar">
-            <span id="derrota">JOGO ANULADO</span>
-          </h3>
-        </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">08/07 | <b>SÁBADO</b></h1>
-        <div class="jogo">
-          <h2>SEM JOGOS!</h2>
-          <h3>Nesse dia não teremos CAPLOL.</h3>
         </div>
       </div>
 
@@ -445,7 +427,6 @@
           </h3>
         </div>
 
-
         <div class="jogo">
           <h2>
             <img src="./assets/img/equipes/vde-logo.png" />
@@ -460,35 +441,6 @@
           <h3 id="placar">
             <span id="derrota">0</span> : <span id="derrota">0</span>
           </h3>
-        </div>
-      </div>
-
-      <div class="jogos-folga">
-        <div class="jogos-lista">
-          <!-- DIA SEM CAPLOL -->
-          <h1 class="order-0">10/07 | <b>SEGUNDA-FEIRA</b></h1>
-          <div class="folga">
-            <h2>SEM JOGOS!</h2>
-            <h3>Nesse dia não teremos CAPLOL.</h3>
-          </div>
-        </div>
-
-        <div class="jogos-lista">
-          <!-- DIA SEM CAPLOL -->
-          <h1 class="order-0">11/07 | <b>TERÇA-FEIRA</b></h1>
-          <div class="folga">
-            <h2>SEM JOGOS!</h2>
-            <h3>Nesse dia não teremos CAPLOL.</h3>
-          </div>
-        </div>
-
-        <div class="jogos-lista">
-          <!-- DIA SEM CAPLOL -->
-          <h1 class="order-0">12/07 | <b>QUARTA-FEIRA</b></h1>
-          <div class="folga">
-            <h2>SEM JOGOS!</h2>
-            <h3>Nesse dia não teremos CAPLOL.</h3>
-          </div>
         </div>
       </div>
 
@@ -543,10 +495,6 @@
           </h3>
         </div>
       </div>
-
-      <div class="jogos-lista">
-        <h1 class="order-0">14/07 | <b>SEXTA-FEIRA</b></h1>
-      </div>
     </div>
 
     <hr class="hr-ball" />
@@ -573,6 +521,6 @@
       </div>
     </div>
 
-    <script src="/assets/js/scripts.js"></script>
+    <script src="./assets/js/scripts-jogos.js"></script>
   </body>
 </html>
