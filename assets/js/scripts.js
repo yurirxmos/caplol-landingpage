@@ -50,9 +50,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
   jogosListaDivs.forEach((jogosListaDiv) => {
     const jogoDivs = jogosListaDiv.querySelectorAll('.jogo');
-    if (jogoDivs.length === 1) {
+    if (jogoDivs.length === 1 || jogoDivs.length === 2) {
       jogosListaDiv.style.height = '305px';
-    }
+    }    
   });
 });
 
