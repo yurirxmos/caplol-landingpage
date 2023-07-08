@@ -197,6 +197,15 @@
     color: #e03b3b;
 }
 
+.jogos #feito {
+    opacity: 65%;
+}
+
+.jogos #feito:hover {
+    opacity: 100%;
+    transition: 400ms;
+}
+
 .jogos #feito img {
     width: 12px;
     vertical-align: text-top;
