@@ -204,6 +204,7 @@
 .jogos #feito:hover {
     opacity: 100%;
     transition: 400ms;
+    cursor: pointer;
 }
 
 .jogos #feito img {
