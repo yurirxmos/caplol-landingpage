@@ -66,14 +66,14 @@ Eduardo Garen/200/DEB/top.png
 VDE Thigas/200/VDE/sup.png
 hydruZ mete fofo/100/FAG/mid.png
 Askedre/100/UNB/mid.png
-HEZ Ivankob xB/100/HEZ/mid.png
-Um anão mt loko/100/UMP/mid.png
+HEZ Ivankob xB/100/HEZ/sup.png
+Um anão mt loko/100/UMP/top.png
 INV yuridela/300/INV/adc.png
-POKIN PEGA MEMO/100/UMP/mid.png
-ZDC Tekashi/100/ZDC/mid.png
-INTZ Wenddel/100/INTZ/mid.png
-Carloniii/100/DEB/mid.png
-Rakão/100/DEB/mid.png
+POKIN PEGA MEMO/100/UMP/jungle.png
+ZDC T3K4SH1/100/ZDC/mid.png
+INTZ Wenddel/100/INTZ/top.png
+Carloniii/100/DEB/adc.png
+Rakão/100/DEB/sup.png
 VDE vital/100/VDE/jungle.png
 VDE 369/100/VDE/top.png
 `;
