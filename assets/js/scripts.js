@@ -74,6 +74,8 @@ ZDC Tekashi/100/ZDC/mid.png
 INTZ Wenddel/100/INTZ/mid.png
 Carloniii/100/DEB/mid.png
 Rakão/100/DEB/mid.png
+VDE vital/100/VDE/jungle.png
+VDE 369/100/VDE/top.png
 `;
 
 const linhas = dados.split('\n');
