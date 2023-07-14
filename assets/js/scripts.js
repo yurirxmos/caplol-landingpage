@@ -76,6 +76,7 @@ Carloniii/100/DEB/adc.png
 Rakão/100/DEB/sup.png
 VDE vital/100/VDE/jungle.png
 VDE 369/100/VDE/top.png
+OLY Hercules/100/OLY/jungle.png
 `;
 
 const linhas = dados.split('\n');
