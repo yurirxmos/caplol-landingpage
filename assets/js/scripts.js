@@ -62,7 +62,7 @@ organizarTabela();
 // ORDENAÇÃO DE MVP
 const dados =
   `
-Eduardo Garen/200/DEB/top.png
+Eduardo Garen/300/DEB/top.png
 VDE Thigas/200/VDE/sup.png
 hydruZ mete fofo/100/FAG/mid.png
 Askedre/200/UNB/mid.png
