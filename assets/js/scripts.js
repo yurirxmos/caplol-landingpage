@@ -65,7 +65,7 @@ const dados =
 Eduardo Garen/200/DEB/top.png
 VDE Thigas/200/VDE/sup.png
 hydruZ mete fofo/100/FAG/mid.png
-Askedre/100/UNB/mid.png
+Askedre/200/UNB/mid.png
 HEZ Ivankob xB/100/HEZ/sup.png
 Um anão mt loko/100/UMP/top.png
 INV yuridela/300/INV/adc.png
