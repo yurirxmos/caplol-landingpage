@@ -79,6 +79,7 @@ VDE 369/100/VDE/top.png
 OLY Hercules/100/OLY/jungle.png
 HEZ magíc/100/HEZ/jungle.png
 Neninha/100/UNB/sup.png
+INV João Justino/100/INV/top.png
 `;
 
 const linhas = dados.split('\n');
