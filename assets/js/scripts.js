@@ -75,7 +75,7 @@ INTZ Wenddel/100/INTZ/top.png
 Carloniii/100/DEB/adc.png
 Rakão/100/DEB/sup.png
 VDE vital/100/VDE/jungle.png
-VDE 369/100/VDE/top.png
+VDE 369/200/VDE/top.png
 OLY Hercules/100/OLY/jungle.png
 HEZ magíc/100/HEZ/jungle.png
 Neninha/100/UNB/sup.png
