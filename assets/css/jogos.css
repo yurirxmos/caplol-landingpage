@@ -233,6 +233,7 @@
 
 #vitoria {
     color: var(--vitoria);
+    font-weight: 800;
 }
 
 #derrota {
