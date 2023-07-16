@@ -26,8 +26,8 @@ function organizarTabela() {
     var scoreB = parseInt(b.getElementsByClassName('score')[1].innerText);
     var defeatA = parseInt(a.getElementsByClassName('score')[2].innerText);
     var defeatB = parseInt(b.getElementsByClassName('score')[2].innerText);
-    var timeA = a.getElementsByClassName('placar')[0].innerText.split('|')[0].trim();
-    var timeB = b.getElementsByClassName('placar')[0].innerText.split('|')[0].trim();
+    var timeA = a.getElementsByClassName('placar')[0].innerText.trim();
+    var timeB = b.getElementsByClassName('placar')[0].innerText.trim();
 
     if (scoreA > scoreB) {
       return -1;
@@ -56,5 +56,7 @@ function organizarTabela() {
     tabela.appendChild(li);
   });
 }
+
 organizarTabela();
+
 
