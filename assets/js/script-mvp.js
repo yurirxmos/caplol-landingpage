@@ -29,11 +29,11 @@ document.addEventListener("DOMContentLoaded", function() {
   const lis = mvpConteudo.querySelectorAll('li');
   jogadoresOrdenados.forEach((jogador, index) => {
     const li = lis[index];
-    const imgElement = li.querySelector('img');
+    const imgElement = li.querySelector('span + img');
     const numeroElement = li.querySelector('b');
     const timeElement = li.querySelector('span');
-    const nomeElement = li.querySelectorAll('h2')[0];
-    const pontosElement = li.querySelectorAll('h2')[1];
+    const nomeElement = li.querySelector('.mvp-placar h2:first-child');
+    const pontosElement = li.querySelector('.mvp-placar h2:last-child');
 
     imgElement.src = jogador.imagem;
     numeroElement.textContent = (index + 1).toString();
