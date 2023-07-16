@@ -839,17 +839,17 @@ span#VDE {
     font-weight: 1000;
 }
 
-.tabela-conteudo li:nth-child(n):nth-child(-n+4) {
+.tabela-conteudo li:nth-child(n):nth-child(-n+5) {
 
     border-left: solid 3px green;
 }
 
-.tabela-conteudo li:nth-child(n+5):nth-child(-n+8) {
+.tabela-conteudo li:nth-child(n+6):nth-child(-n+9) {
 
     border-left: solid 3px rgb(0, 87, 128);
 }
 
-.tabela-conteudo li:nth-child(n+9):nth-child(-n+12) {
+.tabela-conteudo li:nth-child(n+10):nth-child(-n+12) {
 
     border-left: solid 3px rgb(226, 43, 43);
 }
