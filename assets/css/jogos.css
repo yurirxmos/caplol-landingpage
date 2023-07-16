@@ -122,7 +122,7 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     opacity: 1;
     transition: opacity 0.5s;
 }
@@ -198,7 +198,7 @@
 }
 
 .jogos #feito {
-    opacity: 65%;
+    opacity: 45%;
 }
 
 .jogos #feito:hover {
