@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { nome: "Carloniii", pontos: 100, time: "DEB", imagem: "./assets/img/ranked-positions/adc.png" },
     { nome: "Rakão", pontos: 100, time: "DEB", imagem: "./assets/img/ranked-positions/sup.png" },
     { nome: "VDE vital", pontos: 100, time: "DEB", imagem: "./assets/img/ranked-positions/jungle.png" },
-    { nome: "VDE 369", pontos: 200, time: "VDE", imagem: "./assets/img/ranked-positions/top.png" },
+    { nome: "VDE 369", pontos: 300, time: "VDE", imagem: "./assets/img/ranked-positions/top.png" },
     { nome: "OLY Hercules", pontos: 100, time: "OLY", imagem: "./assets/img/ranked-positions/jungle.png" },
     { nome: "HEZ magíc", pontos: 100, time: "HEZ", imagem: "./assets/img/ranked-positions/fill.png" },
     { nome: "Neninha", pontos: 100, time: "UNB", imagem: "./assets/img/ranked-positions/sup.png" },
