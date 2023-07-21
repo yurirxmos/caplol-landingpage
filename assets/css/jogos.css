@@ -240,9 +240,87 @@
     color: var(--derrota);
 }
 
+#menuTimes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+    width: 70%;
+    margin-bottom: 3rem;
+}
+
+#menuTimes img {
+    width: 50px;
+}
+
+#menuTimes a {
+    font-size: 12px;
+    color: white;
+    background-color: #1d1d1d;
+    padding: 1rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+
+#menuTimes div a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background-color: #1d1d1d;
+    padding: 1rem;
+    border-radius: 20px;
+    font-size: 13px;
+    min-height: 120px;
+    min-width: 100px;
+}
+
+#menuTimes a:hover {
+    cursor: pointer;
+    transition: 300ms;
+    background-color: #333;
+}
+
+#menuTimes span {
+    margin-top: 10px;
+}
+
+#menuTimes div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+}
+
 @media only screen and (max-width: 768px) {
     .jogos-botoes {
         gap: 30px;
         flex-direction: column;
+    }
+
+    #menuTimes img {
+        display: none;
+    }
+
+    #menuTimes div a {
+        min-width: 70px;
+        min-height: 70px;
+    }
+
+    #menuTimes span {
+        margin: 0;
+    }
+
+    #menuTimes div {
+        gap: 5px;
+    }
+
+    #menuTimes {
+        width: auto;
     }
 }

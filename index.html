@@ -27,7 +27,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-
     <script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8407466269684056"
@@ -36,41 +35,58 @@
   </head>
 
   <body>
-    <!-- HEADER -->
+    <!-- HEADER E NAVBAR -->
 
     <div class="header">
-      <a href="/">
-        <img src="/assets/img/icones/caplol.png" />
+      <a class="logo-header" href="/">
+        <img class="logo" src="/assets/img/icones/caplol.png" />
+        <h1><b>CAPLOL</b> | Oficial</h1>
+        <img class="check" src="./assets/img/icones/check.png" />
       </a>
+
+      <nav class="navbar">
+        <ul class="navbar-ul">
+          <li class="navbar-li"><a href="/">início</a></li>
+          <li class="navbar-li"><a href="/#equipes">equipes</a></li>
+          <li class="navbar-li"><a href="/#tabela">tabela</a></li>
+          <li class="navbar-li"><a href="/jogos.html">jogos</a></li>
+          <li class="navbar-li dropdown">
+            <a class="dropdown-toggle">
+              CAPLOL
+              <img src="./assets/img/icones/seta-baixo.png" />
+            </a>
+            <div class="dropdown-menu">
+              <a href="/regras.html"> regras </a>
+              <a href="/inscricao.html"> inscrição </a>
+              <a href="/analise.html"> análise </a>
+              <a href="/sobre.html"> sobre</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="icones-header">
+        <a href="https://discord.gg/UzEARpUFWg" target="_blank"
+          ><img src="./assets/img/icones/discord.png" alt="discord-icon"
+        /></a>
+        <a
+          href="https://chat.whatsapp.com/BXhSlS6nhUDLqaFHgg3oJU"
+          target="_blank"
+          ><img src="./assets/img/icones/whatsapp.png" alt="wpp-icon"
+        /></a>
+        <a href="https://www.twitch.tv/caploltwitch" target="_blank"
+          ><img src="./assets/img/icones/twitch.png" alt="twitch-icon"
+        /></a>
+        <a href="https://www.youtube.com/@caplolytb" target="_blank"
+          ><img src="./assets/img/icones/youtube.png" alt="youtube-icon"
+        /></a>
+      </div>
     </div>
 
-    <!-- NAVBAR -->
-
-    <nav class="navbar">
-      <ul class="navbar-ul">
-        <li class="navbar-li"><a href="/">início</a></li>
-        <li class="navbar-li"><a href="/#equipes">equipes</a></li>
-        <li class="navbar-li"><a href="/#tabela">tabela</a></li>
-        <li class="navbar-li"><a href="/jogos.html">jogos</a></li>
-        <li class="navbar-li dropdown">
-          <a class="dropdown-toggle">
-            CAPLOL
-            <img src="./assets/img/icones/seta-baixo.png" />
-          </a>
-          <div class="dropdown-menu">
-            <a href="/regras.html"> regras </a>
-            <a href="/inscricao.html"> inscrição </a>
-            <a href="/analise.html"> análise </a>
-            <a href="/sobre.html"> sobre</a>
-          </div>
-        </li>
-      </ul>
-    </nav>
-
-    <hr />
-
+    <div class="space"></div>
+    
+    <!-- POPUP -->
     <div class="popup">
-      <img src="./assets/img/icones/aviso.png" alt="twitch-popup" />
       <div>
         <h1>ESTAMOS PASSANDO POR PROBLEMAS!</h1>
         <h2>
@@ -81,6 +97,8 @@
       </div>
       <div id="fechar">X</div>
     </div>
+
+    
 
     <!-- TRANSMISSÃO -->
 
@@ -245,8 +263,7 @@
               <img src="./assets/img/ranked-positions/fill.png" /> BFT Ares002
             </div>
             <div>
-              <img src="./assets/img/ranked-positions/fill.png" /> OLY
-              Hercules
+              <img src="./assets/img/ranked-positions/fill.png" /> OLY Hercules
             </div>
             <div>
               <img src="./assets/img/ranked-positions/fill.png" /> Telokee
@@ -267,7 +284,8 @@
               <img src="./assets/img/ranked-positions/fill.png" /> Prophet 7K
             </div>
             <div id="reserva">
-              <img src="./assets/img/ranked-positions/fill.png" /> The Yasuo Open
+              <img src="./assets/img/ranked-positions/fill.png" /> The Yasuo
+              Open
             </div>
           </div>
         </div>
@@ -402,23 +420,19 @@
             </div>
             <div>
               <img src="./assets/img/ranked-positions/fill.png" /> PREDO PAULO
-              <b>(C)</b>
             </div>
             <div>
               <img src="./assets/img/ranked-positions/fill.png" /> Who l Am
+              <b>(C)</b>
             </div>
             <hr />
             <div id="reserva">
-              <img src="./assets/img/ranked-positions/fill.png" /> Hydruz mete
+              <img src="./assets/img/ranked-positions/fill.png" /> hydruz mete
               fofo
             </div>
             <div id="reserva">
               <img src="./assets/img/ranked-positions/fill.png" /> zocca final
-              boss
-            </div>
-            <div id="reserva">
-              <img src="./assets/img/ranked-positions/fill.png" /> vulgo mk
-              delas
+              boss, vulgo mk delas
             </div>
             <div id="reserva">
               <img src="./assets/img/ranked-positions/mid.png" /> neguin
@@ -471,7 +485,6 @@
               <img src="./assets/img/ranked-positions/fill.png" /> POKIN PEGA
               MEMO
             </div>
-            <hr />
           </div>
         </div>
 
@@ -621,7 +634,7 @@
       </a>
 
       <a
-        href="https://www.op.gg/multisearch/br?summoners=Eduardo+garen%2Cdraven+1+vs+9%2Cmoderfoca66%2Ccarloniii%2CRak%C3%A3o%2C"
+        href="https://www.op.gg/multisearch/br?summoners=Eduardo+garen%2Cbleken%2Cmoderfoca66%2Ccarloniii%2CRak%C3%A3o"
         target="_blank"
         class="equipes-lista"
       >
@@ -641,8 +654,7 @@
               <img src="./assets/img/ranked-positions/top.png" /> Eduardo garen
             </div>
             <div>
-              <img src="./assets/img/ranked-positions/jungle.png" /> Draven 1 vs
-              9
+              <img src="./assets/img/ranked-positions/jungle.png" /> BLEKEN
             </div>
             <div>
               <img src="./assets/img/ranked-positions/mid.png" /> moderfoca66
@@ -658,7 +670,8 @@
               PequiDeGoiás
             </div>
             <div id="reserva">
-              <img src="./assets/img/ranked-positions/jungle.png" /> Bleken
+              <img src="./assets/img/ranked-positions/jungle.png" /> Draven 1 vs
+              9
             </div>
             <div id="reserva">
               <img src="./assets/img/ranked-positions/mid.png" /> Neera
@@ -696,7 +709,7 @@
         </div>
         <li>
           <b id="1">1.</b>
-          <img src="./assets/img/equipes/invasora-logo.png">
+          <img src="./assets/img/equipes/invasora-logo.png" />
           <span id="INV">INV</span> Invasora
           <div class="placar">
             00:23:09
@@ -708,7 +721,7 @@
 
         <li>
           <b>2.</b>
-          <img src="./assets/img/equipes/intz-logo.png">
+          <img src="./assets/img/equipes/intz-logo.png" />
           <span id="INTZ">INTZ</span> Inúteis Não Tem veZ
           <div class="placar">
             00:31:50
@@ -720,7 +733,7 @@
 
         <li>
           <b>3.</b>
-          <img src="./assets/img/equipes/olympus-logo.png">
+          <img src="./assets/img/equipes/olympus-logo.png" />
           <span id="OLY">OLY</span> Olympus Fortify Gaming
           <div class="placar">
             00:24:22
@@ -731,8 +744,8 @@
         </li>
 
         <li>
-          <b>4.</b> 
-          <img src="./assets/img/equipes/unb-logo.png">
+          <b>4.</b>
+          <img src="./assets/img/equipes/unb-logo.png" />
           <span id="UNB">UNB</span> União Bagre
           <div class="placar">
             00:29:08
@@ -743,8 +756,8 @@
         </li>
 
         <li>
-          <b>5.</b> 
-          <img src="./assets/img/equipes/hez-logo.png">
+          <b>5.</b>
+          <img src="./assets/img/equipes/hez-logo.png" />
           <span id="HEZ">HEZ</span> Heros Zero
           <div class="placar">
             00:28:56
@@ -755,8 +768,8 @@
         </li>
 
         <li>
-          <b>6.</b> 
-          <img src="./assets/img/equipes/fa-logo.png">
+          <b>6.</b>
+          <img src="./assets/img/equipes/fa-logo.png" />
           <span id="FAG">FAG</span> Free Agents Gang
           <div class="placar">
             00:36:10
@@ -767,8 +780,8 @@
         </li>
 
         <li>
-          <b>7.</b> 
-          <img src="./assets/img/equipes/ump-logo.png">
+          <b>7.</b>
+          <img src="./assets/img/equipes/ump-logo.png" />
           <span id="UMP">UMP</span> Ursos Mansos e Peludos
           <div class="placar">
             00:31:53
@@ -779,8 +792,8 @@
         </li>
 
         <li>
-          <b>9.</b> 
-          <img src="./assets/img/equipes/idn-logo.png">
+          <b>9.</b>
+          <img src="./assets/img/equipes/idn-logo.png" />
           <span id="IDN">IDN</span> Inimigos do Nexus
           <div class="placar">
             00:00:00
@@ -791,8 +804,8 @@
         </li>
 
         <li>
-          <b>10.</b> 
-          <img src="./assets/img/equipes/zdc-logo.png">
+          <b>10.</b>
+          <img src="./assets/img/equipes/zdc-logo.png" />
           <span id="ZDC">ZDC</span> Zodiac
           <div class="placar">
             00:30:33
@@ -803,8 +816,8 @@
         </li>
 
         <li>
-          <b>11.</b> 
-          <img src="./assets/img/equipes/vde-logo.png">
+          <b>11.</b>
+          <img src="./assets/img/equipes/vde-logo.png" />
           <span id="VDE">VDE</span> Vivo Dibre E-Sports
           <div class="placar">
             00:30:08
@@ -815,8 +828,8 @@
         </li>
 
         <li>
-          <b>12.</b> 
-          <img src="./assets/img/equipes/deb-logo.png">
+          <b>12.</b>
+          <img src="./assets/img/equipes/deb-logo.png" />
           <span id="DEB">DEB</span> Debug
           <div class="placar">
             00:28:38

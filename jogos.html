@@ -27,38 +27,55 @@
   </head>
 
   <body>
-    <!-- HEADER -->
+    <!-- HEADER E NAVBAR -->
 
     <div class="header">
-      <a href="/">
-        <img src="/assets/img/icones/caplol.png" />
+      <a class="logo-header" href="/">
+        <img class="logo" src="/assets/img/icones/caplol.png" />
+        <h1><b>CAPLOL</b> | Oficial</h1>
+        <img class="check" src="./assets/img/icones/check.png" />
       </a>
+
+      <nav class="navbar">
+        <ul class="navbar-ul">
+          <li class="navbar-li"><a href="/">início</a></li>
+          <li class="navbar-li"><a href="/#equipes">equipes</a></li>
+          <li class="navbar-li"><a href="/#tabela">tabela</a></li>
+          <li class="navbar-li"><a href="/jogos.html">jogos</a></li>
+          <li class="navbar-li dropdown">
+            <a class="dropdown-toggle">
+              CAPLOL
+              <img src="./assets/img/icones/seta-baixo.png" />
+            </a>
+            <div class="dropdown-menu">
+              <a href="/regras.html"> regras </a>
+              <a href="/inscricao.html"> inscrição </a>
+              <a href="/analise.html"> análise </a>
+              <a href="/sobre.html"> sobre</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="icones-header">
+        <a href="https://discord.gg/UzEARpUFWg" target="_blank"
+          ><img src="./assets/img/icones/discord.png" alt="discord-icon"
+        /></a>
+        <a
+          href="https://chat.whatsapp.com/BXhSlS6nhUDLqaFHgg3oJU"
+          target="_blank"
+          ><img src="./assets/img/icones/whatsapp.png" alt="wpp-icon"
+        /></a>
+        <a href="https://www.twitch.tv/caploltwitch" target="_blank"
+          ><img src="./assets/img/icones/twitch.png" alt="twitch-icon"
+        /></a>
+        <a href="https://www.youtube.com/@caplolytb" target="_blank"
+          ><img src="./assets/img/icones/youtube.png" alt="youtube-icon"
+        /></a>
+      </div>
     </div>
 
-    <!-- NAVBAR -->
-
-    <nav class="navbar">
-      <ul class="navbar-ul">
-        <li class="navbar-li"><a href="/">início</a></li>
-        <li class="navbar-li"><a href="/#equipes">equipes</a></li>
-        <li class="navbar-li"><a href="/#tabela">tabela</a></li>
-        <li class="navbar-li"><a href="/jogos.html">jogos</a></li>
-        <li class="navbar-li dropdown">
-          <a class="dropdown-toggle">
-            CAPLOL
-            <img src="./assets/img/icones/seta-baixo.png" />
-          </a>
-          <div class="dropdown-menu">
-            <a href="/regras.html"> regras </a>
-            <a href="/inscricao.html"> inscrição </a>
-            <a href="/analise.html"> análise </a>
-            <a href="/sobre.html"> sobre</a>
-          </div>
-        </li>
-      </ul>
-    </nav>
-
-    <hr />
+    <div class="space"></div>
 
     <!-- JOGOS -->
 
@@ -89,24 +106,75 @@
       <h2>\ BUSCA AVANÇADA /</h2>
       <br />
       <h1>SELECIONE UM TIME</h1>
-      <select id="selectTime">
-        <option value="">Todos os times</option>
-        <option value="INV">Invasora</option>
-        <option value="DEB">Debug</option>
-        <option value="VDE">Vivo Dibre E-Sports</option>
-        <option value="ZDC">Zodiac</option>
-        <option value="FAG">Free Agents Gang</option>
-        <option value="UMP">Ursos Mansos e Pelados</option>
-        <option value="IDN">Inimigos do Nexus</option>
-        <option value="UNB">União Bagre</option>
-        <option value="HEZ">Heros Zero</option>
-        <option value="OLY">Olympus Fortify Gaming</option>
-        <option value="INTZ">Inúteis Não Tem veZ</option>
-      </select>
+      <div id="menuTimes">
+
+        <a data-time=""><b>VER TODOS OS JOGOS</b></a>
+
+        <div>
+          <a data-time="INV">
+            <img src="./assets/img/equipes/invasora-logo.png" />
+            <span id="INV"><b>INV</b></span>
+            Invasora
+          </a>
+          <a data-time="DEB">
+            <img src="./assets/img/equipes/deb-logo.png" />
+            <span id="DEB"><b>DEB</b></span>
+            Debug
+          </a>
+          <a data-time="DEB">
+            <img src="./assets/img/equipes/vde-logo.png" />
+            <span id="VDE"><b>VDE</b></span>
+            Vivo Dibre <br />E-Sports
+          </a>
+          <a data-time="ZDC">
+            <img src="./assets/img/equipes/zdc-logo.png" />
+            <span id="ZDC"><b>ZDC</b></span>
+            Zodiac
+          </a>
+          <a data-time="FAG">
+            <img src="./assets/img/equipes/fa-logo.png" />
+            <span id="FAG"><b>FAG</b></span>
+            Free Agents <br />Gang
+          </a>
+          <a data-time="UMP">
+            <img src="./assets/img/equipes/ump-logo.png" />
+            <span id="UMP"><b>UMP</b></span>
+            Ursos Mansos<br />e Pelados
+          </a>
+          <a data-time="IDN">
+            <img src="./assets/img/equipes/idn-logo.png" />
+            <span id="IDN"><b>IDN</b></span>
+            Inimigos<br />do Nexus
+          </a>
+          <a data-time="UNB">
+            <img src="./assets/img/equipes/unb-logo.png" />
+            <span id="UNB"><b>UNB</b></span>
+            União Bagre
+          </a>
+          <a data-time="HEZ">
+            <img src="./assets/img/equipes/hez-logo.png" />
+            <span id="HEZ"><b>HEZ</b></span>
+            Heros Zero
+          </a>
+          <a data-time="OLY">
+            <img src="./assets/img/equipes/olympus-logo.png" />
+            <span id="OLY"><b>OLY</b></span>
+            Olympus <br />
+            Fortify Gaming
+          </a>
+          <a data-time="INTZ">
+            <img src="./assets/img/equipes/intz-logo.png" />
+            <span id="INTZ"><b>INTZ</b></span>
+            Inúteis Não<br />Tem veZ
+          </a>
+        </div>
+
+      </div>
     </div>
 
+    <hr class="hr-ball">
+    
     <div class="jogos">
-
       <div class="jogos-lista">
         <h1 class="order-0">23/07 | <b>DOMINGO</b></h1>
         <div class="jogo">
