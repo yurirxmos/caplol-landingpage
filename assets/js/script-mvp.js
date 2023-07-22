@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
     { nome: "VDE Franzzera", pontos: 100, time: "VDE", imagem: "./assets/img/ranked-positions/mid.png" },
     { nome: "Zaraki Kenpachi", pontos: 100, time: "UNB", imagem: "./assets/img/ranked-positions/jungle.png" },
     { nome: "HEZ Paçoquita xD", pontos: 100, time: "UNB", imagem: "./assets/img/ranked-positions/fill.png" },
-    { nome: "Amante da loira", pontos: 100, time: "ZDC", imagem: "./assets/img/ranked-positions/sup.png" }
+    { nome: "Amante da loira", pontos: 100, time: "ZDC", imagem: "./assets/img/ranked-positions/sup.png" },
+    { nome: "ZDC Taranis", pontos: 100, time: "ZDC", imagem: "./assets/img/ranked-positions/jungle.png" }
   ];
 
   // Ordenando os jogadores com base nos pontos
