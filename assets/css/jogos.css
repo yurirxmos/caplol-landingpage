@@ -236,6 +236,12 @@
     font-weight: 800;
 }
 
+#wo {
+    color: rgb(255, 197, 6);
+    font-size: 8px;
+    font-weight: 800;
+}
+
 #derrota {
     color: var(--derrota);
 }
