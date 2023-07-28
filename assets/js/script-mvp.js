@@ -26,7 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
     { nome: "ZDC Taranis", pontos: 100, time: "ZDC", imagem: "./assets/img/ranked-positions/jungle.png" },
     { nome: "Gstvh", pontos: 100, time: "UNB", imagem: "./assets/img/ranked-positions/adc.png" },
     { nome: "VDE Ori", pontos: 100, time: "VDE", imagem: "./assets/img/ranked-positions/adc.png" },
-    { nome: "OnlinePlay", pontos: 100, time: "ZDC", imagem: "./assets/img/ranked-positions/top.png" }
+    { nome: "OnlinePlay", pontos: 100, time: "ZDC", imagem: "./assets/img/ranked-positions/top.png" },
+    { nome: "INV Gonn", pontos: 100, time: "INV", imagem: "./assets/img/ranked-positions/jungle.png" }
   ];
 
   // Ordenando os jogadores com base nos pontos
