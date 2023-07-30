@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Obtendo os dados dos jogadores
   const jogadores = [
-    { nome: "INV yuridela", pontos: 300, time: "INV", imagem: "./assets/img/ranked-positions/adc.png" },
+    { nome: "INV yuridela", pontos: 400, time: "INV", imagem: "./assets/img/ranked-positions/adc.png" },
     { nome: "VDE Thigas", pontos: 200, time: "VDE", imagem: "./assets/img/ranked-positions/sup.png" },
     { nome: "Eduardo Garen", pontos: 300, time: "DEB", imagem: "./assets/img/ranked-positions/top.png" },
     { nome: "hydruZ mete fofo", pontos: 100, time: "FAG", imagem: "./assets/img/ranked-positions/mid.png" },
