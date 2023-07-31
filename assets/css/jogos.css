@@ -1,42 +1,168 @@
-.hidden {
-    display: none;
-}
+/* LAYOUT DA PÁGINA*/
 
-.mostrarJogos img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 
-    width: 20px;
-    height: 20px;
-    margin-bottom: 0.5rem;
-    filter: brightness(100%) invert(1);
-}
-
-.mostrarJogos button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 6vh;
-    width: 40vh;
+.divisor-de-etapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin-bottom: 2rem;
-    min-width: 80px;
+}
 
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    border: none;
-    background-color: #333;
+.divisor-de-etapa h1 {
+    font-family: 'StretchPro';
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-feature-settings: "liga"1;
     color: white;
-    border-radius: 10px;
+    margin: 0;
 }
 
-.mostrarJogos button:hover {
-    background-color: #ec3737;
-    cursor: pointer;
-    transition: 400ms;
+.divisor-de-etapa h2 {
+    text-transform: uppercase;
+    font-size: 10px;
 }
+
+.divisor-de-etapa h2#finalizado {
+    color: #ee7c7c;
+}
+
+.divisor-de-etapa h2#aguardando {
+    color: #7cb1ee;
+}
+
+.divisor-de-etapa h2#andamento {
+    color: #afee7c;
+}
+
+.divisor-de-etapa hr {
+    margin-top: 2rem;
+
+    width: 60%;
+}
+
+
+.botao-mostrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.botao-mostrar button {
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px 15px;
+    font-size: 12px;
+    color: white;
+    background-color: #ec3737;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+
+.botao-mostrar button:hover {
+    background-color: #333;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* PLAYOFFS */
+
+
+
+
+
+.playoff {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Duração e tipo de transição */
+    margin-right: auto;
+    margin-left: auto;
+    width: 60%;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.playoff h1 {
+    margin: 0;
+    color: white;
+    font-family: 'StretchPro';
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.time {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 13px;
+    color: white;
+    padding: 10px 15px;
+    background-color: #181818;
+    border-left: solid 3px #ec3737;
+    height: 15px;
+    width: 220px;
+} 
+
+.time:hover {
+    background-color: #1f1f1f;
+    cursor: pointer;
+}
+
+.time img {
+    width: 25px;
+    vertical-align: middle;
+}
+
+.time span {
+    font-weight: 1000;
+}
+
+.time #derrota {
+    position: absolute;
+    font-weight: 400;
+    right: 10px;
+}
+
+.time #vitoria {
+    position: absolute;
+    font-weight: 400;
+    right: 10px;
+}
+
+.confronto {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.linha-1 {
+    display: flex;
+    gap: 30px;
+}
+
+
+
+
+/* FASE DE PONTOS */
+
+
+
+
+
 
 
 .seletor {
@@ -114,46 +240,6 @@
     width: 14px;
     vertical-align: middle;
     margin-right: 5px;
-}
-
-
-.divisor-de-etapa {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 2rem;
-}
-
-.divisor-de-etapa h1 {
-    font-family: 'StretchPro';
-    font-size: 18px;
-    letter-spacing: 2px;
-    font-feature-settings: "liga" 1;
-    color: white;
-    margin: 0;
-}
-
-.divisor-de-etapa h2 {
-    text-transform: uppercase;
-    font-size: 10px;
-}
-
-.divisor-de-etapa h2#finalizado {
-    color: #ee7c7c;
-}
-
-.divisor-de-etapa h2#aguardando {
-    color: #7cb1ee;
-}
-
-.divisor-de-etapa h2#andamento {
-    color: #afee7c;
-}
-
-.divisor-de-etapa hr {
-    margin: 2rem;
-    width: 60%;
 }
 
 .jogos {
@@ -321,11 +407,11 @@
     padding: 15px 15px;
 }
 
-.seletor #menuTimes .reset{
+.seletor #menuTimes .reset {
     padding: 10px 15px;
 }
 
-.seletor #menuTimes .reset img{
+.seletor #menuTimes .reset img {
     width: 20px;
     vertical-align: middle;
 }
@@ -346,6 +432,12 @@
     text-align: center;
 }
 
+
+
+
+/* RESPONSIVIDADE */
+
+
 @media only screen and (max-width: 768px) {
     .jogos-botoes {
         gap: 30px;
@@ -358,6 +450,10 @@
 
     #menuTimes div {
         gap: 10px;
+    }
+
+    .playoff {
+        width: 75%;
     }
 
 }

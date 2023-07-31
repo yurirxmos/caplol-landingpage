@@ -101,54 +101,6 @@
         mvps
       </a>
     </div>
-
-    <div class="seletor">
-      <h2>\ BUSCA AVANÇADA /</h2>
-      <br />
-      <h1>SELECIONE UM TIME</h1>
-      <div id="menuTimes">
-        <a data-time="" class="reset">
-          <img src="./assets/img/icones/reset.png">
-          <b>RESETAR</b>
-        </a>
-
-        <div>
-          <a data-time="INV">
-            <span id="INV"><b>INV</b></span>
-          </a>
-          <a data-time="DEB">
-            <span id="DEB"><b>DEB</b></span>
-          </a>
-          <a data-time="VDE">
-            <span id="VDE"><b>VDE</b></span>
-          </a>
-          <a data-time="ZDC">
-            <span id="ZDC"><b>ZDC</b></span>
-          </a>
-          <a data-time="FAG">
-            <span id="FAG"><b>FAG</b></span>
-          </a>
-          <a data-time="UMP">
-            <span id="UMP"><b>UMP</b></span>
-          </a>
-          <a data-time="IDN">
-            <span id="IDN"><b>IDN</b></span>
-          </a>
-          <a data-time="UNB">
-            <span id="UNB"><b>UNB</b></span>
-          </a>
-          <a data-time="HEZ">
-            <span id="HEZ"><b>HEZ</b></span>
-          </a>
-          <a data-time="OLY">
-            <span id="OLY"><b>OLY</b></span>
-          </a>
-          <a data-time="INTZ">
-            <span id="INTZ"><b>INTZ</b></span>
-          </a>
-        </div>
-      </div>
-    </div>
     <!--- 
     <div class="divisor-de-etapa">
       <h1>FINALS</h1>
@@ -157,13 +109,152 @@
     </div>
     -->
 
-    <!--- 
     <div class="divisor-de-etapa">
       <h1>PLAY-OFFS</h1>
       <h2 id="aguardando">(Aguardando)</h2>
       <hr />
     </div>
-    -->
+
+    <div class="botao-mostrar">
+      <button id="toggleButton" onclick="togglePlayoff()">
+        Mostrar Playoffs
+      </button>
+    </div>
+
+    <div class="playoff" id="playoffDiv" style="opacity: 0; display: none;">
+      <div class="playoff-jogos">
+        <h1><span id="DEB">|</span> CHAVE SUPERIOR</h1>
+        <div class="chave-superior">
+          <div class="linha-1">
+            <div class="confronto">
+              <div class="time">
+                1º COLOCADO
+                <span id="derrota">0</span>
+              </div>
+              <div class="time">
+                3º/4º COLOCADO
+                <span id="derrota">0</span>
+              </div>
+            </div>
+
+            <div class="confronto">
+              <div class="time">
+                GANHADOR 1
+                <span id="derrota">0</span>
+              </div>
+            </div>
+
+            <div class="confronto">
+              <div class="time">FINALISTA SUPERIOR</div>
+            </div>
+          </div>
+
+          <div class="linha-1">
+            <div class="confronto">
+              <div class="time">
+                2º COLOCADO
+                <span id="derrota">0</span>
+              </div>
+              <div class="time">
+                3º/4º COLOCADO
+                <span id="derrota">0</span>
+              </div>
+            </div>
+
+            <div class="confronto">
+              <div class="time">
+                GANHADOR 2
+                <span id="derrota">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h1><span id="INV">|</span> CHAVE INFERIOR</h1>
+        <div class="chave-inferior">
+          <div class="linha-1">
+            <div class="confronto">
+              <div class="time">
+                PERDEDOR 1
+                <span id="derrota">0</span>
+              </div>
+              <div class="time">
+                PERDEDOR 2
+                <span id="derrota">0</span>
+              </div>
+            </div>
+
+            <div class="confronto">
+              <div class="time">
+                GANHADOR 3
+                <span id="derrota">0</span>
+              </div>
+            </div>
+
+            <div class="confronto">
+              <div class="time">
+                PERDEDOR SUPERIOR
+                <span id="derrota">0</span>
+              </div>
+              <div class="time">
+                GANHADOR 5
+                <span id="derrota">0</span>
+              </div>
+            </div>
+
+            <div class="confronto">
+              <div class="time">FINALISTA INFERIOR</div>
+            </div>
+          </div>
+
+          <div class="linha-1">
+            <div class="confronto">
+              <div class="time">
+                5º COLOCADO
+                <span id="derrota">0</span>
+              </div>
+              <div class="time">
+                VENCEDOR (6/X)
+                <span id="derrota">0</span>
+              </div>
+            </div>
+
+            <div class="confronto">
+              <div class="time">
+                GANHADOR 4
+                <span id="derrota">0</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="linha-1">
+            <div class="confronto">
+              <div class="time">
+                7º COLOCADO
+                <span id="derrota">0</span>
+              </div>
+              <div class="time">
+                8º COLOCADO
+                <span id="derrota">0</span>
+              </div>
+            </div>
+
+            <div class="confronto">
+              <div class="time">
+                6º COLOCADO
+                <span id="derrota">0</span>
+              </div>
+              <div class="time">
+                7º/8º COLOCADO
+                <span id="derrota">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="hr-ball" />
 
     <div class="divisor-de-etapa">
       <h1>FASE DE POONTOS</h1>
@@ -171,1033 +262,1074 @@
       <hr />
     </div>
 
-    <div class="jogos">
-      <div class="jogos-lista">
-        <h1 class="order-0">06/08 | <b>DOMINGO</b></h1>
+    <div class="botao-mostrar">
+      <button id="toggleButtonFaseDePontos" onclick="toggleFaseDePontos()">
+        Mostrar FASE DE PONTOS
+      </button>
+    </div>
 
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/hez-logo.png" />
-
-            <b>HEZ</b>
-            x
-            <b>FAG</b>
-
-            <img src="./assets/img/equipes/fa-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>13:00</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="derrota">0</span>
-          </h3>
+    <div class="fasedepontos" id="fasedepontosDiv" style="opacity: 0; display: none;">
+      <div class="seletor">
+        <h2>\ BUSCA AVANÇADA /</h2>
+        <br />
+        <h1>SELECIONE UM TIME</h1>
+        <div id="menuTimes">
+          <a data-time="" class="reset">
+            <img src="./assets/img/icones/reset.png" />
+            <b>RESETAR</b>
+          </a>
+  
+          <div>
+            <a data-time="INV">
+              <span id="INV"><b>INV</b></span>
+            </a>
+            <a data-time="DEB">
+              <span id="DEB"><b>DEB</b></span>
+            </a>
+            <a data-time="VDE">
+              <span id="VDE"><b>VDE</b></span>
+            </a>
+            <a data-time="ZDC">
+              <span id="ZDC"><b>ZDC</b></span>
+            </a>
+            <a data-time="FAG">
+              <span id="FAG"><b>FAG</b></span>
+            </a>
+            <a data-time="UMP">
+              <span id="UMP"><b>UMP</b></span>
+            </a>
+            <a data-time="IDN">
+              <span id="IDN"><b>IDN</b></span>
+            </a>
+            <a data-time="UNB">
+              <span id="UNB"><b>UNB</b></span>
+            </a>
+            <a data-time="HEZ">
+              <span id="HEZ"><b>HEZ</b></span>
+            </a>
+            <a data-time="OLY">
+              <span id="OLY"><b>OLY</b></span>
+            </a>
+            <a data-time="INTZ">
+              <span id="INTZ"><b>INTZ</b></span>
+            </a>
+          </div>
         </div>
       </div>
-
-      <div class="jogos-lista">
-        <h1 class="order-0">05/08 | <b>SÁBADO</b></h1>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/olympus-logo.png" />
-
-            <b>OLY</b>
-            x
-            <b>INTZ</b>
-
-            <img src="./assets/img/equipes/intz-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>13:00</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="derrota">0</span>
-          </h3>
+  
+      <div class="jogos">
+        <div class="jogos-lista">
+          <h1 class="order-0">05/08 | <b>SÁBADO</b></h1>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/hez-logo.png" />
+  
+              <b>HEZ</b>
+              x
+              <b>FAG</b>
+  
+              <img src="./assets/img/equipes/fa-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>13:00</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
         </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/deb-logo.png" />
-
-            <b>DEB</b>
-            x
-            <b>IDN</b>
-
-            <img src="./assets/img/equipes/idn-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>14:00</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="derrota">0</span>
-          </h3>
+  
+        <div class="jogos-lista">
+          <h1 class="order-0">04/08 | <b>SEXTA-FEIRA</b></h1>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/fa-logo.png" />
+  
+              <b>FAG</b>
+              x
+              <b>INTZ</b>
+  
+              <img src="./assets/img/equipes/intz-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>21:00</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/zdc-logo.png" />
+  
+              <b>ZDC</b>
+              x
+              <b>UMP</b>
+  
+              <img src="./assets/img/equipes/ump-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>22:00</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/deb-logo.png" />
+  
+              <b>DEB</b>
+              x
+              <b>UNB</b>
+  
+              <img src="./assets/img/equipes/unb-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>23:00</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
         </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/olympus-logo.png" />
-
-            <b>OLY</b>
-            x
-            <b>DEB</b>
-
-            <img src="./assets/img/equipes/deb-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>15:00</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="derrota">0</span>
-          </h3>
+  
+        <div class="jogos-lista">
+          <h1 class="order-0">03/08 | <b>QUINTA-FEIRA</b></h1>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/olympus-logo.png" />
+  
+              <b>OLY</b>
+              x
+              <b>FAG</b>
+  
+              <img src="./assets/img/equipes/fa-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>20:00</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/ump-logo.png" />
+  
+              <b>UMP</b>
+              x
+              <b>VDE</b>
+  
+              <img src="./assets/img/equipes/vde-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>21:00</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/hez-logo.png" />
+  
+              <b>HEZ</b>
+              x
+              <b>UMP</b>
+  
+              <img src="./assets/img/equipes/ump-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>22:00</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
         </div>
-      </div>
-
-      <div class="jogos-lista">
-        <h1 class="order-0">04/08 | <b>SEXTA-FEIRA</b></h1>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/fa-logo.png" />
-
-            <b>FAG</b>
-            x
-            <b>INTZ</b>
-
-            <img src="./assets/img/equipes/intz-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>21:00</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="derrota">0</span>
-          </h3>
+  
+        <div class="jogos-lista">
+          <h1 class="order-0">02/08 | <b>QUARTA-FEIRA</b></h1>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/olympus-logo.png" />
+  
+              <b>OLY</b>
+              x
+              <b>INTZ</b>
+  
+              <img src="./assets/img/equipes/intz-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>21:40</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/deb-logo.png" />
+  
+              <b>DEB</b>
+              x
+              <b>IDN</b>
+  
+              <img src="./assets/img/equipes/idn-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>22:40</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
         </div>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/zdc-logo.png" />
-
-            <b>ZDC</b>
-            x
-            <b>UMP</b>
-
-            <img src="./assets/img/equipes/ump-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>22:00</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="derrota">0</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            29/07 | <b>SÁBADO</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/invasora-logo.png" />
+  
+              <b>INV</b>
+              x
+              <b>ZDC</b>
+  
+              <img src="./assets/img/equipes/zdc-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>13:00</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
         </div>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/deb-logo.png" />
-
-            <b>DEB</b>
-            x
-            <b>UNB</b>
-
-            <img src="./assets/img/equipes/unb-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>23:00</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="derrota">0</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            28/07 | <b>SEXTA-FEIRA</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/ump-logo.png" />
+  
+              <b>UMP</b>
+              x
+              <b>INV</b>
+  
+              <img src="./assets/img/equipes/invasora-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>19:30</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/idn-logo.png" />
+  
+              <b>IDN</b>
+              x
+              <b>UMP</b>
+  
+              <img src="./assets/img/equipes/ump-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>20:30</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
         </div>
-      </div>
-
-      <div class="jogos-lista">
-        <h1 class="order-0">03/08 | <b>QUINTA-FEIRA</b></h1>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/olympus-logo.png" />
-
-            <b>OLY</b>
-            x
-            <b>FAG</b>
-
-            <img src="./assets/img/equipes/fa-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>20:00</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="derrota">0</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            27/07 | <b>QUINTA-FEIRA</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/idn-logo.png" />
+  
+              <b>IDN</b>
+              x
+              <b>VDE</b>
+  
+              <img src="./assets/img/equipes/vde-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>20:30</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/idn-logo.png" />
+  
+              <b>IDN</b>
+              x
+              <b>HEZ</b>
+  
+              <img src="./assets/img/equipes/hez-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>21:30</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/hez-logo.png" />
+  
+              <b>HEZ</b>
+              x
+              <b>ZDC</b>
+  
+              <img src="./assets/img/equipes/zdc-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>22:30</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
         </div>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/ump-logo.png" />
-
-            <b>UMP</b>
-            x
-            <b>VDE</b>
-
-            <img src="./assets/img/equipes/vde-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>21:00</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="derrota">0</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            25/07 | <b>TERÇA-FEIRA</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/unb-logo.png" />
+  
+              <b>UNB</b>
+              x
+              <b>IDN</b>
+  
+              <img src="./assets/img/equipes/idn-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>21:45</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
         </div>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/hez-logo.png" />
-
-            <b>HEZ</b>
-            x
-            <b>UMP</b>
-
-            <img src="./assets/img/equipes/ump-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>22:00</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="derrota">0</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            25/07 | <b>TERÇA-FEIRA</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/fa-logo.png" />
+  
+              <b>FAG</b>
+              x
+              <b>IDN</b>
+  
+              <img src="./assets/img/equipes/idn-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>20:30</b></h3>
+            <h3 id="placar">
+              <span id="wo">RESULTADO POR WO</span><br />
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/fa-logo.png" />
+  
+              <b>FAG</b>
+              x
+              <b>UNB</b>
+  
+              <img src="./assets/img/equipes/unb-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>21:30</b></h3>
+            <h3 id="placar">
+              <span id="wo">RESULTADO POR WO</span><br />
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/zdc-logo.png" />
+  
+              <b>ZDC</b>
+              x
+              <b>FAG</b>
+  
+              <img src="./assets/img/equipes/fa-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>22:30</b></h3>
+            <h3 id="placar">
+              <span id="wo">RESULTADO POR WO</span><br />
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
         </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          29/07 | <b>SÁBADO</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/invasora-logo.png" />
-
-            <b>INV</b>
-            x
-            <b>ZDC</b>
-
-            <img src="./assets/img/equipes/zdc-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>13:00</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            23/07 | <b>DOMINGO</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/unb-logo.png" />
+  
+              <b>UNB</b>
+              x
+              <b>INV</b>
+  
+              <img src="./assets/img/equipes/invasora-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>14:30</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
         </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          28/07 | <b>SEXTA-FEIRA</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/ump-logo.png" />
-
-            <b>UMP</b>
-            x
-            <b>INV</b>
-
-            <img src="./assets/img/equipes/invasora-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>19:30</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            22/07 | <b>SÁBADO</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/intz-logo.png" />
+  
+              <b>INTZ</b>
+              x
+              <b>UNB</b>
+  
+              <img src="./assets/img/equipes/unb-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>15:00</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/vde-logo.png" />
+  
+              <b>VDE</b>
+              x
+              <b>INTZ</b>
+  
+              <img src="./assets/img/equipes/intz-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>16:00</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
         </div>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/idn-logo.png" />
-
-            <b>IDN</b>
-            x
-            <b>UMP</b>
-
-            <img src="./assets/img/equipes/ump-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>20:30</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            21/07 | <b>SEXTA-FEIRA</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/ump-logo.png" />
+  
+              <b>UMP</b>
+              x
+              <b>INTZ</b>
+  
+              <img src="./assets/img/equipes/intz-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>20:30</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/intz-logo.png" />
+  
+              <b>INTZ</b>
+              x
+              <b>ZDC</b>
+  
+              <img src="./assets/img/equipes/zdc-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>21:30</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/zdc-logo.png" />
+  
+              <b>ZDC</b>
+              x
+              <b>OLY</b>
+  
+              <img src="./assets/img/equipes/olympus-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>22:30</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
         </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          27/07 | <b>QUINTA-FEIRA</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/idn-logo.png" />
-
-            <b>IDN</b>
-            x
-            <b>VDE</b>
-
-            <img src="./assets/img/equipes/vde-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>20:30</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            20/07 | <b>QUINTA-FEIRA</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/olympus-logo.png" />
+  
+              <b>OLY</b>
+              x
+              <b>HEZ</b>
+  
+              <img src="./assets/img/equipes/hez-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>20:30</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/olympus-logo.png" />
+  
+              <b>OLY</b>
+              x
+              <b>UNB</b>
+  
+              <img src="./assets/img/equipes/unb-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>21:30</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
         </div>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/idn-logo.png" />
-
-            <b>IDN</b>
-            x
-            <b>HEZ</b>
-
-            <img src="./assets/img/equipes/hez-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>21:30</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            16/07 | <b>DOMINGO</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/vde-logo.png" />
+  
+              <b>VDE</b>
+              x
+              <b>INV</b>
+  
+              <img src="./assets/img/equipes/invasora-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>13:00</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/deb-logo.png" />
+  
+              <b>DEB</b>
+              x
+              <b>VDE</b>
+  
+              <img src="./assets/img/equipes/vde-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>14:00</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
         </div>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/hez-logo.png" />
-
-            <b>HEZ</b>
-            x
-            <b>ZDC</b>
-
-            <img src="./assets/img/equipes/zdc-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>22:30</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            15/07 | <b>SÁBADO</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/vde-logo.png" />
+  
+              <b>VDE</b>
+              x
+              <b>FAG</b>
+  
+              <img src="./assets/img/equipes/fa-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>14:00</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
         </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          25/07 | <b>TERÇA-FEIRA</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/unb-logo.png" />
-
-            <b>UNB</b>
-            x
-            <b>IDN</b>
-
-            <img src="./assets/img/equipes/idn-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>21:45</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            14/07 | <b>SEXTA-FEIRA</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/intz-logo.png" />
+  
+              <b>INTZ</b>
+              x
+              <b>HEZ</b>
+  
+              <img src="./assets/img/equipes/hez-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>20:30</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/ump-logo.png" />
+  
+              <b>UMP</b>
+              x
+              <b>UNB</b>
+  
+              <img src="./assets/img/equipes/unb-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>21:30</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/idn-logo.png" />
+  
+              <b>IDN</b>
+              x
+              <b>INV</b>
+  
+              <img src="./assets/img/equipes/invasora-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>22:30</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
         </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          25/07 | <b>TERÇA-FEIRA</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/fa-logo.png" />
-
-            <b>FAG</b>
-            x
-            <b>IDN</b>
-
-            <img src="./assets/img/equipes/idn-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>20:30</b></h3>
-          <h3 id="placar">
-            <span id="wo">RESULTADO POR WO</span><br />
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            13/07 | <b>QUINTA-FEIRA</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/idn-logo.png" />
+  
+              <b>IDN</b>
+              x
+              <b>OLY</b>
+  
+              <img src="./assets/img/equipes/olympus-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>20:30</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/unb-logo.png" />
+  
+              <b>UNB</b>
+              x
+              <b>ZDC</b>
+  
+              <img src="./assets/img/equipes/zdc-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>21:30</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/intz-logo.png" />
+  
+              <b>INTZ</b>
+              x
+              <b>DEB</b>
+  
+              <img src="./assets/img/equipes/deb-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>22:30</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
         </div>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/fa-logo.png" />
-
-            <b>FAG</b>
-            x
-            <b>UNB</b>
-
-            <img src="./assets/img/equipes/unb-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>21:30</b></h3>
-          <h3 id="placar">
-            <span id="wo">RESULTADO POR WO</span><br />
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            09/07 | <b>DOMINGO</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/unb-logo.png" />
+  
+              <b>UNB</b>
+              x
+              <b>VDE</b>
+  
+              <img src="./assets/img/equipes/vde-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>15:00</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/vde-logo.png" />
+  
+              <b>VDE</b>
+              x
+              <b>HEZ</b>
+  
+              <img src="./assets/img/equipes/hez-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>16:00</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
         </div>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/zdc-logo.png" />
-
-            <b>ZDC</b>
-            x
-            <b>FAG</b>
-
-            <img src="./assets/img/equipes/fa-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>22:30</b></h3>
-          <h3 id="placar">
-            <span id="wo">RESULTADO POR WO</span><br />
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            07/07 | <b>SEXTA-FEIRA</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/hez-logo.png" />
+  
+              <b>HEZ</b>
+              x
+              <b>DEB</b>
+  
+              <img src="./assets/img/equipes/deb-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>20:30</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/zdc-logo.png" />
+  
+              <b>ZDC</b>
+              x
+              <b>DEB</b>
+  
+              <img src="./assets/img/equipes/deb-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>21:30</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
         </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          23/07 | <b>DOMINGO</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/unb-logo.png" />
-
-            <b>UNB</b>
-            x
-            <b>INV</b>
-
-            <img src="./assets/img/equipes/invasora-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>14:30</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            06/07 | <b>QUINTA-FEIRA</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/deb-logo.png" />
+  
+              <b>DEB</b>
+              x
+              <b>FAG</b>
+  
+              <img src="./assets/img/equipes/fa-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>21:00</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/fa-logo.png" />
+  
+              <b>FAG</b>
+              x
+              <b>INV</b>
+  
+              <img src="./assets/img/equipes/invasora-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>22:00</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
         </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          22/07 | <b>SÁBADO</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/intz-logo.png" />
-
-            <b>INTZ</b>
-            x
-            <b>UNB</b>
-
-            <img src="./assets/img/equipes/unb-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>15:00</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            05/07 | <b>QUARTA-FEIRA</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/deb-logo.png" />
+  
+              <b>DEB</b>
+              x
+              <b>UMP</b>
+  
+              <img src="./assets/img/equipes/ump-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>20:00</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/invasora-logo.png" />
+  
+              <b>INV</b>
+              x
+              <b>OLY</b>
+  
+              <img src="./assets/img/equipes/olympus-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>21:00</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/zdc-logo.png" />
+  
+              <b>ZDC</b>
+              x
+              <b>IDN</b>
+  
+              <img src="./assets/img/equipes/idn-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>22:00</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
         </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/vde-logo.png" />
-
-            <b>VDE</b>
-            x
-            <b>INTZ</b>
-
-            <img src="./assets/img/equipes/intz-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>16:00</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            04/07 | <b>TERÇA-FEIRA</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/invasora-logo.png" />
+  
+              <b>INV</b>
+              x
+              <b>INTZ</b>
+  
+              <img src="./assets/img/equipes/intz-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>20:30</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/intz-logo.png" />
+  
+              <b>INTZ</b>
+              x
+              <b>IDN</b>
+  
+              <img src="./assets/img/equipes/idn-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>21:30</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/olympus-logo.png" />
+  
+              <b>OLY</b>
+              x
+              <b>VDE</b>
+  
+              <img src="./assets/img/equipes/vde-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>22:30</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
         </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          21/07 | <b>SEXTA-FEIRA</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/ump-logo.png" />
-
-            <b>UMP</b>
-            x
-            <b>INTZ</b>
-
-            <img src="./assets/img/equipes/intz-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>20:30</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            03/07 | <b>SEGUNDA-FEIRA</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/unb-logo.png" />
+  
+              <b>UNB</b>
+              x
+              <b>HEZ</b>
+  
+              <img src="./assets/img/equipes/hez-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>20:30</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/hez-logo.png" />
+  
+              <b>HEZ</b>
+              x
+              <b>INV</b>
+  
+              <img src="./assets/img/equipes/invasora-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>21:30</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/ump-logo.png" />
+  
+              <b>UMP</b>
+              x
+              <b>OLY</b>
+  
+              <img src="./assets/img/equipes/olympus-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>22:30</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
         </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/intz-logo.png" />
-
-            <b>INTZ</b>
-            x
-            <b>ZDC</b>
-
-            <img src="./assets/img/equipes/zdc-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>21:30</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            02/07 | <b>DOMINGO</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/vde-logo.png" />
+  
+              <b>VDE</b>
+              x
+              <b>ZDC</b>
+  
+              <img src="./assets/img/equipes/zdc-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>14:00</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/fa-logo.png" />
+  
+              <b>FAG</b>
+              x
+              <b>UMP</b>
+  
+              <img src="./assets/img/equipes/ump-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>15:00</b></h3>
+            <h3 id="placar">
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
+            </h3>
+          </div>
         </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/zdc-logo.png" />
-
-            <b>ZDC</b>
-            x
-            <b>OLY</b>
-
-            <img src="./assets/img/equipes/olympus-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>22:30</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
-        </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          20/07 | <b>QUINTA-FEIRA</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/olympus-logo.png" />
-
-            <b>OLY</b>
-            x
-            <b>HEZ</b>
-
-            <img src="./assets/img/equipes/hez-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>20:30</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
-        </div>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/olympus-logo.png" />
-
-            <b>OLY</b>
-            x
-            <b>UNB</b>
-
-            <img src="./assets/img/equipes/unb-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>21:30</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
-        </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          16/07 | <b>DOMINGO</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/vde-logo.png" />
-
-            <b>VDE</b>
-            x
-            <b>INV</b>
-
-            <img src="./assets/img/equipes/invasora-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>13:00</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
-        </div>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/deb-logo.png" />
-
-            <b>DEB</b>
-            x
-            <b>VDE</b>
-
-            <img src="./assets/img/equipes/vde-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>14:00</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
-        </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          15/07 | <b>SÁBADO</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/vde-logo.png" />
-
-            <b>VDE</b>
-            x
-            <b>FAG</b>
-
-            <img src="./assets/img/equipes/fa-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>14:00</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
-        </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          14/07 | <b>SEXTA-FEIRA</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/intz-logo.png" />
-
-            <b>INTZ</b>
-            x
-            <b>HEZ</b>
-
-            <img src="./assets/img/equipes/hez-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>20:30</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
-        </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/ump-logo.png" />
-
-            <b>UMP</b>
-            x
-            <b>UNB</b>
-
-            <img src="./assets/img/equipes/unb-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>21:30</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
-        </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/idn-logo.png" />
-
-            <b>IDN</b>
-            x
-            <b>INV</b>
-
-            <img src="./assets/img/equipes/invasora-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>22:30</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
-        </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          13/07 | <b>QUINTA-FEIRA</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/idn-logo.png" />
-
-            <b>IDN</b>
-            x
-            <b>OLY</b>
-
-            <img src="./assets/img/equipes/olympus-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>20:30</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
-        </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/unb-logo.png" />
-
-            <b>UNB</b>
-            x
-            <b>ZDC</b>
-
-            <img src="./assets/img/equipes/zdc-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>21:30</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
-        </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/intz-logo.png" />
-
-            <b>INTZ</b>
-            x
-            <b>DEB</b>
-
-            <img src="./assets/img/equipes/deb-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>22:30</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
-        </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          09/07 | <b>DOMINGO</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/unb-logo.png" />
-
-            <b>UNB</b>
-            x
-            <b>VDE</b>
-
-            <img src="./assets/img/equipes/vde-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>15:00</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
-        </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/vde-logo.png" />
-
-            <b>VDE</b>
-            x
-            <b>HEZ</b>
-
-            <img src="./assets/img/equipes/hez-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>16:00</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
-        </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          07/07 | <b>SEXTA-FEIRA</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/hez-logo.png" />
-
-            <b>HEZ</b>
-            x
-            <b>DEB</b>
-
-            <img src="./assets/img/equipes/deb-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>20:30</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
-        </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/zdc-logo.png" />
-
-            <b>ZDC</b>
-            x
-            <b>DEB</b>
-
-            <img src="./assets/img/equipes/deb-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>21:30</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
-        </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          06/07 | <b>QUINTA-FEIRA</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/deb-logo.png" />
-
-            <b>DEB</b>
-            x
-            <b>FAG</b>
-
-            <img src="./assets/img/equipes/fa-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>21:00</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
-        </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/fa-logo.png" />
-
-            <b>FAG</b>
-            x
-            <b>INV</b>
-
-            <img src="./assets/img/equipes/invasora-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>22:00</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
-        </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          05/07 | <b>QUARTA-FEIRA</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/deb-logo.png" />
-
-            <b>DEB</b>
-            x
-            <b>UMP</b>
-
-            <img src="./assets/img/equipes/ump-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>20:00</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
-        </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/invasora-logo.png" />
-
-            <b>INV</b>
-            x
-            <b>OLY</b>
-
-            <img src="./assets/img/equipes/olympus-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>21:00</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
-        </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/zdc-logo.png" />
-
-            <b>ZDC</b>
-            x
-            <b>IDN</b>
-
-            <img src="./assets/img/equipes/idn-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>22:00</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
-        </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          04/07 | <b>TERÇA-FEIRA</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/invasora-logo.png" />
-
-            <b>INV</b>
-            x
-            <b>INTZ</b>
-
-            <img src="./assets/img/equipes/intz-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>20:30</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
-        </div>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/intz-logo.png" />
-
-            <b>INTZ</b>
-            x
-            <b>IDN</b>
-
-            <img src="./assets/img/equipes/idn-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>21:30</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
-        </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/olympus-logo.png" />
-
-            <b>OLY</b>
-            x
-            <b>VDE</b>
-
-            <img src="./assets/img/equipes/vde-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>22:30</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
-        </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          03/07 | <b>SEGUNDA-FEIRA</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/unb-logo.png" />
-
-            <b>UNB</b>
-            x
-            <b>HEZ</b>
-
-            <img src="./assets/img/equipes/hez-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>20:30</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
-        </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/hez-logo.png" />
-
-            <b>HEZ</b>
-            x
-            <b>INV</b>
-
-            <img src="./assets/img/equipes/invasora-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>21:30</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
-        </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/ump-logo.png" />
-
-            <b>UMP</b>
-            x
-            <b>OLY</b>
-
-            <img src="./assets/img/equipes/olympus-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>22:30</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
-        </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          02/07 | <b>DOMINGO</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/vde-logo.png" />
-
-            <b>VDE</b>
-            x
-            <b>ZDC</b>
-
-            <img src="./assets/img/equipes/zdc-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>14:00</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
-        </div>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/fa-logo.png" />
-
-            <b>FAG</b>
-            x
-            <b>UMP</b>
-
-            <img src="./assets/img/equipes/ump-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>15:00</b></h3>
-          <h3 id="placar">
-            <span id="vitoria">1</span> : <span id="derrota">0</span>
-          </h3>
-        </div>
-      </div>
-
-      <div class="jogos-lista" id="feito">
-        <h1 class="order-0">
-          01/07 | <b>SÁBADO</b>
-          <img src="./assets/img/icones/check.png" />
-        </h1>
-
-        <div class="jogo">
-          <h2>
-            <img src="./assets/img/equipes/invasora-logo.png" />
-
-            <b>INV</b>
-            x
-            <b>DEB</b>
-
-            <img src="./assets/img/equipes/deb-logo.png" />
-          </h2>
-          <h3>FASE DE PONTOS | <b>19:30</b></h3>
-          <h3 id="placar">
-            <span id="derrota">0</span> : <span id="vitoria">1</span>
-          </h3>
+  
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            01/07 | <b>SÁBADO</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
+  
+          <div class="jogo">
+            <h2>
+              <img src="./assets/img/equipes/invasora-logo.png" />
+  
+              <b>INV</b>
+              x
+              <b>DEB</b>
+  
+              <img src="./assets/img/equipes/deb-logo.png" />
+            </h2>
+            <h3>FASE DE PONTOS | <b>19:30</b></h3>
+            <h3 id="placar">
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
+            </h3>
+          </div>
         </div>
       </div>
     </div>
+    
 
     <hr class="hr-ball" />
 
