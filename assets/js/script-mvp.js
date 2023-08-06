@@ -2,12 +2,12 @@ document.addEventListener("DOMContentLoaded", function() {
   // Obtendo os dados dos jogadores
   const jogadores = [
     { nome: "INV yuridela", pontos: 400, time: "INV", imagem: "./assets/img/ranked-positions/adc.png" },
-    { nome: "VDE Thigas", pontos: 200, time: "VDE", imagem: "./assets/img/ranked-positions/sup.png" },
+    { nome: "VDE Thigas", pontos: 300, time: "VDE", imagem: "./assets/img/ranked-positions/sup.png" },
     { nome: "Eduardo Garen", pontos: 300, time: "DEB", imagem: "./assets/img/ranked-positions/top.png" },
     { nome: "hydruZ mete fofo", pontos: 100, time: "FAG", imagem: "./assets/img/ranked-positions/mid.png" },
     { nome: "Askedre", pontos: 300, time: "UNB", imagem: "./assets/img/ranked-positions/mid.png" },
     { nome: "HEZ Ivankov xB", pontos: 100, time: "HEZ", imagem: "./assets/img/ranked-positions/sup.png" },
-    { nome: "um anão mt loko", pontos: 100, time: "UMP", imagem: "./assets/img/ranked-positions/top.png" },
+    { nome: "um anão mt loko", pontos: 300, time: "UMP", imagem: "./assets/img/ranked-positions/top.png" },
     { nome: "POKIN PEGA MEMO", pontos: 100, time: "UMP", imagem: "./assets/img/ranked-positions/fill.png" },
     { nome: "ZDC T3K4SH1", pontos: 100, time: "ZDC", imagem: "./assets/img/ranked-positions/mid.png" },
     { nome: "INTZ Wenddel", pontos: 100, time: "INTZ", imagem: "./assets/img/ranked-positions/fill.png" },
