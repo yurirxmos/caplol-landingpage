@@ -111,19 +111,23 @@
 
     <div class="divisor-de-etapa">
       <h1>PLAY-OFFS</h1>
-      <h2 id="aguardando">(Aguardando)</h2>
+      <h2 id="andamento">(EM ANDAMENTO)</h2>
       <hr />
     </div>
 
     <div class="botao-mostrar">
       <button id="toggleButton" onclick="togglePlayoff()">
-        Mostrar Playoffs
+        Ocultar Playoffs
       </button>
     </div>
 
-    <div class="playoff" id="playoffDiv" style="opacity: 0; display: none">
+    <div class="playoff" id="playoffDiv" style="opacity: 1; display: block">
       <div class="playoff-jogos">
-        <h1><span id="DEB">|</span> CHAVE SUPERIOR</h1>
+        <h1>
+          <span id="DEB">|</span> CHAVE SUPERIOR
+          <br />
+          <h2>[!] Os jogos serão no formato <b>MD3</b>.</h2>
+        </h1>
         <div class="chave-superior">
           <div class="linha-1">
             <div class="confronto">
@@ -133,7 +137,8 @@
                 <span id="derrota">0</span>
               </div>
               <div class="time">
-                3º/4º COLOCADO
+                <img src="./assets/img/equipes/invasora-logo.png" />
+                <span id="INV">INV</span> Invasora
                 <span id="derrota">0</span>
               </div>
             </div>
@@ -158,7 +163,8 @@
                 <span id="derrota">0</span>
               </div>
               <div class="time">
-                3º/4º COLOCADO
+                <img src="./assets/img/equipes/deb-logo.png" />
+                <span id="DEB">DEB</span> Debug
                 <span id="derrota">0</span>
               </div>
             </div>
@@ -172,7 +178,11 @@
           </div>
         </div>
 
-        <h1><span id="INV">|</span> CHAVE INFERIOR</h1>
+        <h1>
+          <span id="INV">|</span> CHAVE INFERIOR
+          <br />
+          <h2>[!] Os jogos serão no formato <b>MD3</b>.</h2>
+        </h1>
         <div class="chave-inferior">
           <div class="linha-1">
             <div class="confronto">
@@ -212,7 +222,8 @@
           <div class="linha-1">
             <div class="confronto">
               <div class="time">
-                5º COLOCADO
+                <img src="./assets/img/equipes/hez-logo.png" />
+                <span id="HEZ">HEZ</span> Heros Zero
                 <span id="derrota">0</span>
               </div>
               <div class="time">
@@ -232,22 +243,25 @@
           <div class="linha-1">
             <div class="confronto">
               <div class="time">
-                7º COLOCADO
+                <img src="./assets/img/equipes/ump-logo.png" />
+                <span id="UMP">UMP</span> Ursos Mansos e P...
                 <span id="derrota">0</span>
               </div>
               <div class="time">
-                8º COLOCADO
+                <img src="./assets/img/equipes/olympus-logo.png" />
+                <span id="OLY">OLY</span> Olympus Fortify G...
                 <span id="derrota">0</span>
               </div>
             </div>
 
             <div class="confronto">
               <div class="time">
-                6º COLOCADO
+                <img src="./assets/img/equipes/zdc-logo.png" />
+                <span id="ZDC">ZDC</span> Zodiac
                 <span id="derrota">0</span>
               </div>
               <div class="time">
-                7º/8º COLOCADO
+                VENCEDOR (7º/8º) 
                 <span id="derrota">0</span>
               </div>
             </div>
@@ -260,20 +274,20 @@
 
     <div class="divisor-de-etapa">
       <h1>FASE DE POONTOS</h1>
-      <h2 id="andamento">(Em andamento)</h2>
+      <h2 id="finalizado">(FINALIZADO)</h2>
       <hr />
     </div>
 
     <div class="botao-mostrar">
       <button id="toggleButtonFaseDePontos" onclick="toggleFaseDePontos()">
-        Ocultar FASE DE PONTOS
+        Mostrar FASE DE PONTOS
       </button>
     </div>
 
     <div
       class="fasedepontos"
       id="fasedepontosDiv"
-      style="opacity: 1; display: block"
+      style="opacity: 0; display: none"
     >
       <div class="seletor">
         <h2>\ BUSCA AVANÇADA /</h2>
@@ -324,8 +338,11 @@
       </div>
 
       <div class="jogos">
-        <div class="jogos-lista">
-          <h1 class="order-0">06/08 | <b>DOMINGO</b></h1>
+        <div class="jogos-lista" id="feito">
+          <h1 class="order-0">
+            06/08 | <b>DOMINGO</b>
+            <img src="./assets/img/icones/check.png" />
+          </h1>
 
           <div class="jogo">
             <h2>
@@ -339,7 +356,7 @@
             </h2>
             <h3>FASE DE PONTOS | <b>20:00</b></h3>
             <h3 id="placar">
-              <span id="derrota">0</span> : <span id="derrota">0</span>
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
             </h3>
           </div>
 
@@ -355,7 +372,7 @@
             </h2>
             <h3>FASE DE PONTOS | <b>21:00</b></h3>
             <h3 id="placar">
-              <span id="derrota">0</span> : <span id="derrota">0</span>
+              <span id="vitoria">1</span> : <span id="derrota">0</span>
             </h3>
           </div>
 
@@ -371,7 +388,7 @@
             </h2>
             <h3>FASE DE PONTOS | <b>22:00</b></h3>
             <h3 id="placar">
-              <span id="derrota">0</span> : <span id="derrota">0</span>
+              <span id="derrota">0</span> : <span id="vitoria">1</span>
             </h3>
           </div>
         </div>
