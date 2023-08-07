@@ -164,6 +164,13 @@
     gap: 60px;
 }
 
+.data {
+    color: white;
+    position: absolute;
+    top: -16px;
+    font-size: 9px;
+}
+
 
 
 /* FASE DE PONTOS */
