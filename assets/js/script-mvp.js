@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { nome: "OnlinePlay", pontos: 100, time: "ZDC", imagem: "./assets/img/ranked-positions/top.png" },
     { nome: "INV Gonn", pontos: 100, time: "INV", imagem: "./assets/img/ranked-positions/jungle.png" },
     { nome: "CR7 VASCO", pontos: 100, time: "UMP", imagem: "./assets/img/ranked-positions/adc.png" },
-    { nome: "Novïnho Rabudo", pontos: 100, time: "UMP", imagem: "./assets/img/ranked-positions/mid.png" }
+    { nome: "AKÏRAH", pontos: 100, time: "UMP", imagem: "./assets/img/ranked-positions/mid.png" }
   ];
 
   // Ordenando os jogadores com base nos pontos
