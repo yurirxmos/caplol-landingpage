@@ -366,64 +366,6 @@ hr {
     filter: invert(100%);
 }
 
-.popup {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    text-decoration: none;
-    text-align: left;
-
-    z-index: 999999;
-    top: 70px;
-    right: 15px;
-    padding: 1rem;
-    background-color: #0a0a0a;
-    width: 40vh;
-    border-radius: 20px;
-    gap: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.popup h1 {
-    text-align: center;
-    margin: 0;
-    font-weight: 1000;
-    font-size: 14px;
-    color: rgb(245, 94, 94);
-}
-
-.popup h2 {
-    text-align: justify;
-    font-size: 13px;
-    margin-top: 5px;
-    margin-bottom: 0;
-}
-
-.popup img {
-    width: 80px;
-    height: 60px;
-    vertical-align: middle;
-}
-
-.popup #fechar {
-    position: absolute;
-    top: 8px;
-    right: 15px;
-    cursor: pointer;
-    color: white;
-    font-weight: 900;
-    font-size: 12px;
-    padding: 7px;
-    border-radius: 10px;
-}
-
-.popup #fechar:hover {
-    opacity: 50%;
-    transition: 300ms;
-}
-
 #contador {
     font-size: 17px;
     color: white;
