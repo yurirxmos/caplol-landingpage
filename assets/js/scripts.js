@@ -1,9 +1,3 @@
-// FECHAR POPUP
-document.getElementById("fechar").addEventListener("click", function () {
-  var contagemInicio = document.querySelector(".popup");
-  contagemInicio.style.display = "none";
-});
-
 // DIV INSCRIÇÃO
 function toggleFormInscricao() {
   var checkbox = document.getElementById("myCheckbox");
