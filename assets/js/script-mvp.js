@@ -28,10 +28,10 @@ document.addEventListener("DOMContentLoaded", function() {
     { nome: "VDE Ori", pontos: 100, time: "VDE", imagem: "./assets/img/ranked-positions/adc.png" },
     { nome: "OnlinePlay", pontos: 100, time: "ZDC", imagem: "./assets/img/ranked-positions/top.png" },
     { nome: "INV Gonn", pontos: 300, time: "INV", imagem: "./assets/img/ranked-positions/jungle.png" },
-    { nome: "CR7 VASCO", pontos: 100, time: "UMP", imagem: "./assets/img/ranked-positions/adc.png" },
+    { nome: "CR7 VASCO", pontos: 200, time: "UMP", imagem: "./assets/img/ranked-positions/adc.png" },
     { nome: "AKÏRAH", pontos: 100, time: "UMP", imagem: "./assets/img/ranked-positions/mid.png" },
     { nome: "Ze Mangão", pontos: 100, time: "DEB", imagem: "./assets/img/ranked-positions/adc.png" },
-    { nome: "Melanthios", pontos: 100, time: "UMP", imagem: "./assets/img/ranked-positions/jungle.png" }
+    { nome: "Melanthios", pontos: 200, time: "UMP", imagem: "./assets/img/ranked-positions/jungle.png" }
   ];
 
   // Ordenando os jogadores com base nos pontos
