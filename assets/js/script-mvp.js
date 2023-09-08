@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { nome: "Askedre", pontos: 300, time: "UNB", imagem: "./assets/img/ranked-positions/mid.png" },
     { nome: "HEZ Ivankov xB", pontos: 100, time: "HEZ", imagem: "./assets/img/ranked-positions/sup.png" },
     { nome: "um anão mt loko", pontos: 400, time: "UMP", imagem: "./assets/img/ranked-positions/top.png" },
-    { nome: "POKIN PEGA MEMO", pontos: 100, time: "UMP", imagem: "./assets/img/ranked-positions/fill.png" },
+    { nome: "POKIN PEGA MEMO", pontos: 200, time: "UMP", imagem: "./assets/img/ranked-positions/fill.png" },
     { nome: "ZDC T3K4SH1", pontos: 100, time: "ZDC", imagem: "./assets/img/ranked-positions/mid.png" },
     { nome: "INTZ Wenddel", pontos: 100, time: "INTZ", imagem: "./assets/img/ranked-positions/fill.png" },
     { nome: "Carloniii", pontos: 100, time: "DEB", imagem: "./assets/img/ranked-positions/adc.png" },
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { nome: "VDE vital", pontos: 100, time: "DEB", imagem: "./assets/img/ranked-positions/jungle.png" },
     { nome: "VDE 369", pontos: 400, time: "VDE", imagem: "./assets/img/ranked-positions/top.png" },
     { nome: "OLY Hercules", pontos: 200, time: "OLY", imagem: "./assets/img/ranked-positions/jungle.png" },
-    { nome: "HEZ magíc", pontos: 200, time: "HEZ", imagem: "./assets/img/ranked-positions/fill.png" },
+    { nome: "HEZ magíc", pontos: 300, time: "HEZ", imagem: "./assets/img/ranked-positions/fill.png" },
     { nome: "Neninha", pontos: 300, time: "UNB", imagem: "./assets/img/ranked-positions/sup.png" },
     { nome: "INV João Justino", pontos: 100, time: "INV", imagem: "./assets/img/ranked-positions/top.png" },
     { nome: "VDE Franzzera", pontos: 100, time: "VDE", imagem: "./assets/img/ranked-positions/mid.png" },
@@ -31,7 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
     { nome: "CR7 VASCO", pontos: 200, time: "UMP", imagem: "./assets/img/ranked-positions/adc.png" },
     { nome: "AKÏRAH", pontos: 100, time: "UMP", imagem: "./assets/img/ranked-positions/mid.png" },
     { nome: "Ze Mangão", pontos: 100, time: "DEB", imagem: "./assets/img/ranked-positions/adc.png" },
-    { nome: "Melanthios", pontos: 200, time: "UMP", imagem: "./assets/img/ranked-positions/jungle.png" }
+    { nome: "Melanthios", pontos: 200, time: "UMP", imagem: "./assets/img/ranked-positions/jungle.png" },
+    { nome: "HEZ Harry xD", pontos: 100, time: "HEZ", imagem: "./assets/img/ranked-positions/fill.png" }
   ];
 
   // Ordenando os jogadores com base nos pontos
