@@ -87,3 +87,4 @@ function togglePlayoff() {
     document.getElementById('toggleButton').textContent = 'Mostrar playoffs';
   }
 }
+

@@ -72,6 +72,55 @@
 
 
 
+/* FINALS */
+
+
+
+.finals-jogos .confronto {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.finals-jogos .confronto .time {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 13px;
+    color: white;
+    padding: 10px 15px;
+    background-color: #181818;
+    border-left: 0;
+    height: 15px;
+    width: 220px;
+} 
+
+.confronto #final {
+    border-bottom: solid 2px #ec3737;
+}
+
+.placarFinal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+    color: white;
+    font-family: 'StretchPro';
+    font-size: 30px;
+}
+
+.placarFinal span {
+    color: #ee7c7c;
+    font-family: 'Inter';
+    font-size: 13px;
+}
 
 
 /* PLAYOFFS */
@@ -158,6 +207,36 @@
     justify-content: center;
     align-items: center;
 }
+
+.confronto #finalista {
+    border-left: solid 3px #46ec37;
+    position: relative;
+}
+
+.confronto #finalista:hover {
+    filter: invert(100%);
+    transition: 300ms;
+}
+
+.confronto #finalista:hover::before {
+    content: "Classificado pra final do CAPLOL 2023.2"; 
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    top: 110%; 
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 1; 
+    opacity: 0; 
+    transition: opacity 300ms; 
+}
+
+.confronto #finalista:hover::before {
+    opacity: 1; 
+}
+
 
 .linha-1 {
     display: flex;
