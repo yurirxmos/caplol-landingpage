@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { nome: "INTZ Wenddel", pontos: 100, time: "INTZ", imagem: "./assets/img/ranked-positions/fill.png" },
     { nome: "Carloniii", pontos: 100, time: "DEB", imagem: "./assets/img/ranked-positions/adc.png" },
     { nome: "Rakão", pontos: 100, time: "DEB", imagem: "./assets/img/ranked-positions/sup.png" },
-    { nome: "VDE vital", pontos: 100, time: "DEB", imagem: "./assets/img/ranked-positions/jungle.png" },
+    { nome: "VDE vital", pontos: 300, time: "DEB", imagem: "./assets/img/ranked-positions/jungle.png" },
     { nome: "VDE 369", pontos: 400, time: "VDE", imagem: "./assets/img/ranked-positions/top.png" },
     { nome: "OLY Hercules", pontos: 200, time: "OLY", imagem: "./assets/img/ranked-positions/jungle.png" },
     { nome: "HEZ magíc", pontos: 300, time: "HEZ", imagem: "./assets/img/ranked-positions/fill.png" },
